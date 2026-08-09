@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" role="img" aria-label="Dream Home Properties">
+  <title>Dream Home Properties</title>
+  <!--
+    FALLBACK MARK — approximation, not the official artwork.
+
+    The roof cluster and swoosh follow the brand sheet's geometry, but the
+    "DreamHome" wordmark in the real logo is a script face that cannot be
+    honestly reproduced by eye. It is set in Barlow here as a stand-in.
+
+    Drop the official logo into the asset folder and run `npm run sync:assets`
+    to replace this file. Do not treat this as brand-approved artwork.
+  -->
+  <defs>
+    <linearGradient id="dhp-roof" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#2f4da0" />
+      <stop offset="100%" stop-color="#1b3a86" />
+    </linearGradient>
+    <linearGradient id="dhp-swoosh" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6bbdff" />
+      <stop offset="55%" stop-color="#3f8fe0" />
+      <stop offset="100%" stop-color="#2f4da0" />
+    </linearGradient>
+  </defs>
+
+  <g>
+    <!-- left gable -->
+    <path d="M42 150 L104 84 L150 132 L150 150 Z" fill="url(#dhp-roof)" />
+    <path d="M96 92 L96 62 L118 62 L118 84 Z" fill="url(#dhp-roof)" />
+
+    <!-- centre gable (tallest) -->
+    <path d="M118 150 L196 60 L274 150 Z" fill="url(#dhp-roof)" />
+    <path d="M232 78 L232 44 L256 44 L256 106 Z" fill="url(#dhp-roof)" />
+    <path d="M196 74 L262 150 L250 150 L196 88 Z" fill="#ffffff" opacity="0.9" />
+
+    <!-- right gable -->
+    <path d="M250 150 L312 84 L374 150 Z" fill="url(#dhp-roof)" />
+    <path d="M312 96 L364 150 L352 150 L312 104 Z" fill="#ffffff" opacity="0.9" />
+
+    <!-- windows -->
+    <g fill="#2b2b2b">
+      <path d="M186 96 h22 v30 a11 11 0 0 0 -22 0 Z" transform="translate(0,-4)" />
+      <path d="M96 116 h20 v26 a10 10 0 0 0 -20 0 Z" />
+      <path d="M300 116 h20 v26 a10 10 0 0 0 -20 0 Z" />
+    </g>
+    <g stroke="#ffffff" stroke-width="1.6" opacity="0.85">
+      <line x1="197" y1="92" x2="197" y2="122" />
+      <line x1="186" y1="104" x2="208" y2="104" />
+      <line x1="106" y1="116" x2="106" y2="142" />
+      <line x1="96" y1="128" x2="116" y2="128" />
+      <line x1="310" y1="116" x2="310" y2="142" />
+      <line x1="300" y1="128" x2="320" y2="128" />
+    </g>
+
+    <!-- swoosh -->
+    <path
+      d="M14 196 C 96 138, 300 132, 406 176 C 300 152, 104 162, 34 204 Z"
+      fill="url(#dhp-swoosh)"
+    />
+    <path
+      d="M96 190 C 150 168, 230 164, 286 176 C 224 176, 150 182, 108 198 Z"
+      fill="#6bbdff"
+      opacity="0.75"
+    />
+  </g>
+
+  <text
+    x="210" y="232"
+    text-anchor="middle"
+    font-family="Barlow, ui-sans-serif, system-ui, sans-serif"
+    font-size="46"
+    font-weight="800"
+    fill="#1b3a86"
+    letter-spacing="-1"
+  >DreamHome</text>
+  <text
+    x="210" y="252"
+    text-anchor="middle"
+    font-family="Barlow, ui-sans-serif, system-ui, sans-serif"
+    font-size="14"
+    font-weight="500"
+    fill="#2f4da0"
+    letter-spacing="7"
+  >PROPERTIES</text>
+</svg>
