@@ -48,9 +48,13 @@ export function LocationsSection({ locations }: { locations: Location[] }) {
                 )}
               </div>
 
-              {/* Scrim — required for text contrast over photography, and
-                  the reason the heading stays AA-legible whatever the image. */}
-              <div className="brand-scrim absolute inset-0 -z-10" aria-hidden />
+              {/* Light bottom-only gradient: keeps the image bright and clear
+                  while giving the name/price just enough contrast to stay
+                  legible. (Replaces the previous full-image dark scrim.) */}
+              <div
+                className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-gradient-to-t from-black/75 via-black/30 to-transparent"
+                aria-hidden
+              />
 
               <div className="p-6">
                 <div className="flex items-start justify-between gap-3">
