@@ -49,9 +49,24 @@ export const siteConfig = {
     hours: "Open all days, 10:00 AM – 9:30 PM",
   },
 
+  /**
+   * Google Business Profile.
+   *
+   * `rating`/`reviewCount` are the fallback shown when live data is off.
+   * With GOOGLE_PLACES_API_KEY + GOOGLE_PLACE_ID set, the profile card pulls
+   * the real numbers from Google instead (refreshed daily).
+   *
+   * `profileUrl`: the profile's share link (Google Maps → your listing →
+   * Share → copy link, e.g. https://maps.app.goo.gl/…). Leave empty and links
+   * fall back to a Maps search for the business name + address.
+   * `placeId`: enables the "Write a review" button and exact map links.
+   * Find it at developers.google.com/maps/documentation/places/web-service/place-id
+   */
   google: {
     rating: 4.9,
     reviewCount: 25,
+    profileUrl: "",
+    placeId: "",
   },
 
   /**

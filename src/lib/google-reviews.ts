@@ -43,7 +43,18 @@ interface PlacesReview {
  * rather than render an error. Reviews are a nice-to-have on a page — they
  * should never be able to take the page down.
  */
-export async function fetchGoogleReviews(): Promise<Testimonial[] | null> {
+interface PlaceDetails {
+  rating?: number;
+  user_ratings_total?: number;
+  reviews?: PlacesReview[];
+}
+
+/**
+ * One Places Details call shared by every caller. The URL is identical each
+ * time, so Next's fetch cache serves all of them from a single billed request
+ * per day.
+ */
+async function fetchPlaceDetails(): Promise<PlaceDetails | null> {
   if (!isGoogleReviewsConfigured()) return null;
 
   const url = new URL("https://maps.googleapis.com/maps/api/place/details/json");
@@ -64,28 +75,46 @@ export async function fetchGoogleReviews(): Promise<Testimonial[] | null> {
     const json = (await res.json()) as {
       status: string;
       error_message?: string;
-      result?: { reviews?: PlacesReview[] };
+      result?: PlaceDetails;
     };
 
     if (json.status !== "OK") {
       throw new Error(json.error_message ?? `Places API status: ${json.status}`);
     }
 
-    const reviews = json.result?.reviews ?? [];
-    if (!reviews.length) return null;
-
-    return reviews.map((r, i) => ({
-      id: `google-${r.time}-${i}`,
-      name: r.author_name,
-      location: "",
-      rating: r.rating,
-      quote: r.text,
-      context: r.relative_time_description,
-      date: new Date(r.time * 1000).toISOString(),
-      source: "Google" as const,
-    }));
+    return json.result ?? null;
   } catch (err) {
     console.error("[google-reviews] fetch failed, falling back:", err);
     return null;
   }
+}
+
+/**
+ * Live rating and review count from the Business Profile, or null when the
+ * API isn't configured — callers then show the figures from site-config.
+ */
+export async function fetchGooglePlaceSummary(): Promise<{
+  rating: number;
+  reviewCount: number;
+} | null> {
+  const place = await fetchPlaceDetails();
+  if (place?.rating == null || place.user_ratings_total == null) return null;
+  return { rating: place.rating, reviewCount: place.user_ratings_total };
+}
+
+export async function fetchGoogleReviews(): Promise<Testimonial[] | null> {
+  const place = await fetchPlaceDetails();
+  const reviews = place?.reviews ?? [];
+  if (!reviews.length) return null;
+
+  return reviews.map((r, i) => ({
+    id: `google-${r.time}-${i}`,
+    name: r.author_name,
+    location: "",
+    rating: r.rating,
+    quote: r.text,
+    context: r.relative_time_description,
+    date: new Date(r.time * 1000).toISOString(),
+    source: "Google" as const,
+  }));
 }

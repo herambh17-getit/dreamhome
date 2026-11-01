@@ -3,19 +3,20 @@ import { Section } from "@/components/section";
 import { Reveal } from "@/components/motion/reveal";
 import { EnquiryForm } from "@/components/enquiry-form";
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
+import { GoogleBusinessCard } from "@/components/google-business-card";
+import { mapEmbedSrc } from "@/lib/google-maps";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 
 /**
- * Contact + map.
+ * Contact + live map + Google Business Profile.
  *
- * The map is a lazy-loaded iframe rather than the JS Maps SDK: it costs
- * nothing until scrolled to, needs no API key, and cannot break the page.
- * Swap to the SDK only if interactive pins are ever actually required.
+ * The map is Google's embeddable live map, lazy-loaded: it costs nothing
+ * until scrolled to, needs no API key, and cannot break the page. It is
+ * queried by business name + address, so it lands on the Business Profile
+ * listing rather than an anonymous street pin.
  */
 export function ContactSection() {
   const { contact } = siteConfig;
-  // Full street address geocodes to the actual shop, not just the suburb.
-  const mapQuery = encodeURIComponent(contact.address.full);
 
   return (
     <Section id="contact">
@@ -77,13 +78,16 @@ export function ContactSection() {
 
           <div className="mt-8 overflow-hidden rounded-2xl border border-border">
             <iframe
-              title={`Map showing ${siteConfig.name} in ${contact.address.locality}`}
-              src={`https://maps.google.com/maps?q=${mapQuery}&output=embed`}
+              title={`Google Map showing ${siteConfig.name} in ${contact.address.locality}`}
+              src={mapEmbedSrc()}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="h-72 w-full border-0"
+              allowFullScreen
+              className="h-80 w-full border-0"
             />
           </div>
+
+          <GoogleBusinessCard className="mt-4" />
         </Reveal>
 
         <Reveal delay={0.1}>

@@ -1,6 +1,7 @@
 import { siteConfig } from "@/lib/site-config";
 import type { BlogPost, Faq, Property } from "@/lib/types";
 import { formatArea } from "@/lib/format";
+import { profileUrl } from "@/lib/google-maps";
 
 /**
  * JSON-LD structured data.
@@ -84,7 +85,12 @@ export function OrganizationJsonLd() {
           opens: "10:00",
           closes: "21:30",
         },
-        sameAs: Object.values(siteConfig.social).filter(Boolean),
+        // Links the site to its Google Business Profile listing.
+        hasMap: profileUrl(),
+        sameAs: [
+          ...Object.values(siteConfig.social),
+          google.profileUrl,
+        ].filter(Boolean),
         // MahaRERA agent registration, emitted only once a real number is set.
         ...(siteConfig.rera.agentNumber
           ? {
