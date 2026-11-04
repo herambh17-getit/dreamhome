@@ -590,6 +590,229 @@ Real estate agents in Maharashtra must also be registered with MahaRERA and quot
 
 For a full pre-purchase checklist, see [how to verify a property before you buy](/blog/how-to-verify-a-property-before-you-buy-in-mumbai). If you would like these checks done for a specific flat, our [legal and documentation](/services/legal-documentation) service handles them with a solicitor.`,
   },
+  {
+    id: "post-012",
+    slug: "malad-vs-goregaon-for-working-professionals",
+    title: "Malad vs Goregaon: where should working professionals live?",
+    excerpt:
+      "Both put you close to the western suburbs' biggest office clusters. How they differ on commute, neighbourhoods, lifestyle and value.",
+    category: "Locations",
+    author: "Mr. Nayan Jomraj",
+    publishedAt: "2026-11-05",
+    readingMinutes: 6,
+    image: "/images/locations/malad.jpg",
+    tags: ["Malad", "Goregaon", "Renting", "Locations"],
+    featured: false,
+    content: `If you work in Mindspace, Nesco, or anywhere along the Western Express Highway between Malad and Andheri, Malad and Goregaon are usually the first two names on your list. They border each other and share a lot — but where exactly your office is should decide between them.
+
+## The short answer
+
+Live in **Malad West** if you work in or near Mindspace and want to walk or take a short ride to work. Live in **Goregaon** if your office is at Nesco or further south towards Andheri, or if you value being central between the northern suburbs and the Andheri–BKC belt.
+
+## Where the offices are
+
+- **Malad West** has the [Mindspace business district](/locations/malad), surrounded by Infiniti and Inorbit malls and plenty of places to eat.
+- **Goregaon East** has [Nesco and the Bombay Exhibition Centre](/locations/goregaon), the Oberoi Garden City township with its own offices, and Film City further inland.
+
+Living on the same side of the railway line as your office matters more than which suburb you pick. Crossing the line at peak hours is where commutes lose time.
+
+## Getting around
+
+Both are well served:
+
+- **Western Line** stations at Malad and Goregaon. Goregaon station is also connected to the Harbour Line.
+- **Metro Line 2A** along Link Road on the west side — Malad West, Valnai and Lower Malad in Malad; Goregaon West and Pahadi Goregaon in Goregaon.
+- **Metro Line 7** along the Western Express Highway on the east side — Kurar and Dindoshi in Malad; Aarey and Goregaon East in Goregaon.
+
+## Neighbourhoods
+
+**Malad West:** the Mindspace and Chincholi Bunder area for proximity to work; Orlem and Marve Road for an established residential feel, heading towards the beaches at Aksa and Marve.
+
+**Malad East:** Kurar and Dindoshi, closer to the highway and Metro Line 7.
+
+**Goregaon East:** Oberoi Garden City for township living; the Aarey and Film City side for something greener and quieter.
+
+**Goregaon West:** Bangur Nagar, Motilal Nagar and the area around the station and SV Road — older, established neighbourhoods.
+
+## Lifestyle
+
+Malad West has the edge on malls, restaurants and the beaches. Goregaon East offers large townships with amenities inside the complex, plus the green belt of Aarey. Goregaon West feels more like a traditional, settled neighbourhood.
+
+## Renting first, buying later
+
+Many professionals rent in one of these areas before buying. That is a sensible way to test the commute and the neighbourhood with real days rather than a weekend visit. When you do rent, make sure the [leave and licence agreement](/blog/leave-and-licence-agreement-mumbai-guide) is registered.
+
+## Our honest take
+
+Draw a line from your front door to your desk and time it at 9 am on a weekday. Whichever suburb gives you the shorter, more predictable trip is usually the right one — everything else is a tie-breaker.
+
+Tell us where you work and your budget, and we will shortlist [rentals](/services/renting) or [homes to buy](/services/property-buying) in both.`,
+  },
+  {
+    id: "post-013",
+    slug: "andheri-east-vs-andheri-west-where-to-buy",
+    title: "Andheri East vs Andheri West: where should you buy?",
+    excerpt:
+      "Same suburb, very different places. Lifestyle-led West or work-led East — what each offers, what each costs you, and who each suits.",
+    category: "Locations",
+    author: "Mr. Nayan Jomraj",
+    publishedAt: "2026-11-05",
+    readingMinutes: 5,
+    image: "/images/locations/andheri.jpg",
+    tags: ["Andheri", "Buying", "Locations"],
+    featured: false,
+    content: `Andheri is the most connected suburb in the western suburbs — and the railway line splits it into two quite different places. Choosing between East and West is mostly about how you live and where you work.
+
+## The short answer
+
+**Andheri West** suits buyers who want a lifestyle neighbourhood: Lokhandwala, Versova and Four Bungalows, with restaurants, retail and the sea nearby. **Andheri East** suits buyers who work at the airport, SEEPZ, MIDC or Chakala and want a short commute. West generally costs more for a comparable flat.
+
+## Andheri West
+
+- **Lokhandwala** — busy, popular and well served for shopping and eating out.
+- **Versova and Seven Bungalows** — towards the sea, at the western end of Metro Line 1.
+- **Four Bungalows and DN Nagar** — well connected, with DN Nagar on Metro Lines 1 and 2A.
+
+West is where most people picture "living in Andheri". The trade-off is price and traffic, particularly on the roads towards the station.
+
+## Andheri East
+
+- **Marol** — a residential and commercial mix close to the airport.
+- **Chakala and MIDC** — a major office and industrial belt.
+- **SEEPZ** — an export processing zone and large employment hub.
+
+East is more practical than glamorous. If your office is here, living nearby can turn a long cross-city commute into a short one.
+
+## Connectivity
+
+Andheri is a Metro interchange:
+
+- **Metro Line 1** (Versova–Andheri–Ghatkopar) runs east–west through Andheri and links both sides.
+- **Metro Line 2A** ends at DN Nagar in Andheri West.
+- **Metro Line 7** ends at Gundavali in Andheri East.
+
+Andheri station is on the Western Line and the Harbour Line, and the airport is in Andheri East. Of the areas we cover, Andheri is the closest to BKC.
+
+## Who each suits
+
+- **Andheri West:** families and professionals who want lifestyle and are paying for location.
+- **Andheri East:** people who work in the eastern office belt or travel often, and buyers who want Andheri's connectivity at a lower price than West.
+- **Commercial buyers:** Andheri East has the deepest office market in the western suburbs.
+
+## If Andheri stretches the budget
+
+Goregaon is the next suburb north, with two Metro lines and the Western Express Highway, and often more space for the money. Our [Goregaon guide](/locations/goregaon) and [Andheri guide](/locations/andheri) compare them in more detail.
+
+Thinking of buying in Andheri? [Talk to us](/contact) — we will tell you honestly whether a specific flat is worth the Andheri premium.`,
+  },
+  {
+    id: "post-014",
+    slug: "nri-selling-property-in-mumbai",
+    title: "Selling property in Mumbai as an NRI: what you need to know",
+    excerpt:
+      "TDS, power of attorney, capital gains and getting the money out — the process for NRIs selling a Mumbai flat, and the mistakes that delay it.",
+    category: "NRI Services",
+    author: "Mr. Nayan Jomraj",
+    publishedAt: "2026-11-05",
+    readingMinutes: 6,
+    image: "/images/properties/mumbai-sealink.jpg",
+    tags: ["NRI", "Selling", "Tax", "Legal"],
+    featured: false,
+    content: `Selling a Mumbai flat from abroad is entirely possible. It just has more moving parts than a sale by a resident, and most delays come from the tax and paperwork side rather than finding a buyer. This is the process, and where it usually goes wrong. Tax rules change — confirm the specifics with a chartered accountant who handles NRI cases before you sell.
+
+## The short answer
+
+You can sell without travelling, using a properly drafted power of attorney. The buyer must deduct tax at source (TDS) from what they pay you. Capital gains tax applies, and getting the proceeds abroad depends on how you originally paid for the property. Speak to a CA **before** you agree a price, not after.
+
+## TDS: the part that surprises sellers
+
+When the seller is an NRI, the **buyer is required to deduct TDS** from the payment and deposit it with the tax department. For an NRI seller this deduction is generally calculated on the sale price, not just your profit, so it can be much larger than the tax you actually owe.
+
+Two things help:
+
+- You can apply to the income tax department for a **lower or nil deduction certificate**, so the buyer deducts only what is actually due on your gain. It takes time, so apply early.
+- Any excess deducted can be claimed back when you file your Indian tax return — but that takes longer.
+
+Make sure the buyer has a **TAN** and deposits the TDS correctly; you will need the TDS certificate.
+
+## Capital gains
+
+The gain is taxed in India. How it is taxed depends mainly on how long you have held the property, your purchase cost and improvement costs. Your CA will also advise on any exemptions available and how the sale interacts with tax in your country of residence.
+
+## Power of attorney
+
+You don't need to fly in. A **power of attorney** lets someone you trust sign and register the sale on your behalf. Keep it **specific to this sale**, and execute it correctly where you sign it — usually notarisation and, depending on the country, apostille or consular attestation — and complete the formalities in India before it is used.
+
+## Getting the money out
+
+Sale proceeds are credited to your NRO account. How much you can send abroad, and under what conditions, depends on how the property was originally bought and is subject to RBI rules and limits; your bank and CA will need the purchase and sale documents and tax certificates. This is why the question "how did you pay for it originally?" matters so much.
+
+## Documents to have ready
+
+- Your purchase agreement and the chain of earlier agreements
+- Society share certificate and a society NOC for the transfer
+- Proof that maintenance dues and property tax are clear
+- PAN and passport, and the power of attorney if someone is signing for you
+- Loan closure letter, if the flat had a home loan
+
+## Common mistakes
+
+1. Agreeing a price before understanding the TDS — and being surprised by the net amount.
+2. A broad, open-ended power of attorney instead of one for this transaction.
+3. Leaving the lower-deduction certificate too late.
+4. Missing society paperwork, which holds up the buyer's loan.
+
+Our [NRI services](/services/nri-services) team can manage the sale on the ground — valuation, buyers, paperwork and registration — while coordinating with your CA on the tax side. For buying from abroad, see our [NRI guide to buying in Mumbai](/blog/nri-guide-to-buying-property-in-mumbai).`,
+  },
+  {
+    id: "post-015",
+    slug: "possession-delayed-your-rights-under-rera",
+    title: "Possession delayed? Your rights under RERA in Maharashtra",
+    excerpt:
+      "If a developer misses the possession date, RERA gives you options. What they are, how to complain to MahaRERA, and what to do first.",
+    category: "Buying",
+    author: "Mr. Nayan Jomraj",
+    publishedAt: "2026-11-05",
+    readingMinutes: 6,
+    image: "/images/properties/mumbai-skyline.jpg",
+    tags: ["RERA", "Under Construction", "Legal", "Buying"],
+    featured: false,
+    content: `Delayed possession is the most common complaint from buyers of under-construction flats. Before RERA, there was little a buyer could do except wait. The Real Estate (Regulation and Development) Act changed that. This is general guidance, not legal advice — for a specific case, speak to a lawyer.
+
+## The short answer
+
+If the developer fails to give possession by the date in your agreement, RERA generally lets you choose: **withdraw from the project** and get your money back with interest, or **stay in the project** and receive interest for every month of delay until possession. You can file a complaint with **MahaRERA** to enforce this.
+
+## Step 1: Check the dates
+
+Find the possession date in your **registered agreement for sale**, then look up the project on the [MahaRERA portal](https://maharera.maharashtra.gov.in) and compare it with the completion date the developer committed to, and the project's quarterly progress updates. Note whether the developer has applied for an extension of the project's registration.
+
+## Step 2: Talk to the developer in writing
+
+Write to the developer asking for the revised possession date and the reason for the delay. Keep everything in writing. Sometimes this resolves things; either way it builds your record.
+
+## Step 3: Decide what you want
+
+- **Stay in the project:** you continue as a buyer and claim interest for the delay until you get possession. This suits buyers who still want the flat and believe the project will complete.
+- **Withdraw:** you ask for a refund of what you have paid, with interest. This suits buyers who have lost confidence in the project or whose plans have changed.
+
+Think about your home loan too — if you are paying EMIs on an incomplete flat, the delay is costing you twice.
+
+## Step 4: Complain to MahaRERA
+
+Complaints are filed online through the MahaRERA portal, with your agreement, payment receipts and correspondence. MahaRERA also offers a conciliation route for disputes that both sides are willing to settle. A lawyer who handles RERA matters can tell you which route suits your case.
+
+## Before you buy under construction
+
+Prevention is easier than a complaint:
+
+- Check the developer's **delivery record** on earlier projects, not just this one.
+- Read the project's **MahaRERA page** — committed date, progress updates and any complaints.
+- Make sure your **agreement for sale** states the possession date clearly and is registered.
+- Weigh the risk honestly — our comparison of [under-construction and ready-to-move](/blog/under-construction-vs-ready-to-move-the-honest-comparison) homes covers it.
+
+Our guide to [OC, CC and RERA](/blog/oc-cc-and-rera-what-they-mean-when-buying-a-flat-in-mumbai) explains the documents that matter. If you are weighing an under-construction purchase, a [property consultation](/services/property-consultation) before you commit is the cheapest protection there is.`,
+  },
 ];
 
 export function getBlogPost(slug: string): BlogPost | undefined {
