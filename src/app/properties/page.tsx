@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { Suspense } from "react";
 import { PageHeader } from "@/components/page-header";
 import { PropertiesBrowser } from "@/components/property/properties-browser";
@@ -6,12 +6,12 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { getLocations, getProperties } from "@/lib/queries";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Properties for Sale & Rent in Mumbai",
   description:
-    "Browse verified residential and commercial properties across Borivali, Kandivali, Malad, Goregaon and Andheri. Every listing checked for title, approvals and RERA registration.",
-  alternates: { canonical: "/properties" },
-};
+    "Residential and commercial property for sale and rent in Borivali, Kandivali, Malad, Goregaon and Andheri — title, approvals and RERA checked.",
+  path: "/properties",
+});
 
 /**
  * Property listings.

@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHeader } from "@/components/page-header";
 import { Section } from "@/components/section";
 import { Prose } from "@/components/prose";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Privacy Policy",
   description: `How ${siteConfig.name} collects, uses and protects the information you share when you enquire about property in Mumbai.`,
-  alternates: { canonical: "/privacy" },
-};
+  path: "/privacy",
+});
 
 /**
  * Privacy policy.

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHeader } from "@/components/page-header";
 import { Section } from "@/components/section";
 import { FaqAccordion } from "@/components/faq-accordion";
@@ -8,12 +8,12 @@ import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { getFaqs } from "@/lib/queries";
 import { whatsappLink } from "@/lib/site-config";
 
-export const metadata: Metadata = {
-  title: "Frequently Asked Questions",
+export const metadata = pageMetadata({
+  title: "Mumbai Property FAQs",
   description:
     "Straight answers about buying, selling and renting property in Mumbai — RERA, title verification, stamp duty, society redevelopment and NRI purchases.",
-  alternates: { canonical: "/faq" },
-};
+  path: "/faq",
+});
 
 export default async function FaqPage() {
   const faqs = await getFaqs();

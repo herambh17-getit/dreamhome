@@ -5,13 +5,20 @@ import { Section, SectionHeader } from "@/components/section";
 import { ProjectCard } from "@/components/project-card";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { getDevelopers, getProjects } from "@/lib/queries";
+import { pageMetadata } from "@/lib/seo";
+import { isSampleRecord } from "@/lib/placeholder";
 
-export const metadata: Metadata = {
-  title: "New Projects & Developers in Mumbai",
-  description:
-    "New launches and under-construction projects across Mumbai's western suburbs, with developer profiles, configurations, possession dates and RERA details.",
-  alternates: { canonical: "/projects" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const projects = await getProjects();
+  return pageMetadata({
+    title: "New Projects & Developers in Mumbai",
+    description:
+      "New launches and under-construction projects across Mumbai's western suburbs, with developer profiles, configurations, possession dates and RERA details.",
+    path: "/projects",
+    // While every project listed is a sample, keep the page out of search.
+    noindex: projects.length === 0 || projects.every(isSampleRecord),
+  });
+}
 
 export default async function ProjectsPage() {
   const [projects, developers] = await Promise.all([

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { isSampleRecord } from "@/lib/placeholder";
 import { notFound } from "next/navigation";
 import { PageHeader } from "@/components/page-header";
 import { Section, SectionHeader } from "@/components/section";
@@ -19,11 +21,13 @@ export async function generateMetadata(
   const developer = await getDeveloperBySlug(slug);
   if (!developer) return { title: "Developer not found" };
 
-  return {
+  return pageMetadata({
     title: `${developer.name} — Projects in Mumbai`,
-    description: developer.description.slice(0, 155),
-    alternates: { canonical: `/developers/${developer.slug}` },
-  };
+    description: developer.description,
+    path: `/developers/${developer.slug}`,
+    // Placeholder profiles stay out of search until real details replace them.
+    noindex: isSampleRecord(developer),
+  });
 }
 
 export default async function DeveloperPage(

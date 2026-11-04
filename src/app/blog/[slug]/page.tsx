@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Clock } from "lucide-react";
@@ -26,19 +27,14 @@ export async function generateMetadata(
   const post = await getBlogPostBySlug(slug);
   if (!post) return { title: "Post not found" };
 
-  return {
+  return pageMetadata({
     title: post.title,
     description: post.excerpt,
-    alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: {
-      type: "article",
-      title: post.title,
-      description: post.excerpt,
-      publishedTime: post.publishedAt,
-      authors: [post.author],
-      images: post.image ? [post.image] : undefined,
-    },
-  };
+    path: `/blog/${post.slug}`,
+    image: post.image,
+    imageAlt: post.title,
+    article: { publishedTime: post.publishedAt, authors: [post.author] },
+  });
 }
 
 export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
@@ -78,7 +74,7 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
               <div className="relative mb-10 aspect-16/9 overflow-hidden rounded-2xl bg-brand-indigo-50">
                 <Image
                   src={post.image}
-                  alt=""
+                  alt={post.title}
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 60vw"

@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHeader } from "@/components/page-header";
 import { Section } from "@/components/section";
 import { Prose } from "@/components/prose";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Terms of Use",
   description: `The terms on which ${siteConfig.name} provides information on this website, including RERA verification and no-guarantee notices.`,
-  alternates: { canonical: "/terms" },
-};
+  path: "/terms",
+});
 
 /**
  * Terms of use.

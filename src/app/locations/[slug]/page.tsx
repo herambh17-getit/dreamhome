@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { LocalityJsonLd } from "@/components/seo/json-ld";
 import { notFound } from "next/navigation";
 import { CheckCircle2, TrainFront } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
@@ -22,11 +24,13 @@ export async function generateMetadata(
   const location = await getLocationBySlug(slug);
   if (!location) return { title: "Location not found" };
 
-  return {
+  return pageMetadata({
     title: `Property in ${location.name}, Mumbai`,
-    description: `${location.tagline}. Buy, sell or rent property in ${location.name} with ${siteConfig.name} — local expertise, verified listings, transparent advice.`,
-    alternates: { canonical: `/locations/${location.slug}` },
-  };
+    description: `Buy, sell or rent property in ${location.name}, Mumbai with ${siteConfig.name}. ${location.tagline}. Local expertise and transparent advice.`,
+    path: `/locations/${location.slug}`,
+    image: location.image,
+    imageAlt: `${location.name}, Mumbai`,
+  });
 }
 
 export default async function LocationPage(
@@ -40,6 +44,11 @@ export default async function LocationPage(
 
   return (
     <>
+      <LocalityJsonLd
+        name={location.name}
+        slug={location.slug}
+        description={location.description}
+      />
       <PageHeader
         eyebrow="Location"
         title={`Property in ${location.name}`}

@@ -6,12 +6,12 @@
  * from this file, so updating a phone number here updates it everywhere,
  * including schema markup.
  *
- * Contact details are taken from the live dreamhomeproperties.in site.
- * They feed WhatsApp links, `tel:` links and LocalBusiness schema, so a
- * wrong value here silently drops real leads.
+ * Contact details were supplied by the business owner. They feed WhatsApp
+ * links, `tel:` links and LocalBusiness schema, so a wrong value here
+ * silently drops real leads.
  *
  * Still unconfirmed: postalCode and geo are inferred for Borivali East, not
- * read off the live site. Verify both before launch — geo drives the map pin.
+ * verified. Check both before launch — geo drives the map pin.
  */
 
 export const siteConfig = {
@@ -29,7 +29,18 @@ export const siteConfig = {
   shortDescription:
     "A premium real estate consultancy in Borivali East, Mumbai — guiding buyers, sellers, investors and tenants with transparent, expert advice.",
 
-  url: "https://www.dreamhomeproperties.in",
+  /**
+   * The site's public address. Every canonical, sitemap entry, share link
+   * and schema URL is built from this, so it must be the address visitors
+   * actually reach the site on.
+   *
+   * Set NEXT_PUBLIC_SITE_URL in Vercel (Settings → Environment Variables) to
+   * the final domain once it is connected — no code change needed. Until
+   * then it falls back to the live Vercel address.
+   */
+  url: (
+    process.env.NEXT_PUBLIC_SITE_URL || "https://dreamhome-steel.vercel.app"
+  ).replace(/\/+$/, ""),
 
   contact: {
     phone: "+91 98193 88390",

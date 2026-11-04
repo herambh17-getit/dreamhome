@@ -2,6 +2,7 @@ import { siteConfig } from "@/lib/site-config";
 import type { BlogPost, Faq, Property } from "@/lib/types";
 import { formatArea } from "@/lib/format";
 import { profileUrl } from "@/lib/google-maps";
+import { isSampleRecord } from "@/lib/placeholder";
 
 /**
  * JSON-LD structured data.
@@ -38,8 +39,8 @@ export function OrganizationJsonLd() {
         telephone: contact.phone,
         email: contact.email,
         slogan: siteConfig.tagline,
-        image: `${siteConfig.url}/images/brand/logo.svg`,
-        logo: `${siteConfig.url}/images/brand/logo.svg`,
+        image: `${siteConfig.url}/og-default.png`,
+        logo: `${siteConfig.url}/images/brand/logo-icon.png`,
         priceRange: "₹₹₹",
         address: {
           "@type": "PostalAddress",
@@ -115,15 +116,10 @@ export function WebSiteJsonLd() {
         "@id": `${siteConfig.url}/#website`,
         url: siteConfig.url,
         name: siteConfig.name,
+        inLanguage: "en-IN",
         publisher: { "@id": `${siteConfig.url}/#organization` },
-        potentialAction: {
-          "@type": "SearchAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate: `${siteConfig.url}/properties?q={search_term_string}`,
-          },
-          "query-input": "required name=search_term_string",
-        },
+        // No SearchAction: Google retired the sitelinks search box in 2024,
+        // so the markup no longer does anything.
       }}
     />
   );
@@ -157,6 +153,9 @@ export function BreadcrumbJsonLd({
  * emitting a zero or a guess would be a false claim about a real transaction.
  */
 export function PropertyJsonLd({ property }: { property: Property }) {
+  // Never describe a sample listing to search engines as a real offer.
+  if (isSampleRecord(property)) return null;
+
   const amount = property.intent === "rent" ? property.rent : property.price;
   const hasPrice = typeof amount === "number" && amount > 0;
 
@@ -233,6 +232,100 @@ export function ArticleJsonLd({ post }: { post: BlogPost }) {
           "@id": `${siteConfig.url}/blog/${post.slug}`,
         },
         keywords: post.tags.join(", "),
+      }}
+    />
+  );
+}
+
+/** One service, provided by the business. Rendered on /services/[slug]. */
+export function ServiceJsonLd({
+  name,
+  description,
+  slug,
+}: {
+  name: string;
+  description: string;
+  slug: string;
+}) {
+  const url = `${siteConfig.url}/services/${slug}`;
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": `${url}#service`,
+        name,
+        serviceType: name,
+        description,
+        url,
+        provider: { "@id": `${siteConfig.url}/#organization` },
+        areaServed: siteConfig.serviceAreas.map((a) => ({
+          "@type": "City",
+          name: a,
+        })),
+      }}
+    />
+  );
+}
+
+/** The founder, linked to the business. Rendered on /about. */
+export function FounderJsonLd() {
+  const { founder } = siteConfig;
+  const honorific = founder.name.match(/^(Mr|Mrs|Ms|Dr)\.?\s+/)?.[0]?.trim();
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": `${siteConfig.url}/#founder`,
+        name: founder.name.replace(/^(Mr|Mrs|Ms|Dr)\.?\s+/, ""),
+        ...(honorific ? { honorificPrefix: honorific } : {}),
+        jobTitle: founder.role,
+        image: `${siteConfig.url}/images/team/founder.jpg`,
+        worksFor: { "@id": `${siteConfig.url}/#organization` },
+      }}
+    />
+  );
+}
+
+/**
+ * A locality guide page: says what area the page is about and who serves
+ * it. Deliberately no coordinates — we only state what we know.
+ */
+export function LocalityJsonLd({
+  name,
+  slug,
+  description,
+}: {
+  name: string;
+  slug: string;
+  description: string;
+}) {
+  const url = `${siteConfig.url}/locations/${slug}`;
+  return (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": url,
+        url,
+        name: `Property in ${name}, Mumbai`,
+        description,
+        inLanguage: "en-IN",
+        isPartOf: { "@id": `${siteConfig.url}/#website` },
+        about: {
+          "@type": "Place",
+          name: `${name}, Mumbai`,
+          containedInPlace: {
+            "@type": "City",
+            name: siteConfig.contact.address.city,
+            containedInPlace: {
+              "@type": "State",
+              name: siteConfig.contact.address.region,
+            },
+          },
+        },
+        provider: { "@id": `${siteConfig.url}/#organization` },
       }}
     />
   );

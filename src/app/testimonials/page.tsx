@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHeader } from "@/components/page-header";
 import { ReviewsSection } from "@/components/home/reviews-section";
 import { getTestimonials } from "@/lib/queries";
 import { fetchGoogleReviews } from "@/lib/google-reviews";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Client Reviews & Testimonials",
   description: `${siteConfig.name} is rated ${siteConfig.google.rating} out of 5 across ${siteConfig.google.reviewCount} Google reviews. Read what clients say about buying, selling and renting with us.`,
-  alternates: { canonical: "/testimonials" },
-};
+  path: "/testimonials",
+});
 
 export default async function TestimonialsPage() {
   const [seed, google] = await Promise.all([

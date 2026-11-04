@@ -16,6 +16,14 @@ import {
   getTestimonials,
 } from "@/lib/queries";
 import { fetchGoogleReviews } from "@/lib/google-reviews";
+import { pageMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site-config";
+
+export const metadata = pageMetadata({
+  title: `${siteConfig.name} | Real Estate Consultant in Mumbai`,
+  description: siteConfig.shortDescription,
+  path: "/",
+});
 
 /**
  * Homepage.

@@ -26,7 +26,7 @@ export function BlogCard({
         {post.image ? (
           <Image
             src={post.image}
-            alt=""
+            alt={post.title}
             fill
             sizes="(max-width: 768px) 100vw, 33vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"

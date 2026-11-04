@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { FounderJsonLd } from "@/components/seo/json-ld";
 import { PageHeader } from "@/components/page-header";
 import { AboutSection } from "@/components/home/about-section";
 import { FounderSection } from "@/components/home/founder-section";
@@ -7,11 +8,13 @@ import { Section, SectionHeader } from "@/components/section";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { brandStrategy, brandVoice, siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
-  title: "About Us — A Real Estate Consultancy in Borivali East",
+export const metadata = pageMetadata({
+  title: `About ${siteConfig.name}, Borivali East`,
   description: `${siteConfig.name} is a Mumbai real estate consultancy founded by ${siteConfig.founder.name}. Our purpose, values, and how we work.`,
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+  image: "/images/team/founder.jpg",
+  imageAlt: `${siteConfig.founder.name}, ${siteConfig.founder.role} of ${siteConfig.name}`,
+});
 
 const PILLARS = [
   { label: "Our purpose", body: brandStrategy.purpose },
@@ -24,6 +27,7 @@ const PILLARS = [
 export default function AboutPage() {
   return (
     <>
+      <FounderJsonLd />
       <PageHeader
         eyebrow="About us"
         title="We guide. You decide."

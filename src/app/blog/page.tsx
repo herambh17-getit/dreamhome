@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHeader } from "@/components/page-header";
 import { Section } from "@/components/section";
 import { BlogCard } from "@/components/blog-card";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { getBlogPosts } from "@/lib/queries";
 
-export const metadata: Metadata = {
-  title: "Property Insights & Guides for Mumbai Buyers",
+export const metadata = pageMetadata({
+  title: "Mumbai Property Guides & Insights",
   description:
     "Practical guides on buying, selling, renting and investing in Mumbai property — RERA, due diligence, society redevelopment and NRI purchases. No hype.",
-  alternates: { canonical: "/blog" },
-};
+  path: "/blog",
+});
 
 export default async function BlogPage() {
   const posts = await getBlogPosts();

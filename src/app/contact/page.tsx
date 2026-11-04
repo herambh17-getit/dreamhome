@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHeader } from "@/components/page-header";
 import { ContactSection } from "@/components/home/contact-section";
 import { siteConfig } from "@/lib/site-config";
 
-export const metadata: Metadata = {
-  title: "Contact a Property Consultant in Mumbai",
-  description: `Speak to ${siteConfig.name} about buying, selling, renting or investing in Mumbai property. Based in ${siteConfig.contact.address.full}. No obligation.`,
-  alternates: { canonical: "/contact" },
-};
+export const metadata = pageMetadata({
+  title: `Contact ${siteConfig.name}, Mumbai`,
+  description: `Call, WhatsApp or visit ${siteConfig.name} in ${siteConfig.contact.address.locality}, Mumbai to buy, sell, rent or invest in property. Honest advice, no obligation.`,
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (

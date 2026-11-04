@@ -47,7 +47,11 @@ export function PropertyCard({
         {cover ? (
           <Image
             src={cover}
-            alt=""
+            alt={`${
+              property.configuration === property.propertyType
+                ? property.propertyType
+                : `${property.configuration} ${property.propertyType.toLowerCase()}`
+            } in ${property.location}`}
             fill
             priority={priority}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

@@ -36,7 +36,7 @@ export function LocationsSection({ locations }: { locations: Location[] }) {
                 {location.image && (
                   <Image
                     src={location.image}
-                    alt=""
+                    alt={`${location.name}, Mumbai`}
                     fill
                     sizes={
                       i === 0

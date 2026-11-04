@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { isSampleRecord } from "@/lib/placeholder";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import {
@@ -46,17 +48,15 @@ export async function generateMetadata(
 
   const title = `${property.configuration} in ${property.location} — ${formatListingPrice(property)}`;
 
-  return {
+  return pageMetadata({
     title,
-    description: property.description.slice(0, 155),
-    alternates: { canonical: `/properties/${property.slug}` },
-    openGraph: {
-      title,
-      description: property.description.slice(0, 155),
-      type: "article",
-      images: property.gallery.length ? [property.gallery[0]] : undefined,
-    },
-  };
+    description: property.description,
+    path: `/properties/${property.slug}`,
+    image: property.gallery[0],
+    imageAlt: `${property.configuration} in ${property.location}`,
+    // Sample listings stay out of search until real listings replace them.
+    noindex: isSampleRecord(property),
+  });
 }
 
 export default async function PropertyPage(

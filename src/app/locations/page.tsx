@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { PageHeader } from "@/components/page-header";
 import { LocationsSection } from "@/components/home/locations-section";
 import { getLocations } from "@/lib/queries";
 
-export const metadata: Metadata = {
-  title: "Property Locations — Mumbai Western Suburbs",
+export const metadata = pageMetadata({
+  title: "Property Locations in Mumbai",
   description:
-    "Borivali, Kandivali, Malad, Goregaon and Andheri — local guides to Mumbai's western suburbs, with indicative rates, connectivity and available property.",
-  alternates: { canonical: "/locations" },
-};
+    "Local guides to Borivali, Kandivali, Malad, Goregaon and Andheri — indicative rates, connectivity and available property in Mumbai's western suburbs.",
+  path: "/locations",
+});
 
 export default async function LocationsPage() {
   const locations = await getLocations();

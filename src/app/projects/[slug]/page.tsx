@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { isSampleRecord } from "@/lib/placeholder";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { CheckCircle2, ShieldQuestion } from "lucide-react";
@@ -23,11 +25,15 @@ export async function generateMetadata(
   const project = await getProjectBySlug(slug);
   if (!project) return { title: "Project not found" };
 
-  return {
+  return pageMetadata({
     title: `${project.name} — ${project.location}`,
-    description: project.description.slice(0, 155),
-    alternates: { canonical: `/projects/${project.slug}` },
-  };
+    description: project.description,
+    path: `/projects/${project.slug}`,
+    image: project.gallery[0],
+    imageAlt: `${project.name}, ${project.location}`,
+    // Sample projects stay out of search until real details replace them.
+    noindex: isSampleRecord(project),
+  });
 }
 
 export default async function ProjectPage(props: PageProps<"/projects/[slug]">) {

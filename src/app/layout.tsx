@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { WhatsAppFab } from "@/components/whatsapp-fab";
 import { OrganizationJsonLd } from "@/components/seo/json-ld";
 import { siteConfig, seoKeywords } from "@/lib/site-config";
+import { DEFAULT_OG_IMAGE } from "@/lib/seo";
 import "./globals.css";
 
 /**
@@ -30,19 +31,22 @@ export const metadata: Metadata = {
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
-  alternates: { canonical: "/" },
+  // Canonical and Open Graph URLs are set per page via `pageMetadata()` —
+  // a layout-level canonical would be inherited by any page that forgot to
+  // set its own, silently marking it a duplicate of the homepage.
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: siteConfig.url,
     siteName: siteConfig.name,
     title: `${siteConfig.name} | Real Estate Consultant in Mumbai`,
     description: siteConfig.shortDescription,
+    images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} | Real Estate Consultant in Mumbai`,
     description: siteConfig.shortDescription,
+    images: [DEFAULT_OG_IMAGE],
   },
   robots: {
     index: true,

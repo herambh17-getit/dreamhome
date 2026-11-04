@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { CheckCircle2 } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
@@ -8,9 +9,9 @@ import { ServiceIcon } from "@/components/service-icon";
 import { ButtonLink } from "@/components/ui/button";
 import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
-import { FaqJsonLd } from "@/components/seo/json-ld";
+import { FaqJsonLd, ServiceJsonLd } from "@/components/seo/json-ld";
 import { getFaqs } from "@/lib/queries";
-import { practiceAreas, services, whatsappLink } from "@/lib/site-config";
+import { practiceAreas, services, siteConfig, whatsappLink } from "@/lib/site-config";
 import { serviceDetails } from "@/data/service-details";
 
 /** Both the four core services and the eight practice areas live at /services/*. */
@@ -40,11 +41,16 @@ export async function generateMetadata(
   const service = findService(slug);
   if (!service) return { title: "Service not found" };
 
-  return {
+  return pageMetadata({
     title: `${service.title} in Mumbai`,
-    description: service.summary,
-    alternates: { canonical: `/services/${slug}` },
-  };
+    // The summary alone runs ~80 characters; adding the detail gives search
+    // results a fuller, still-accurate snippet.
+    description:
+      service.description === service.summary
+        ? `${service.summary} ${siteConfig.name} — real estate consultants in Borivali East, Mumbai.`
+        : `${service.summary} ${service.description}`,
+    path: `/services/${slug}`,
+  });
 }
 
 export default async function ServicePage(
@@ -64,6 +70,11 @@ export default async function ServicePage(
 
   return (
     <>
+      <ServiceJsonLd
+        name={service.title}
+        description={service.description}
+        slug={slug}
+      />
       <PageHeader
         eyebrow="Service"
         title={service.title}

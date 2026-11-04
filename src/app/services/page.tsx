@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
@@ -8,12 +8,12 @@ import { ServicesSection } from "@/components/home/services-section";
 import { ServiceIcon } from "@/components/service-icon";
 import { practiceAreas } from "@/lib/site-config";
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
   title: "Real Estate Services in Mumbai",
   description:
-    "Property buying, selling, renting and consultation across Mumbai's western suburbs — plus NRI services, society redevelopment, legal and documentation, investment advisory and property management.",
-  alternates: { canonical: "/services" },
-};
+    "Buying, selling, renting and property consultation in Mumbai's western suburbs — plus NRI services, redevelopment, legal paperwork and investment advice.",
+  path: "/services",
+});
 
 export default function ServicesPage() {
   return (

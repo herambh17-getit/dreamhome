@@ -72,9 +72,12 @@ export function Hero({ locations }: { locations: Location[] }) {
             </p>
           </motion.div>
 
+          {/* The H1 is the page's LCP element, so it must be visible in the
+              server HTML: slide only, never fade in from opacity 0 (which
+              would hold LCP back until hydration). */}
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 24 }}
+            animate={{ y: 0 }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.08 }}
             className="mt-6 text-balance text-4xl leading-[1.05] text-white sm:text-6xl lg:text-7xl"
           >
@@ -84,8 +87,8 @@ export function Hero({ locations }: { locations: Location[] }) {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 24 }}
+            animate={{ y: 0 }}
             transition={{ duration: 0.7, ease: EASE, delay: 0.16 }}
             className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-white/85 sm:text-lg"
           >
