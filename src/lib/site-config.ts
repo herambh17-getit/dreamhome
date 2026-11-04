@@ -65,7 +65,7 @@ export const siteConfig = {
   google: {
     rating: 4.9,
     reviewCount: 25,
-    profileUrl: "",
+    profileUrl: "https://share.google/zCtJJkIpltB7TBwlZ",
     placeId: "",
   },
 
