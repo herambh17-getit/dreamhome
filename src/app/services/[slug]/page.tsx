@@ -13,6 +13,7 @@ import { FaqJsonLd, ServiceJsonLd } from "@/components/seo/json-ld";
 import { getFaqs } from "@/lib/queries";
 import { practiceAreas, services, siteConfig, whatsappLink } from "@/lib/site-config";
 import { serviceDetails } from "@/data/service-details";
+import { serviceGuides } from "@/data/service-guides";
 
 /** Both the four core services and the eight practice areas live at /services/*. */
 function findService(slug: string) {
@@ -63,16 +64,26 @@ export default async function ServicePage(
   const detail = serviceDetails[slug];
   const allFaqs = await getFaqs();
 
-  // Show only FAQs relevant to this service, when a category is mapped.
-  const faqs = detail?.faqCategory
-    ? allFaqs.filter((f) => f.category === detail.faqCategory)
-    : [];
+  const guide = serviceGuides[slug];
+
+  // Service-specific questions first, then the shared FAQs for this
+  // service's category (when one is mapped).
+  const faqs = [
+    ...(guide?.faqs ?? []).map((f, i) => ({
+      id: `${slug}-${i}`,
+      category: service.title,
+      ...f,
+    })),
+    ...(detail?.faqCategory
+      ? allFaqs.filter((f) => f.category === detail.faqCategory)
+      : []),
+  ];
 
   return (
     <>
       <ServiceJsonLd
         name={service.title}
-        description={service.description}
+        description={guide?.summary ?? service.description}
         slug={slug}
       />
       <PageHeader
@@ -91,6 +102,19 @@ export default async function ServicePage(
             <span className="inline-flex size-14 items-center justify-center rounded-2xl bg-brand-indigo-50 text-primary">
               <ServiceIcon name={service.icon} className="size-7" />
             </span>
+
+            {/* Answer-first summary — what search snippets and AI
+                assistants quote for "what does <service> involve?" */}
+            {guide && (
+              <div className="mt-6 rounded-2xl border border-brand-gold/40 bg-brand-gold/5 p-6">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-600">
+                  In short
+                </p>
+                <p className="mt-2 text-pretty leading-relaxed text-brand-indigo-900">
+                  {guide.summary}
+                </p>
+              </div>
+            )}
 
             <p className="mt-6 text-pretty text-lg leading-relaxed text-foreground/85">
               {service.description}

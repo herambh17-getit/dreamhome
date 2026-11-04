@@ -81,6 +81,18 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col">
+        {/* Scroll-reveal content is server-rendered at opacity 0 and faded
+            in by JavaScript. If scripts don't run (blocked, failed, or a
+            non-JS crawler/screenshot tool), show everything instead of a
+            page that looks empty below the hero. */}
+        <noscript>
+          <style
+            dangerouslySetInnerHTML={{
+              __html:
+                '[style*="opacity:0"]{opacity:1!important;transform:none!important}',
+            }}
+          />
+        </noscript>
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-100 focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
