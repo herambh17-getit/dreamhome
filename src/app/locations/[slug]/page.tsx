@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
-import { LocalityJsonLd } from "@/components/seo/json-ld";
+import { FaqJsonLd, LocalityJsonLd } from "@/components/seo/json-ld";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle2, TrainFront } from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronDown, MapPin, TrainFront } from "lucide-react";
+import { locationGuides } from "@/data/location-guides";
 import { PageHeader } from "@/components/page-header";
 import { Section, SectionHeader } from "@/components/section";
 import { PropertyCard } from "@/components/property/property-card";
@@ -40,15 +42,31 @@ export default async function LocationPage(
   const location = await getLocationBySlug(slug);
   if (!location) notFound();
 
-  const properties = await getProperties({ location: slug });
+  const [properties, allLocations] = await Promise.all([
+    getProperties({ location: slug }),
+    getLocations(),
+  ]);
+  const guide = locationGuides[slug];
+  const nearby = (guide?.nearby ?? [])
+    .map((s) => allLocations.find((l) => l.slug === s))
+    .filter((l): l is NonNullable<typeof l> => Boolean(l));
 
   return (
     <>
       <LocalityJsonLd
         name={location.name}
         slug={location.slug}
-        description={location.description}
+        description={guide?.summary ?? location.description}
       />
+      {guide && guide.faqs.length > 0 && (
+        <FaqJsonLd
+          faqs={guide.faqs.map((f, i) => ({
+            id: `${slug}-${i}`,
+            category: location.name,
+            ...f,
+          }))}
+        />
+      )}
       <PageHeader
         eyebrow="Location"
         title={`Property in ${location.name}`}
@@ -81,6 +99,19 @@ export default async function LocationPage(
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr] lg:gap-16">
           <div>
+            {/* Answer-first summary: what search snippets and AI assistants
+                quote when someone asks "is <suburb> a good place to buy?" */}
+            {guide && (
+              <div className="mb-10 rounded-2xl border border-brand-gold/40 bg-brand-gold/5 p-6">
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-600">
+                  In short
+                </p>
+                <p className="mt-2 text-pretty leading-relaxed text-brand-indigo-900">
+                  {guide.summary}
+                </p>
+              </div>
+            )}
+
             <h2 className="text-2xl text-brand-indigo-900">
               About {location.name}
             </h2>
@@ -125,6 +156,86 @@ export default async function LocationPage(
                 ))}
               </ul>
             </section>
+
+            {guide && (
+              <section className="mt-10">
+                <h2 className="text-xl text-brand-indigo-900">
+                  Neighbourhoods in {location.name}
+                </h2>
+                <div className="mt-4 grid gap-4 sm:grid-cols-2">
+                  {guide.neighbourhoods.map((group) => (
+                    <div
+                      key={group.side}
+                      className="rounded-2xl border border-border bg-card p-5"
+                    >
+                      <h3 className="text-base font-semibold text-brand-indigo-900">
+                        {group.side}
+                      </h3>
+                      <ul className="mt-3 space-y-3">
+                        {group.places.map((p) => (
+                          <li key={p.name} className="flex items-start gap-2.5">
+                            <MapPin
+                              className="mt-0.5 size-4 shrink-0 text-brand-gold-600"
+                              aria-hidden
+                            />
+                            <span className="text-sm text-foreground/80">
+                              <span className="font-semibold text-brand-indigo-900">
+                                {p.name}
+                              </span>{" "}
+                              — {p.note}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {guide && guide.faqs.length > 0 && (
+              <section className="mt-10">
+                <h2 className="text-xl text-brand-indigo-900">
+                  {location.name}: common questions
+                </h2>
+                {/* Native <details>: answers are in the HTML for crawlers and
+                    AI assistants, and work without JavaScript. */}
+                <div className="mt-4 divide-y divide-border rounded-2xl border border-border bg-card">
+                  {guide.faqs.map((f, i) => (
+                    <details key={f.question} className="group p-5" open={i === 0}>
+                      <summary className="flex cursor-pointer list-none items-start justify-between gap-4 font-semibold text-brand-indigo-900 [&::-webkit-details-marker]:hidden">
+                        <h3 className="text-base">{f.question}</h3>
+                        <ChevronDown
+                          className="mt-0.5 size-5 shrink-0 text-muted-foreground transition-transform group-open:rotate-180"
+                          aria-hidden
+                        />
+                      </summary>
+                      <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground">
+                        {f.answer}
+                      </p>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {nearby.length > 0 && (
+              <section className="mt-10">
+                <h2 className="text-xl text-brand-indigo-900">Also consider</h2>
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {nearby.map((n) => (
+                    <Link
+                      key={n.slug}
+                      href={`/locations/${n.slug}`}
+                      className="inline-flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm font-medium text-brand-indigo-900 transition-colors hover:border-primary hover:bg-brand-indigo-50"
+                    >
+                      Property in {n.name}
+                      <ArrowRight className="size-3.5" aria-hidden />
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:h-fit">

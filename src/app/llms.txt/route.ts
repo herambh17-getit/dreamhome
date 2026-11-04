@@ -1,4 +1,5 @@
 import { locations } from "@/data/locations";
+import { locationGuides } from "@/data/location-guides";
 import { blogPosts } from "@/data/blog";
 import { practiceAreas, services, siteConfig } from "@/lib/site-config";
 
@@ -34,7 +35,7 @@ ${services.map((s) => `- [${s.title}](${u}/services/${s.slug}): ${s.summary}`).j
 ${practiceAreas.map((p) => `- [${p.title}](${u}/services/${p.slug}): ${p.summary}`).join("\n")}
 
 ## Areas served
-${locations.map((l) => `- [Property in ${l.name}, Mumbai](${u}/locations/${l.slug}): ${l.tagline}.`).join("\n")}
+${locations.map((l) => `- [Property in ${l.name}, Mumbai](${u}/locations/${l.slug}): ${locationGuides[l.slug]?.summary ?? `${l.tagline}.`}`).join("\n")}
 
 ## Guides
 ${blogPosts.map((p) => `- [${p.title}](${u}/blog/${p.slug}): ${p.excerpt}`).join("\n")}
