@@ -1,10 +1,12 @@
+import Link from "next/link";
 import { Fragment, type ReactNode } from "react";
 
 /**
  * Minimal Markdown renderer for blog content.
  *
  * Supports the subset the posts actually use: `##`/`###` headings, unordered
- * and ordered lists, `**bold**`, and paragraphs.
+ * and ordered lists, `**bold**`, `[links](/path)` (same-site paths and https
+ * only — see LINK below), and paragraphs.
  *
  * Deliberately does NOT use `dangerouslySetInnerHTML`. Blog bodies will
  * eventually come from the CMS, i.e. from a database row an admin can edit —
@@ -12,8 +14,8 @@ import { Fragment, type ReactNode } from "react";
  * account into stored XSS against every reader. Everything here goes through
  * React's escaping.
  *
- * If the content model ever needs images, tables or links, reach for a real
- * Markdown pipeline with sanitisation rather than growing this.
+ * If the content model ever needs images or tables, reach for a real
+ * Markdown pipeline with sanitisation rather than growing this further.
  */
 export function Prose({ content }: { content: string }) {
   return (
@@ -126,9 +128,20 @@ function parseBlocks(content: string): ReactNode[] {
   return blocks;
 }
 
-/** Renders `**bold**` spans. Text is escaped by React, never injected. */
+/**
+ * Matches `[text](href)` where href is either a same-site path ("/about" —
+ * but never "//host", which browsers treat as another site) or an https URL.
+ * Anything else — `javascript:`, `data:`, plain http — is left as literal
+ * text, so a careless CMS edit can't turn into a script link.
+ */
+const LINK = /\[([^\]]+)\]\((\/(?!\/)[^)\s]*|https:\/\/[^)\s]+)\)/;
+
+/**
+ * Renders `**bold**` and `[links](/path)` spans. Text is escaped by React,
+ * never injected.
+ */
 function inline(text: string): ReactNode[] {
-  const parts = text.split(/(\*\*[^*]+\*\*)/g);
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)\s]+\))/g);
 
   return parts.filter(Boolean).map((part, i) => {
     const bold = /^\*\*([^*]+)\*\*$/.exec(part);
@@ -139,6 +152,29 @@ function inline(text: string): ReactNode[] {
         </strong>
       );
     }
+
+    const link = LINK.exec(part);
+    if (link && link[0] === part) {
+      const [, label, href] = link;
+      const className =
+        "font-medium text-primary underline underline-offset-2 hover:text-brand-indigo-900";
+      return href.startsWith("/") ? (
+        <Link key={i} href={href} className={className}>
+          {label}
+        </Link>
+      ) : (
+        <a
+          key={i}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={className}
+        >
+          {label}
+        </a>
+      );
+    }
+
     return <Fragment key={i}>{part}</Fragment>;
   });
 }
