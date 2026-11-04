@@ -38,8 +38,12 @@ export function directionsUrl(): string {
   }`;
 }
 
-/** Opens Google's "write a review" dialog. Needs a Place ID. */
+/**
+ * Opens Google's "write a review" dialog. Prefers the owner's official
+ * review link from the Business Profile; falls back to the Place ID.
+ */
 export function writeReviewUrl(): string | null {
+  if (siteConfig.google.reviewUrl) return siteConfig.google.reviewUrl;
   const id = placeId();
   return id ? `https://search.google.com/local/writereview?placeid=${id}` : null;
 }
