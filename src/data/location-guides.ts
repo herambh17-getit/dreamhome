@@ -74,7 +74,7 @@ export const locationGuides: Record<string, LocationGuide> = {
       {
         question: "Which Metro lines serve Borivali?",
         answer:
-          "Metro Line 7 runs along the Western Express Highway on the east side, with stations including Rashtriya Udyan, Devipada and Magathane. Metro Line 2A runs along Link Road on the west side, with stations including Eksar, Borivali West and Shimpoli. Borivali railway station is on the Western Line.",
+          "Metro Line 7 runs along the Western Express Highway on the east side, with stations including Rashtriya Udyan, Devipada and Magathane. Metro Line 2A runs along Link Road on the west side, with stations including Eksar and Borivali West. Borivali railway station is on the Western Line.",
       },
       {
         question: "Is Borivali good for families?",
@@ -262,7 +262,7 @@ export const locationGuides: Record<string, LocationGuide> = {
       {
         question: "Which Metro lines serve Goregaon?",
         answer:
-          "Metro Line 7 runs along the Western Express Highway through Goregaon East, with stations including Aarey and Goregaon East. Metro Line 2A runs along Link Road through Goregaon West, with stations including Goregaon West and Pahadi Goregaon. Goregaon railway station is on the Western Line and is also connected to the Harbour Line.",
+          "Metro Line 7 runs along the Western Express Highway through Goregaon East, with stations including Aarey and Goregaon East. Metro Line 2A runs along Link Road through Goregaon West, with stations including Goregaon West. Goregaon railway station is on the Western Line and is also connected to the Harbour Line.",
       },
       {
         question: "Is Goregaon East or Goregaon West better?",

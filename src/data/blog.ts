@@ -319,7 +319,7 @@ Kandivali's character depends heavily on the pocket. **Thakur Village** and **Lo
 Both have their own Western Line station and sit on the Western Express Highway. The Metro changed the picture for both:
 
 - **Metro Line 7** runs along the Western Express Highway through Borivali East (Rashtriya Udyan, Devipada, Magathane) and Kandivali East (Poisar, Akurli).
-- **Metro Line 2A** runs along Link Road through Borivali West (Eksar, Borivali West, Shimpoli) and Kandivali West (Kandivali West, Dahanukarwadi).
+- **Metro Line 2A** runs along Link Road through Borivali West (stations including Eksar and Borivali West) and Kandivali West (Kandivali West, Dahanukarwadi).
 
 Kandivali is one station closer to Malad, Goregaon and Andheri. If both parents commute south every day, that difference adds up over a year. If one works from home or in the northern suburbs, it barely matters.
 
@@ -621,7 +621,7 @@ Living on the same side of the railway line as your office matters more than whi
 Both are well served:
 
 - **Western Line** stations at Malad and Goregaon. Goregaon station is also connected to the Harbour Line.
-- **Metro Line 2A** along Link Road on the west side — Malad West, Valnai and Lower Malad in Malad; Goregaon West and Pahadi Goregaon in Goregaon.
+- **Metro Line 2A** along Link Road on the west side — Malad West, Valnai and Lower Malad in Malad; Goregaon West in Goregaon.
 - **Metro Line 7** along the Western Express Highway on the east side — Kurar and Dindoshi in Malad; Aarey and Goregaon East in Goregaon.
 
 ## Neighbourhoods
@@ -812,6 +812,181 @@ Prevention is easier than a complaint:
 - Weigh the risk honestly — our comparison of [under-construction and ready-to-move](/blog/under-construction-vs-ready-to-move-the-honest-comparison) homes covers it.
 
 Our guide to [OC, CC and RERA](/blog/oc-cc-and-rera-what-they-mean-when-buying-a-flat-in-mumbai) explains the documents that matter. If you are weighing an under-construction purchase, a [property consultation](/services/property-consultation) before you commit is the cheapest protection there is.`,
+  },
+  {
+    id: "post-016",
+    slug: "resale-flat-society-transfer-process-mumbai",
+    title: "Buying a resale flat in Mumbai: the society transfer process",
+    excerpt:
+      "Registering the sale is only half of it. How membership, the share certificate and the utilities move into your name — and what to check first.",
+    category: "Buying",
+    author: "Mr. Nayan Jomraj",
+    publishedAt: "2026-11-05",
+    readingMinutes: 6,
+    image: "/images/properties/mumbai-towers.jpg",
+    tags: ["Resale", "Society", "Legal", "Buying"],
+    featured: false,
+    content: `Most flats in Mumbai sit inside a cooperative housing society. When you buy a resale flat, you are buying two things: the flat itself, and the seller's membership and shares in the society. Registering the sale agreement transfers the first. The second needs its own process — and if it is skipped, you can find yourself owning a flat in a building where you are not a member.
+
+## The short answer
+
+Before you buy, see the **share certificate**, a **society NOC** for the sale, and proof that **dues are clear**. After registration, apply to the society for **membership transfer** so the share certificate is endorsed in your name, then move the **electricity, gas and property tax** records across.
+
+## Before you agree to buy
+
+Ask the seller for:
+
+- the **original share certificate** in their name
+- a **no-objection certificate** from the society for the sale
+- a letter confirming **maintenance and other society dues** are paid up to date
+- the society's **bye-laws** or rules on transfer and any transfer charges
+- for a newer building, the **occupation certificate**
+
+Also ask the managing committee — not just the seller — whether **redevelopment** is under discussion, whether there are any **disputes or litigation**, and what the **monthly maintenance** is. Our [verification checklist](/blog/how-to-verify-a-property-before-you-buy-in-mumbai) covers the title side.
+
+## Registration
+
+The sale agreement is stamped and registered at the sub-registrar's office. After registration you receive the registered document and an **Index II** extract, which records the transaction. Keep both safely — you will need them for the society, the utilities and, one day, your own sale. Our guide to [stamp duty and registration](/blog/stamp-duty-and-registration-in-mumbai-explained) explains that step.
+
+## Transferring the society membership
+
+After registration, the buyer applies to the society to become a member in place of the seller. Typically this involves:
+
+1. A **membership application** from the buyer and a **resignation** or transfer application from the seller, on the society's prescribed forms.
+2. A copy of the **registered agreement** and Index II.
+3. Payment of any **transfer charges** permitted under the society's bye-laws.
+4. Approval at a **managing committee** meeting.
+5. The **share certificate endorsed** in the buyer's name, and the society's register updated.
+
+Ask the society secretary for its exact checklist at the start — societies differ, and a missing signature can hold things up for a month.
+
+## Moving the utilities and taxes
+
+Once the society transfer is done, change the name on:
+
+- the **electricity** connection, with your supplier
+- **piped gas**, if connected
+- **property tax** records with the municipal corporation
+- the **water** account, where it is billed separately
+
+These all ask for the registered agreement and usually the society's letter, which is another reason to finish the society transfer promptly.
+
+## If you have a home loan
+
+Your lender will usually want the society NOC and an undertaking from the society to note the bank's interest — sometimes called a **lien letter**. Ask the society early so it doesn't delay disbursement.
+
+## The mistakes we see most
+
+1. Paying a large advance before seeing the original share certificate.
+2. Assuming dues are clear because the seller says so.
+3. Registering the sale and never completing the society transfer.
+4. Not asking about redevelopment before buying in an older building.
+
+Our [legal and documentation](/services/legal-documentation) service coordinates the whole sequence — title, registration and society transfer — so nothing is left half-done.`,
+  },
+  {
+    id: "post-017",
+    slug: "ready-reckoner-rate-mumbai-explained",
+    title: "Ready reckoner rate in Mumbai, explained",
+    excerpt:
+      "What the ready reckoner rate is, why it sets your stamp duty even when you pay less, how it can affect tax, and where to look up the current rate.",
+    category: "Buying",
+    author: "Mr. Nayan Jomraj",
+    publishedAt: "2026-11-05",
+    readingMinutes: 5,
+    image: "/images/properties/mumbai-skyline.jpg",
+    tags: ["Ready Reckoner", "Stamp Duty", "Tax", "Buying"],
+    featured: false,
+    content: `If you are buying or selling property in Mumbai, someone will mention the "ready reckoner rate" — usually when stamp duty comes up. It is a simple idea with consequences for both buyers and sellers. We have left out actual rates: they differ street by street and are revised by the state, so look up the current figure for your property on the official site linked below.
+
+## The short answer
+
+The ready reckoner rate is the **government's reference value** for property in a given location. Stamp duty is charged on the **higher of** this value and your agreement price. If you buy below the ready reckoner value, you still pay stamp duty on the ready reckoner value — and both buyer and seller can face income tax consequences.
+
+## What it is
+
+The Department of Registration and Stamps, Maharashtra publishes ready reckoner rates — officially the **Annual Statement of Rates** — for every zone and sub-zone of the state, by type of property: flats, offices, shops, industrial and open land. They are typically revised once a year.
+
+The rate for a specific flat can also be adjusted for factors such as the floor it is on, the age of the building and the amenities, following the rules published with the rates.
+
+## Why it matters when you buy
+
+**Stamp duty** is calculated on the higher of the agreement value and the ready reckoner value. So:
+
+- if you agree a price **above** the ready reckoner value, stamp duty is charged on your price
+- if you agree a price **below** it, stamp duty is charged on the ready reckoner value anyway
+
+This is why under-declaring the price in the agreement never saves stamp duty. Our guide to [stamp duty and registration](/blog/stamp-duty-and-registration-in-mumbai-explained) covers the rest of that cost.
+
+## Why it matters for tax
+
+Where a property is sold for less than its ready reckoner value beyond a permitted margin, income tax law can treat the ready reckoner value as the sale price for the seller, and the difference as income for the buyer. Older buildings and distressed sales are where this comes up most. If your agreed price is below the ready reckoner value, speak to a chartered accountant before you sign.
+
+## Ready reckoner rate is not market price
+
+The ready reckoner value is a reference, not a valuation. In many parts of the western suburbs, actual market prices are different from it — sometimes higher, sometimes lower for older or poorly maintained buildings. Don't use it to decide what a flat is worth. Compare recent registered transactions for similar flats nearby instead.
+
+## Where to look it up
+
+Use the **official ready reckoner tool** of the Department of Registration and Stamps at [igrmaharashtra.gov.in](https://igrmaharashtra.gov.in). Select the district, taluka, village or zone and sub-zone, and the property type, to see the current rate. If you are unsure which zone a building falls in, the sub-registrar's office or your lawyer can confirm it.
+
+Want the stamp duty and ready reckoner figures for a specific property before you agree a price? Our [legal and documentation](/services/legal-documentation) team works them out as part of every purchase.`,
+  },
+  {
+    id: "post-018",
+    slug: "buying-a-shop-or-office-in-mumbai-checklist",
+    title: "Buying a shop or office in Mumbai: what to check first",
+    excerpt:
+      "Commercial property isn't a bigger flat. Permitted use, approvals, tenancy, GST and society rules — the checks that matter before you buy.",
+    category: "Commercial",
+    author: "Mr. Nayan Jomraj",
+    publishedAt: "2026-11-05",
+    readingMinutes: 6,
+    image: "/images/properties/mumbai-city.jpg",
+    tags: ["Commercial", "Office", "Shop", "Investment"],
+    featured: false,
+    content: `Buying a shop or office is not the same as buying a bigger flat. The checks overlap, but commercial property has its own questions — about what the space may legally be used for, who the tenant is, and how easily you could sell it again.
+
+## The short answer
+
+Confirm the space is **approved for the use you intend**, check the **title and approvals** just as you would for a flat, read any **existing lease** carefully if it is tenanted, and judge the purchase on **realistic rent and resale demand**, not on the asking price.
+
+## 1. Permitted use
+
+The first question is what the space is legally approved for. A unit approved as an office may not be usable as a clinic, restaurant or retail shop without further permissions. Check the approved plans and occupation certificate, and ask your lawyer to confirm that your intended use is allowed. For a shop, trade and business licences depend on this too.
+
+## 2. Title and approvals
+
+Everything in our [property verification checklist](/blog/how-to-verify-a-property-before-you-buy-in-mumbai) applies: a title search with a written opinion, the occupation certificate for the building, and MahaRERA registration where the project falls under it — see our guide to [OC, CC and RERA](/blog/oc-cc-and-rera-what-they-mean-when-buying-a-flat-in-mumbai).
+
+## 3. The society or building rules
+
+Commercial units in mixed-use buildings are often subject to society or association rules on signage, operating hours, deliveries and what businesses are allowed. Read them before you commit — a restaurant or clinic can be blocked by rules that would never affect a flat.
+
+## 4. If the property is already tenanted
+
+A tenanted shop or office can produce income from day one, but you are also buying the lease:
+
+- read the **lease agreement**: rent, escalation, remaining period, lock-in, notice and renewal terms
+- confirm the **tenant pays on time** and the deposit held
+- check who is responsible for **maintenance, property tax and repairs**
+- understand what happens if the tenant leaves — how quickly could you re-let it?
+
+## 5. Taxes and costs
+
+Budget for **stamp duty and registration**, legal fees, and **GST** if you buy under construction. Rent from commercial property can also attract GST depending on the owner's circumstances. Get a chartered accountant's view before you buy, especially if you are buying as an investment.
+
+## 6. Location for the use, not just the address
+
+For a **shop**, footfall and frontage matter more than the building: main-road visibility, parking and the businesses around it. For an **office**, it is access — stations, Metro and roads — and the employment base nearby. In the western suburbs, Andheri East's SEEPZ, MIDC and Chakala belt has the deepest office market; our [Andheri guide](/locations/andheri) covers it.
+
+## 7. Exit
+
+Ask how easy it would be to sell. Smaller, well-located units in good buildings usually find buyers more easily than large or awkward floor plates. If the answer depends on finding one specific type of buyer, factor that into the price.
+
+## Our honest take
+
+Commercial property can be a good investment, but the margin for error is smaller and vacant months cost more. Run the numbers on realistic rent and realistic vacancy, not the best case. Our [investment advisory](/services/investment-advisory) service does exactly that before you commit.`,
   },
 ];
 
