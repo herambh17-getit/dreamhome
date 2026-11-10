@@ -10,8 +10,9 @@
  * links, `tel:` links and LocalBusiness schema, so a wrong value here
  * silently drops real leads.
  *
- * Still unconfirmed: postalCode and geo are inferred for Borivali East, not
- * verified. Check both before launch — geo drives the map pin.
+ * Address, coordinates and rating match the Google Business Profile
+ * (cid 8532071799736751479). Keep them in sync with it — Google compares the
+ * two, and the coordinates drive the map pin.
  */
 
 export const siteConfig = {
@@ -48,15 +49,16 @@ export const siteConfig = {
     whatsapp: "919819388390",
     email: "dreamproperties147@gmail.com",
     address: {
-      street: "Shop No 6, Thakkar Apartment, Near Universal High School",
+      street:
+        "Shop No. 6, B Wing, Thakkar Apartment, Ashokvan, Near Universal High School, Shiv Vallabh Road",
       locality: "Borivali East",
       region: "Maharashtra",
       city: "Mumbai",
       country: "IN",
       postalCode: "400066",
-      full: "Shop No 6, Thakkar Apartment, Near Universal High School, Borivali East, Mumbai, Maharashtra 400066",
+      full: "Shop No. 6, B Wing, Thakkar Apartment, Ashokvan, Near Universal High School, Shiv Vallabh Road, Borivali East, Mumbai, Maharashtra 400066",
     },
-    geo: { lat: 19.2307, lng: 72.8567 },
+    geo: { lat: 19.2409686, lng: 72.8667789 },
     hours: "Open all days, 9:00 AM – 10:00 PM",
   },
 
@@ -74,8 +76,8 @@ export const siteConfig = {
    * Find it at developers.google.com/maps/documentation/places/web-service/place-id
    */
   google: {
-    rating: 4.9,
-    reviewCount: 25,
+    rating: 4.8,
+    reviewCount: 26,
     profileUrl: "https://share.google/zCtJJkIpltB7TBwlZ",
     reviewUrl: "https://g.page/r/CXfVb9UYAmh2EAE/review",
     placeId: "ChIJg8DRKQux5zsRd9Vv1RgCaHY",

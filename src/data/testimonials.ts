@@ -4,8 +4,8 @@ import type { Testimonial } from "@/lib/types";
  * Client testimonials.
  *
  * These are published as genuine client feedback, confirmed by the business
- * owner as reflecting real, consented clients. The aggregate (4.9 across 25
- * Google reviews, per the client data sheet) is also real.
+ * owner as reflecting real, consented clients. The aggregate rating lives in
+ * siteConfig.google and mirrors the Google Business Profile.
  *
  * Keep this honest: only add entries here that reflect real clients who have
  * agreed to be quoted. For live, self-updating, independently verifiable

@@ -7,7 +7,7 @@ import type { Testimonial } from "@/lib/types";
 /**
  * Google Reviews.
  *
- * The aggregate (4.9 / 25) is real and comes from the client's data sheet.
+ * The aggregate rating comes from siteConfig.google (mirrors the Google profile).
  * Individual quotes come from `getTestimonials()`, which returns the curated,
  * owner-confirmed client testimonials, or live Google reviews when the Places
  * API is wired.

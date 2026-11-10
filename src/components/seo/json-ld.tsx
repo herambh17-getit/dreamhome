@@ -42,7 +42,7 @@ export function OrganizationJsonLd() {
         foundingDate: String(siteConfig.founded),
         image: `${siteConfig.url}/og-default.png`,
         logo: `${siteConfig.url}/images/brand/logo-icon.png`,
-        priceRange: "₹₹₹",
+        priceRange: "₹₹",
         address: {
           "@type": "PostalAddress",
           streetAddress: `${contact.address.street}, ${contact.address.locality}`,
@@ -92,6 +92,8 @@ export function OrganizationJsonLd() {
         sameAs: [
           ...Object.values(siteConfig.social),
           google.profileUrl,
+          // Canonical Google Maps link for the listing (stable, unlike share links).
+          "https://www.google.com/maps?cid=8532071799736751479",
         ].filter(Boolean),
         // MahaRERA agent registration, emitted only once a real number is set.
         ...(siteConfig.rera.agentNumber
