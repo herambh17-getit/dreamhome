@@ -1,4 +1,8 @@
+import Link from "next/link";
+import { Clock, MapPin } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
+import { mapEmbedSrc } from "@/lib/google-maps";
+import { GoogleBusinessCard } from "@/components/google-business-card";
 import { FounderJsonLd } from "@/components/seo/json-ld";
 import { PageHeader } from "@/components/page-header";
 import { AboutSection } from "@/components/home/about-section";
@@ -10,11 +14,27 @@ import { brandStrategy, brandVoice, siteConfig } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
   title: `About ${siteConfig.name}, Borivali East`,
-  description: `${siteConfig.name} is a Mumbai real estate consultancy founded by ${siteConfig.founder.name}. Our purpose, values, and how we work.`,
+  description: `${siteConfig.name} has advised Mumbai buyers, sellers and tenants from Borivali East since ${siteConfig.founded}. Founded by ${siteConfig.founder.name}. Our story, principles and office.`,
   path: "/about",
   image: "/images/team/founder.jpg",
   imageAlt: `${siteConfig.founder.name}, ${siteConfig.founder.role} of ${siteConfig.name}`,
 });
+
+/** The business's three working principles, in its own words. */
+const PRINCIPLES = [
+  {
+    title: "We say no to bad deals.",
+    body: "If a flat has an OC issue, a stuck NOC or a seller with a hidden loan, we'll tell you — even if it means losing our commission.",
+  },
+  {
+    title: "We quote carpet, not built-up.",
+    body: "You'll always know exactly what you're buying or renting.",
+  },
+  {
+    title: "We don't hide the brokerage.",
+    body: "Standard rate on a sale, one month's rent on a rental — written into the agreement before the token.",
+  },
+];
 
 const PILLARS = [
   { label: "Our purpose", body: brandStrategy.purpose },
@@ -29,11 +49,61 @@ export default function AboutPage() {
     <>
       <FounderJsonLd />
       <PageHeader
-        eyebrow="About us"
-        title="We guide. You decide."
-        description={siteConfig.description}
+        eyebrow={`About us · Since ${siteConfig.founded}`}
+        title="20 years, rooted in Borivali East."
+        description="We guide. You decide."
         breadcrumbs={[{ name: "About", href: "/about" }]}
       />
+
+      {/* Our story — the business's own account of its history. */}
+      <Section>
+        <div className="mx-auto max-w-3xl">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-600">
+            Our story
+          </p>
+          <div className="mt-4 space-y-5 text-pretty text-lg leading-relaxed text-foreground/85">
+            <p>
+              {siteConfig.name} opened in Borivali East in {siteConfig.founded}.
+              In the two decades since, Borivali has gone from the edge of the
+              city to one of Mumbai&apos;s most sought-after suburbs. Over that
+              stretch, we&apos;ve placed families in their first flats, helped
+              NRIs invest in rental homes, closed commercial deals for small
+              shop owners on Shiv Vallabh Road, and handled hundreds of
+              leave-and-licence agreements in buildings we now know better than
+              most owners do.
+            </p>
+            <p>
+              We work from a single office at Shop 6, Thakkar Apartment,
+              Ashokvan, Borivali East — a five-minute walk from Universal High
+              School. From there we work across Mumbai and the MMR, with our
+              deepest expertise in north Mumbai — Borivali East and West,{" "}
+              <Link
+                href="/locations/borivali/shantivan"
+                className="font-medium text-primary underline underline-offset-2"
+              >
+                Shantivan
+              </Link>
+              , Ashok Van, Nensey Colony, Magathane, Dahisar East, Kandivali
+              East including Thakur Village, Malad, Goregaon and Andheri — and
+              in South Mumbai.
+            </p>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-12 grid max-w-5xl gap-5 md:grid-cols-3">
+          {PRINCIPLES.map((p) => (
+            <div
+              key={p.title}
+              className="rounded-2xl border border-border bg-card p-7"
+            >
+              <h2 className="text-lg text-brand-indigo-900">{p.title}</h2>
+              <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground">
+                {p.body}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Section>
 
       <AboutSection />
 
@@ -122,6 +192,39 @@ export default function AboutPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </Section>
+
+      <Section tone="muted" id="office">
+        <SectionHeader
+          eyebrow="Our office"
+          title="Come and see us in Borivali East"
+          description="Walk in, call or WhatsApp — whichever suits you."
+        />
+        <div className="mx-auto mt-12 grid max-w-5xl gap-6 lg:grid-cols-2">
+          <div className="overflow-hidden rounded-2xl border border-border bg-card">
+            <iframe
+              title={`Google Map showing ${siteConfig.name} in ${siteConfig.contact.address.locality}`}
+              src={mapEmbedSrc()}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+              className="h-80 w-full border-0"
+            />
+          </div>
+          <div className="space-y-4">
+            <div className="rounded-2xl border border-border bg-card p-6">
+              <p className="flex items-start gap-3 text-sm text-foreground/85">
+                <MapPin className="mt-0.5 size-4 shrink-0 text-brand-gold-600" aria-hidden />
+                {siteConfig.contact.address.full}
+              </p>
+              <p className="mt-3 flex items-start gap-3 text-sm text-foreground/85">
+                <Clock className="mt-0.5 size-4 shrink-0 text-brand-gold-600" aria-hidden />
+                {siteConfig.contact.hours}
+              </p>
+            </div>
+            <GoogleBusinessCard />
           </div>
         </div>
       </Section>

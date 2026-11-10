@@ -7,6 +7,7 @@ import {
   getProperties,
 } from "@/lib/queries";
 import { isSampleRecord } from "@/lib/placeholder";
+import { microAreas } from "@/data/micro-areas";
 import { practiceAreas, services, siteConfig } from "@/lib/site-config";
 
 /**
@@ -57,6 +58,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // "property in <suburb>" searches, so they rank high here.
     ...locations.map((l) => ({
       url: `${base}/locations/${l.slug}`,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    })),
+
+    ...microAreas.map((a) => ({
+      url: `${base}/locations/${a.parent}/${a.slug}`,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),

@@ -15,14 +15,14 @@ export const faqs: Faq[] = [
     id: "faq-001",
     question: "What areas of Mumbai does Dream Home Properties cover?",
     answer:
-      "We work across the western suburbs — primarily Borivali, Kandivali, Malad, Goregaon and Andheri. That focus is deliberate. Knowing five suburbs street by street is more useful to you than claiming to know all of Mumbai.",
+      "We work across Mumbai and the MMR, with our deepest expertise in north Mumbai and South Mumbai. Our base is Borivali East, where we have worked since 2005, and we know the western suburbs — Dahisar, Borivali, Kandivali, Malad, Goregaon and Andheri — street by street.",
     category: "General",
   },
   {
     id: "faq-002",
     question: "Do you charge buyers a fee?",
     answer:
-      "Brokerage is discussed openly before you engage us, and it is confirmed in writing. You will know exactly what you are paying and what it covers before any money changes hands. If a fee structure is ever unclear to you, that is our failure, not yours.",
+      "We don't hide the brokerage. It is the standard rate on a sale and one month's rent on a rental, written into the agreement before any token is paid. You will know exactly what you are paying and what it covers before any money changes hands.",
     category: "General",
   },
   {

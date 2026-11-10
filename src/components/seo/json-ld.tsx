@@ -39,6 +39,7 @@ export function OrganizationJsonLd() {
         telephone: contact.phone,
         email: contact.email,
         slogan: siteConfig.tagline,
+        foundingDate: String(siteConfig.founded),
         image: `${siteConfig.url}/og-default.png`,
         logo: `${siteConfig.url}/images/brand/logo-icon.png`,
         priceRange: "₹₹₹",
@@ -83,8 +84,8 @@ export function OrganizationJsonLd() {
             "Saturday",
             "Sunday",
           ],
-          opens: "10:00",
-          closes: "21:30",
+          opens: "09:00",
+          closes: "22:00",
         },
         // Links the site to its Google Business Profile listing.
         hasMap: profileUrl(),

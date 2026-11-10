@@ -1,5 +1,6 @@
 import { locations } from "@/data/locations";
 import { locationGuides } from "@/data/location-guides";
+import { microAreas } from "@/data/micro-areas";
 import { blogPosts } from "@/data/blog";
 import { practiceAreas, services, siteConfig } from "@/lib/site-config";
 
@@ -20,7 +21,9 @@ export function GET() {
 
 > ${siteConfig.description}
 
-${siteConfig.name} is a ${siteConfig.businessType.toLowerCase()} based in ${contact.address.locality}, ${contact.address.city}, founded by ${founder.name}. It helps people buy, sell, rent and invest in residential and commercial property across Mumbai's western suburbs: ${siteConfig.serviceAreas.filter((a) => a !== "Mumbai").join(", ")}.
+${siteConfig.name} is a ${siteConfig.businessType.toLowerCase()} based in ${contact.address.locality}, ${contact.address.city}, founded by ${founder.name} in ${siteConfig.founded}. It helps people buy, sell, rent and lease residential and commercial property across Mumbai and the MMR, with its deepest expertise in north Mumbai (${siteConfig.serviceAreas.filter((a) => !["Mumbai", "South Mumbai"].includes(a)).join(", ")}) and South Mumbai.
+
+Brokerage: the standard rate on a sale and one month's rent on a rental, written into the agreement before any token is paid.
 
 ## Contact
 - Phone / WhatsApp: ${contact.phone}
@@ -36,6 +39,9 @@ ${practiceAreas.map((p) => `- [${p.title}](${u}/services/${p.slug}): ${p.summary
 
 ## Areas served
 ${locations.map((l) => `- [Property in ${l.name}, Mumbai](${u}/locations/${l.slug}): ${locationGuides[l.slug]?.summary ?? `${l.tagline}.`}`).join("\n")}
+
+## Neighbourhood guides
+${microAreas.map((a) => `- [Property in ${a.fullName}](${u}/locations/${a.parent}/${a.slug}): ${a.intro[0]}${a.priceBands ? ` Typical asking prices as of ${a.priceBands.asOf} — resale: ${a.priceBands.resale.map((b) => `${b.config} ${b.range}`).join(", ")}; rent: ${a.priceBands.rent.map((b) => `${b.config} ${b.range}`).join(", ")}.` : ""}`).join("\n")}
 
 ## Guides
 ${blogPosts.map((p) => `- [${p.title}](${u}/blog/${p.slug}): ${p.excerpt}`).join("\n")}

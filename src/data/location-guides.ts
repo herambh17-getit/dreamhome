@@ -19,7 +19,11 @@ export interface LocationGuide {
   /** 2–3 sentence answer to "should I look at property here?" */
   summary: string;
   /** Neighbourhoods people search for by name, grouped by side of the line. */
-  neighbourhoods: { side: string; places: { name: string; note: string }[] }[];
+  neighbourhoods: {
+    side: string;
+    /** `href` links a place to its own neighbourhood page, when it has one. */
+    places: { name: string; note: string; href?: string }[];
+  }[];
   faqs: { question: string; answer: string }[];
   /** Adjacent service areas, by slug, for "also consider" links. */
   nearby: string[];
@@ -36,6 +40,11 @@ export const locationGuides: Record<string, LocationGuide> = {
           {
             name: "National Park side",
             note: "Closest to Sanjay Gandhi National Park, with Rashtriya Udyan Metro station nearby.",
+          },
+          {
+            name: "Shantivan & Ashok Van",
+            note: "Quieter lanes off Shiv Vallabh Road, close to Universal High School and the National Park.",
+            href: "/locations/borivali/shantivan",
           },
           {
             name: "Devipada & Magathane",

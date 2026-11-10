@@ -179,9 +179,18 @@ export default async function LocationPage(
                               aria-hidden
                             />
                             <span className="text-sm text-foreground/80">
-                              <span className="font-semibold text-brand-indigo-900">
-                                {p.name}
-                              </span>{" "}
+                              {p.href ? (
+                                <Link
+                                  href={p.href}
+                                  className="font-semibold text-primary underline underline-offset-2 hover:text-brand-indigo-900"
+                                >
+                                  {p.name}
+                                </Link>
+                              ) : (
+                                <span className="font-semibold text-brand-indigo-900">
+                                  {p.name}
+                                </span>
+                              )}{" "}
                               — {p.note}
                             </span>
                           </li>

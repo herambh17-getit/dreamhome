@@ -18,7 +18,7 @@ export default async function LocationsPage() {
       <PageHeader
         eyebrow="Locations"
         title="The suburbs we know street by street"
-        description="We stay inside the western corridor on purpose. Knowing five suburbs properly is worth more to you than claiming to know all of Mumbai."
+        description="We work across Mumbai and the MMR, with our deepest expertise in north Mumbai and South Mumbai. These guides cover the western-suburb localities we know street by street."
         breadcrumbs={[{ name: "Locations", href: "/locations" }]}
       />
       <LocationsSection locations={locations} />

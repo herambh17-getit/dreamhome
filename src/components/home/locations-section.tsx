@@ -18,8 +18,8 @@ export function LocationsSection({ locations }: { locations: Location[] }) {
     <Section id="locations">
       <SectionHeader
         eyebrow="Where we work"
-        title="Five suburbs, known street by street"
-        description="We stay inside the western corridor on purpose. Knowing five suburbs properly is worth more to you than claiming to know all of Mumbai."
+        title="Local guides, from people who live the market"
+        description="We work across Mumbai and the MMR, with our deepest expertise in north Mumbai and South Mumbai. These guides cover the western-suburb localities we know street by street."
       />
 
       <RevealGroup className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

@@ -73,10 +73,11 @@ export function AboutSection() {
           <RevealItem>
             <div className="h-full rounded-2xl border border-border bg-card p-7">
               <p className="text-4xl font-extrabold text-brand-indigo-900">
-                {siteConfig.serviceAreas.length - 1}
+                {siteConfig.founded}
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
-                western suburbs we cover in depth — Borivali to Andheri
+                opened in Borivali East — advising Mumbai buyers, sellers and
+                tenants ever since
               </p>
             </div>
           </RevealItem>

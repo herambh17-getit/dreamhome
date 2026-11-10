@@ -57,7 +57,7 @@ export const siteConfig = {
       full: "Shop No 6, Thakkar Apartment, Near Universal High School, Borivali East, Mumbai, Maharashtra 400066",
     },
     geo: { lat: 19.2307, lng: 72.8567 },
-    hours: "Open all days, 10:00 AM – 9:30 PM",
+    hours: "Open all days, 9:00 AM – 10:00 PM",
   },
 
   /**
@@ -109,14 +109,25 @@ export const siteConfig = {
     ],
   },
 
+  /**
+   * Areas served. The first five are the localities with full guide pages
+   * (keep that order — the properties page lists the first five). The
+   * business works across Mumbai and the MMR, with its deepest expertise in
+   * north Mumbai and South Mumbai.
+   */
   serviceAreas: [
     "Borivali",
     "Kandivali",
     "Malad",
     "Goregaon",
     "Andheri",
+    "Dahisar",
+    "South Mumbai",
     "Mumbai",
   ],
+
+  /** Year the business opened in Borivali East. */
+  founded: 2005,
 
   social: {
     instagram: "https://www.instagram.com/dreamhomeproperties147/",
