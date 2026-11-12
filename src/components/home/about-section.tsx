@@ -22,7 +22,7 @@ export function AboutSection() {
             About us
           </p>
           <h2 className="mt-3 text-balance text-3xl leading-[1.15] text-brand-indigo-900 sm:text-4xl lg:text-[2.75rem]">
-            A consultancy, not a brokerage
+            Brokers with a consulting approach.
           </h2>
           <p className="mt-6 text-pretty leading-relaxed text-muted-foreground">
             {siteConfig.description}
