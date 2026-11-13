@@ -11,7 +11,7 @@
  */
 
 import { existsSync, mkdirSync, copyFileSync, readdirSync, writeFileSync } from "node:fs";
-import { join, extname, basename } from "node:path";
+import { join, extname } from "node:path";
 import { homedir } from "node:os";
 
 const DROP_DIR = process.env.DHP_ASSETS_DIR ?? join(homedir(), "dhp-assets");

@@ -4,7 +4,6 @@ import { isSampleRecord } from "@/lib/placeholder";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import {
-  BadgeCheck,
   Building2,
   CalendarClock,
   CheckCircle2,
@@ -246,8 +245,8 @@ export default async function PropertyPage(
           <aside className="lg:sticky lg:top-24 lg:h-fit">
             <div className="rounded-3xl border border-border bg-card p-6 shadow-sm">
               <Badge className="border-0 bg-brand-indigo-50 font-semibold text-primary">
-                <BadgeCheck className="size-3.5" aria-hidden />
-                Verified listing
+                <Building2 className="size-3.5" aria-hidden />
+                Listed by Dream Home Properties
               </Badge>
 
               <h2 className="mt-4 text-xl text-brand-indigo-900">

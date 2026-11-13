@@ -8,6 +8,7 @@ import { blogPosts as seedPosts } from "@/data/blog";
 import { faqs as seedFaqs } from "@/data/faqs";
 import { TESTIMONIALS } from "@/data/testimonials";
 import { filterProperties } from "@/lib/property-filters";
+import { visibleRecords } from "@/lib/placeholder";
 import type {
   BlogPost,
   Developer,
@@ -119,7 +120,37 @@ function filterSeed(list: Property[], f: PropertyFilters): Property[] {
   return filterProperties(list, f);
 }
 
+/*
+ * Public listing queries below pass every result through `visibleRecords`,
+ * which drops sample/placeholder records except on preview builds with
+ * SHOW_SAMPLE_LISTINGS=true (see lib/placeholder.ts). Filtering here — not
+ * in each page — means no page can forget the check. The `fetch*` functions
+ * are the raw reads and stay private to this module.
+ */
+
 export async function getProperties(
+  filters: PropertyFilters = {},
+): Promise<Property[]> {
+  return visibleRecords(await fetchProperties(filters));
+}
+
+export async function getPropertyBySlug(
+  slug: string,
+): Promise<Property | null> {
+  const property = await fetchPropertyBySlug(slug);
+  return property && visibleRecords([property]).length ? property : null;
+}
+
+export async function getFeaturedProperties(limit = 6): Promise<Property[]> {
+  return visibleRecords(await fetchFeaturedProperties(limit));
+}
+
+/** Slugs for `generateStaticParams`, limited to records visitors may see. */
+export async function getAllPropertySlugs(): Promise<string[]> {
+  return visibleRecords(await fetchPropertySlugRecords()).map((r) => r.slug);
+}
+
+async function fetchProperties(
   filters: PropertyFilters = {},
 ): Promise<Property[]> {
   if (!isSupabaseConfigured()) return filterSeed(seedProperties, filters);
@@ -162,7 +193,7 @@ export async function getProperties(
   }
 }
 
-export async function getPropertyBySlug(
+async function fetchPropertyBySlug(
   slug: string,
 ): Promise<Property | null> {
   if (!isSupabaseConfigured())
@@ -184,7 +215,7 @@ export async function getPropertyBySlug(
   }
 }
 
-export async function getFeaturedProperties(limit = 6): Promise<Property[]> {
+async function fetchFeaturedProperties(limit: number): Promise<Property[]> {
   if (!isSupabaseConfigured())
     return seedProperties.filter((p) => p.featured).slice(0, limit);
 
@@ -205,20 +236,26 @@ export async function getFeaturedProperties(limit = 6): Promise<Property[]> {
   }
 }
 
-/** Slugs for `generateStaticParams`. Seed slugs are the build-time floor. */
-export async function getAllPropertySlugs(): Promise<string[]> {
-  if (!isSupabaseConfigured()) return seedProperties.map((p) => p.slug);
+type SlugRecord = { slug: string; rera?: string; description?: string };
+
+/** Slug + the fields `isSampleRecord` needs. Seed slugs are the build-time floor. */
+async function fetchPropertySlugRecords(): Promise<SlugRecord[]> {
+  if (!isSupabaseConfigured()) return seedProperties;
 
   try {
     const supabase = await createClient();
     const { data, error } = await supabase
       .from("properties")
-      .select("slug")
+      .select("slug, rera, description")
       .eq("published", true);
     if (error) throw error;
-    return (data ?? []).map((r) => r.slug as string);
+    return (data ?? []).map((r) => ({
+      slug: r.slug as string,
+      rera: (r.rera as string | null) ?? "",
+      description: (r.description as string | null) ?? "",
+    }));
   } catch {
-    return seedProperties.map((p) => p.slug);
+    return seedProperties;
   }
 }
 
@@ -227,6 +264,10 @@ export async function getAllPropertySlugs(): Promise<string[]> {
 /* ------------------------------------------------------------------ */
 
 export async function getProjects(): Promise<Project[]> {
+  return visibleRecords(await fetchProjects());
+}
+
+async function fetchProjects(): Promise<Project[]> {
   if (!isSupabaseConfigured()) return seedProjects;
 
   try {
@@ -250,6 +291,10 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
 }
 
 export async function getDevelopers(): Promise<Developer[]> {
+  return visibleRecords(await fetchDevelopers());
+}
+
+async function fetchDevelopers(): Promise<Developer[]> {
   if (!isSupabaseConfigured()) return seedDevelopers;
 
   try {

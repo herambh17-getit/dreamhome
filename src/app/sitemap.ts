@@ -36,7 +36,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: base, changeFrequency: "weekly", priority: 1 },
-    { url: `${base}/properties`, changeFrequency: "daily", priority: 0.9 },
+    // /properties is noindex while it has no real listings, so it is listed
+    // here only once at least one exists (same rule as /projects).
+    ...(properties.some((p) => !isSampleRecord(p))
+      ? [{ url: `${base}/properties`, changeFrequency: "daily" as const, priority: 0.9 }]
+      : []),
     ...(realProjects.length
       ? [{ url: `${base}/projects`, changeFrequency: "weekly" as const, priority: 0.8 }]
       : []),

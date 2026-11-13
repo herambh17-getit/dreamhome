@@ -23,7 +23,7 @@ export interface ServiceGuide {
 export const serviceGuides: Record<string, ServiceGuide> = {
   "property-buying": {
     summary:
-      "We help you buy property in Mumbai's western suburbs starting from what you need, not from our inventory: an honest shortlist, accompanied viewings, title, approval and RERA checks, then negotiation and paperwork through to registration.",
+      "We help you buy property in Mumbai's western suburbs starting from what you need, not from our inventory: an honest shortlist, accompanied viewings, due diligence coordinated with independent property solicitors, then negotiation and paperwork through to registration.",
     faqs: [
       {
         question: "Do you only show properties you have listed?",
@@ -67,7 +67,7 @@ export const serviceGuides: Record<string, ServiceGuide> = {
 
   renting: {
     summary:
-      "We match tenants and landlords properly — verified listings, screened tenants, and the paperwork handled end to end, including a registered leave-and-licence agreement, society NOC and police verification.",
+      "We match tenants and landlords properly — listings shared by property owners, screened tenants, and the paperwork handled end to end, including a registered leave-and-licence agreement, society NOC and police verification.",
     faqs: [
       {
         question: "Does a rent agreement in Mumbai have to be registered?",
@@ -77,7 +77,7 @@ export const serviceGuides: Record<string, ServiceGuide> = {
       {
         question: "Do you help tenants as well as landlords?",
         answer:
-          "Yes. For tenants we show listings that actually exist at the price advertised; for landlords we find and screen tenants. Either way, the terms are agreed in writing before anyone commits.",
+          "Yes. For tenants we share listings from property owners and confirm the rent and terms with them; for landlords we find and screen tenants. Either way, the terms are agreed in writing before anyone commits.",
       },
       {
         question: "What should be agreed before a tenant moves in?",
@@ -104,7 +104,7 @@ export const serviceGuides: Record<string, ServiceGuide> = {
       {
         question: "Can you review a builder's agreement?",
         answer:
-          "We review the commercial terms and flag anything that looks wrong. Where you need a formal legal opinion, we coordinate it with a solicitor.",
+          "We review the commercial terms and flag anything that looks wrong. Where you need a formal legal opinion, we coordinate it with an independent property solicitor.",
       },
     ],
   },
@@ -133,7 +133,7 @@ export const serviceGuides: Record<string, ServiceGuide> = {
 
   "nri-services": {
     summary:
-      "We help NRIs buy, sell and manage Mumbai property from abroad: honest video walkthroughs, paperwork verification, power-of-attorney coordination, registration in your absence, and coordination with your CA on tax and repatriation.",
+      "We help NRIs buy, sell and manage Mumbai property from abroad: honest video walkthroughs, help gathering paperwork for independent solicitors to review, power-of-attorney coordination, registration in your absence, and coordination with your CA on tax and repatriation.",
     faqs: [
       {
         question: "Do I need to travel to India to buy property?",
@@ -155,7 +155,7 @@ export const serviceGuides: Record<string, ServiceGuide> = {
 
   "legal-documentation": {
     summary:
-      "We coordinate the legal side of a property deal — title search and legal opinion, approval and occupation certificate checks, MahaRERA verification, agreements, stamp duty, registration and society transfer — with solicitors who do this work every day.",
+      "We coordinate the documentation side of a property deal. Independent property solicitors conduct the title search, review the agreement and give the legal opinion; we collect the documents, coordinate the solicitor and the other parties, and handle stamp duty, registration and society transfer. You can check a project's MahaRERA registration yourself on the official portal.",
     faqs: [
       {
         question: "What is a title search?",
@@ -248,12 +248,12 @@ export const serviceGuides: Record<string, ServiceGuide> = {
       {
         question: "What does the property buying and selling service include?",
         answer:
-          "Search or listing, viewings, qualifying the other side, negotiation, the legal checks (carried out by property solicitors), the agreement, stamp duty, registration and handover — with the same person coordinating every stage.",
+          "Search or listing, viewings, qualifying the other side, negotiation, the legal checks (carried out by independent property solicitors), the agreement, stamp duty, registration and handover — with the same person coordinating every stage.",
       },
       {
         question: "Who handles the legal checks?",
         answer:
-          "Solicitors who do property work every day carry out the title search and legal opinion; we coordinate them alongside the rest of the transaction so nothing falls between stages.",
+          "Independent solicitors who do property work every day carry out the title search and give the legal opinion; we coordinate them alongside the rest of the transaction so nothing falls between stages.",
       },
       {
         question: "Can you handle a sale and a purchase together?",
@@ -275,7 +275,7 @@ export const serviceGuides: Record<string, ServiceGuide> = {
       {
         question: "Do I still need a consultant if I've already found a property?",
         answer:
-          "It often helps most at that point: verifying the title and approvals, checking the price against real transactions, negotiating terms and handling the paperwork.",
+          "It often helps most at that point: arranging an independent solicitor's title search, collecting the approval documents, checking the price against real transactions, negotiating terms and handling the paperwork.",
       },
       {
         question: "Do you advise on residential and commercial property?",

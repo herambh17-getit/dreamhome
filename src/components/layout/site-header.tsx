@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, Phone, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
@@ -24,7 +24,12 @@ const TRANSPARENT_ROUTES = new Set(["/"]);
 export function SiteHeader() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+  // The mobile sheet remembers which page it was opened on, and counts as
+  // open only while that is still the current page. Navigating therefore
+  // closes it in the same render, with no effect and no extra re-render.
+  const [openOnPath, setOpenOnPath] = useState<string | null>(null);
+  const open = openOnPath === pathname;
+  const setOpen = (next: boolean) => setOpenOnPath(next ? pathname : null);
   const { scrollY } = useScroll();
 
   const canBeTransparent = TRANSPARENT_ROUTES.has(pathname);
@@ -33,12 +38,6 @@ export function SiteHeader() {
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrolled(latest > 24);
   });
-
-  // Close the mobile sheet on navigation, otherwise it stays open over the
-  // page the user just asked for.
-  useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
 
   return (
     <motion.header
@@ -132,7 +131,7 @@ export function SiteHeader() {
             WhatsApp
           </ButtonLink>
 
-          <Sheet open={open} onOpenChange={setOpen}>
+          <Sheet open={open} onOpenChange={(next) => setOpen(next)}>
             <SheetTrigger
               render={
                 <Button

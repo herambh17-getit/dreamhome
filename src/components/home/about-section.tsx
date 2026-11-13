@@ -65,7 +65,7 @@ export function AboutSection() {
                 <span className="text-xl text-muted-foreground">/5</span>
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
-                across {siteConfig.google.reviewCount} verified Google reviews
+                across {siteConfig.google.reviewCount} Google reviews
               </p>
             </div>
           </RevealItem>

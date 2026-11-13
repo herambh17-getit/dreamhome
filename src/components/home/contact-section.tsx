@@ -1,4 +1,4 @@
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { Section } from "@/components/section";
 import { Reveal } from "@/components/motion/reveal";
 import { EnquiryForm } from "@/components/enquiry-form";
@@ -64,6 +64,19 @@ export function ContactSection() {
                 {contact.hours}
               </span>
             </ContactRow>
+
+            {siteConfig.rera.agentNumber && (
+              <ContactRow icon={ShieldCheck} label="MahaRERA Agent Registration No.">
+                <a
+                  href={siteConfig.rera.portalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-brand-indigo-900 transition-colors hover:text-primary"
+                >
+                  {siteConfig.rera.agentNumber}
+                </a>
+              </ContactRow>
+            )}
           </dl>
 
           <a

@@ -36,7 +36,7 @@ export const faqs: Faq[] = [
     id: "faq-004",
     question: "How do I verify a property's title before buying?",
     answer:
-      "A title search traces ownership back over a period of years to confirm the seller can legally sell, and that the property carries no undisclosed mortgage, litigation or encumbrance. For society flats you also want the share certificate, the society's no-objection certificate, and confirmation that maintenance dues are clear. We coordinate this with a solicitor as standard — it is not an optional extra.",
+      "A title search traces ownership back over a period of years to confirm the seller can legally sell, and that the property carries no undisclosed mortgage, litigation or encumbrance. For society flats you also want the share certificate, the society's no-objection certificate, and confirmation that maintenance dues are clear. The title search itself is done by an independent property solicitor; we coordinate it as standard — it is not an optional extra.",
     category: "Legal & Documentation",
   },
   {

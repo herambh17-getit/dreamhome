@@ -16,6 +16,21 @@ import type {
  * the on-demand rendering path entirely.
  */
 
+/**
+ * Query-string keys that change which listings show, or their order. Keep in
+ * sync with `parsePropertyFilters` below — /properties uses this list to hide
+ * its unfiltered prerendered list while a filtered URL hydrates.
+ */
+export const PROPERTY_FILTER_KEYS = [
+  "q",
+  "intent",
+  "propertyType",
+  "configuration",
+  "location",
+  "budget",
+  "sort",
+] as const;
+
 /** Reads a URL query object into typed filters, ignoring anything unrecognised. */
 export function parsePropertyFilters(
   sp: Record<string, string | string[] | undefined>,

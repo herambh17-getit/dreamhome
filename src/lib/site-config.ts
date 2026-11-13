@@ -88,13 +88,14 @@ export const siteConfig = {
    * Development) Act, a real estate agent operating in Maharashtra must
    * quote their MahaRERA registration number on every piece of marketing.
    *
-   * `agentNumber` is intentionally empty until the client supplies the real
-   * one — the UI shows nothing rather than a fabricated number, so no invalid
-   * registration can ever go live. Set it here and it appears in the footer,
-   * the contact page and the RealEstateAgent schema automatically.
+   * `agentNumber` is the number supplied by the business, exactly as given.
+   * It appears in the footer, the contact details (Contact page and the
+   * homepage contact section), the About page office card and the
+   * RealEstateAgent schema. Clearing it hides every one of those — never
+   * replace it with a guessed or example value.
    */
   rera: {
-    agentNumber: "",
+    agentNumber: "A51800024638",
     portalUrl: "https://maharera.maharashtra.gov.in",
   },
 
@@ -183,7 +184,7 @@ export const services = [
     summary:
       "Tenants and landlords matched properly, with paperwork handled end to end.",
     description:
-      "Verified listings, tenant screening, rent agreements, registration and society NOCs — the full process, without the back-and-forth.",
+      "Listings shared by property owners, tenant screening, rent agreements, registration and society NOCs — the full process, without the back-and-forth.",
   },
   {
     slug: "property-consultation",
@@ -238,10 +239,10 @@ export const practiceAreas = [
   },
   {
     slug: "legal-documentation",
-    title: "Legal & Documentation",
+    title: "Legal Documentation Coordination",
     icon: "Scale",
     summary:
-      "Title checks, agreements, stamp duty, registration and society transfer — verified.",
+      "Independent property solicitors do the title search and legal opinion; we coordinate the documents, stamp duty, registration and society transfer.",
   },
   {
     slug: "investment-advisory",
@@ -280,10 +281,10 @@ export const whyChooseUs = [
       "Every number explained. No hidden charges, no pressure, no surprises at signing.",
   },
   {
-    title: "Verified Properties",
+    title: "Informed Property Decisions",
     icon: "BadgeCheck",
     description:
-      "Title, approvals and RERA registration checked before a listing reaches you.",
+      "An honest shortlist, firm negotiation on price and terms, and the documentation coordinated for you — with independent property solicitors handling the title search and legal review.",
   },
   {
     title: "Documentation Support",

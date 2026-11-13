@@ -1,25 +1,43 @@
+import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/seo";
 import { Suspense } from "react";
 import { PageHeader } from "@/components/page-header";
 import { PropertiesBrowser } from "@/components/property/properties-browser";
-import { Skeleton } from "@/components/ui/skeleton";
+import { PropertySearchForm } from "@/components/property/property-search-form";
+import { PropertyResults } from "@/components/property/property-results";
 import { getLocations, getProperties } from "@/lib/queries";
-import { siteConfig } from "@/lib/site-config";
+import { isSampleRecord } from "@/lib/placeholder";
+import { PROPERTY_FILTER_KEYS } from "@/lib/property-filters";
+import { Skeleton } from "@/components/ui/skeleton";
 
-export const metadata = pageMetadata({
-  title: "Properties for Sale & Rent in Mumbai",
-  description:
-    "Residential and commercial property for sale and rent in Borivali, Kandivali, Malad, Goregaon and Andheri — title, approvals and RERA checked.",
-  path: "/properties",
-});
+/** Marks <html data-property-filters> when the URL carries a listing filter. */
+const FILTERED_URL_SCRIPT = `(function(){try{var p=new URLSearchParams(location.search);if(${JSON.stringify(
+  PROPERTY_FILTER_KEYS,
+)}.some(function(k){return p.has(k)}))document.documentElement.setAttribute("data-property-filters","")}catch(e){}})();`;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const properties = await getProperties();
+  return pageMetadata({
+    title: "Properties for Sale & Rent in Mumbai",
+    description:
+      "Residential and commercial property for sale and rent in Borivali, Kandivali, Malad, Goregaon and Andheri. Ask for the property documents and check MahaRERA registration before you commit.",
+    path: "/properties",
+    // With no real listings the page is an empty state (or, on preview
+    // builds, samples only) — keep it out of search until real listings
+    // exist. Same rule as /projects.
+    noindex: properties.length === 0 || properties.every(isSampleRecord),
+  });
+}
 
 /**
  * Property listings.
  *
- * Rendered statically with the full list; filtering happens on the client
- * from the URL query string (see PropertiesBrowser). Keeping this route static
- * means it is fully indexable and has no per-request server render — the
- * filters remain shareable and linkable exactly as before.
+ * A static route. `PropertiesBrowser` filters in the browser from the URL
+ * query string, so filters stay shareable without a per-request server
+ * render. Because it reads the URL with useSearchParams(), Next leaves it out
+ * of the prerendered HTML — so the Suspense fallback is the full, unfiltered,
+ * server-rendered list. Crawlers and no-JS visitors get every listing; the
+ * browser then swaps in the filterable version.
  */
 export default async function PropertiesPage() {
   const [locations, properties] = await Promise.all([
@@ -32,15 +50,34 @@ export default async function PropertiesPage() {
       <PageHeader
         eyebrow="Properties"
         title="Property in Mumbai for sale & rent"
-        description={`Verified listings across ${siteConfig.serviceAreas.slice(0, 5).join(", ")}. Every one checked for title, approvals and RERA registration before it reaches you.`}
+        description="Residential and commercial properties across Borivali, Kandivali, Malad, Goregaon and Andheri. Ask us for available property documents and, where applicable, verify the project's MahaRERA registration on the official portal before committing."
         breadcrumbs={[{ name: "Properties", href: "/properties" }]}
       />
 
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        {/* Suspense lets the static shell prerender while the client browser,
-            which reads filters from the URL via useSearchParams(), hydrates. */}
+        {/* Runs before the fallback below is painted. On a filtered URL it
+            marks <html> so the unfiltered list is swapped for a skeleton
+            until PropertiesBrowser renders the filtered results — no flash
+            of the wrong listings. Unfiltered URLs, crawlers and no-JS
+            visitors are unaffected and see the full list. */}
+        <script
+          dangerouslySetInnerHTML={{ __html: FILTERED_URL_SCRIPT }}
+        />
         <Suspense
-          fallback={<Skeleton className="h-44 w-full rounded-2xl" />}
+          fallback={
+            <>
+              <PropertySearchForm locations={locations} defaultIntent="buy" />
+              <div className="[html[data-property-filters]_&]:hidden">
+                <PropertyResults
+                  properties={properties}
+                  totalCount={properties.length}
+                />
+              </div>
+              <div className="hidden [html[data-property-filters]_&]:block">
+                <Skeleton className="mt-8 h-44 w-full rounded-2xl" />
+              </div>
+            </>
+          }
         >
           <PropertiesBrowser properties={properties} locations={locations} />
         </Suspense>

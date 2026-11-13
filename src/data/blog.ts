@@ -52,7 +52,7 @@ If a project that should be registered is not, stop.
 
 ## What we do
 
-We coordinate the title search, pull the approvals, hand you the RERA number, and check the society paperwork before you commit. Not as an upsell. Because the alternative is you finding out later.
+We coordinate the title search with an independent property solicitor, help you collect the approvals and society paperwork, and give you the project's RERA number so you can check it yourself — all before you commit. Not as an upsell. Because the alternative is you finding out later.
 
 If something does not check out, we will tell you, even when it costs us the deal. That is the whole point of hiring a consultant rather than a salesperson.`,
   },
@@ -588,7 +588,7 @@ Real estate agents in Maharashtra must also be registered with MahaRERA and quot
 3. Plans on the MahaRERA portal that don't match what you are being shown.
 4. Pressure to pay a large amount before you have seen any of these documents.
 
-For a full pre-purchase checklist, see [how to verify a property before you buy](/blog/how-to-verify-a-property-before-you-buy-in-mumbai). If you would like these checks done for a specific flat, our [legal and documentation](/services/legal-documentation) service handles them with a solicitor.`,
+For a full pre-purchase checklist, see [how to verify a property before you buy](/blog/how-to-verify-a-property-before-you-buy-in-mumbai). If you would like these checks done for a specific flat, our [legal documentation coordination](/services/legal-documentation) service arranges them with an independent property solicitor.`,
   },
   {
     id: "post-012",

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Clock, MapPin } from "lucide-react";
+import { Clock, MapPin, ShieldCheck } from "lucide-react";
 import { pageMetadata } from "@/lib/seo";
 import { mapEmbedSrc } from "@/lib/google-maps";
 import { GoogleBusinessCard } from "@/components/google-business-card";
@@ -223,6 +223,22 @@ export default function AboutPage() {
                 <Clock className="mt-0.5 size-4 shrink-0 text-brand-gold-600" aria-hidden />
                 {siteConfig.contact.hours}
               </p>
+              {siteConfig.rera.agentNumber && (
+                <p className="mt-3 flex items-start gap-3 text-sm text-foreground/85">
+                  <ShieldCheck className="mt-0.5 size-4 shrink-0 text-brand-gold-600" aria-hidden />
+                  <span>
+                    MahaRERA Agent Registration No.{" "}
+                    <a
+                      href={siteConfig.rera.portalUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-brand-indigo-900 underline-offset-2 hover:underline"
+                    >
+                      {siteConfig.rera.agentNumber}
+                    </a>
+                  </span>
+                </p>
+              )}
             </div>
             <GoogleBusinessCard />
           </div>

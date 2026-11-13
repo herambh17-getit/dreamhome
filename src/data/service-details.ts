@@ -36,8 +36,8 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         body: "We point out what a floor plan hides — light, noise, ventilation, society health, what that wall behind the 'park-facing' window really is.",
       },
       {
-        title: "We verify before you commit",
-        body: "Title search, approvals, occupation certificate, RERA registration, society dues. If it does not check out, we say so — even when it costs us the deal.",
+        title: "Property Due Diligence Support",
+        body: "Independent property solicitors conduct the title search and review the legal documents. We coordinate the process: we help you collect the approvals, occupation certificate, society dues statement and the project's MahaRERA details for you to check yourself — and if something does not add up, we say so, even when it costs us the deal.",
       },
       {
         title: "We negotiate and close",
@@ -48,7 +48,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Needs assessment and realistic budgeting",
       "Curated shortlist across our service areas",
       "Accompanied viewings",
-      "Title and approval verification via a solicitor",
+      "Title search and legal opinion by an independent property solicitor, coordinated by us",
       "RERA registration number, for you to check yourself",
       "Price and terms negotiation",
       "Home loan introductions",
@@ -95,12 +95,12 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     faqCategory: "Renting",
     body: [
       "Renting goes wrong in predictable ways: the agreement was never registered, the tenant was never verified, or the society objected after everyone had shaken hands.",
-      "We handle the whole process for both sides so none of that happens. For landlords, that means finding tenants who pay and stay. For tenants, it means listings that actually exist at the price advertised.",
+      "We handle the whole process for both sides to reduce those risks. For landlords, that means screening tenants before you commit. For tenants, it means listings shared by property owners, with the rent and terms confirmed in writing before anyone commits.",
     ],
     steps: [
       {
         title: "Match properly",
-        body: "Verified listings for tenants; screened tenants for landlords.",
+        body: "Listings shared by property owners for tenants; screened tenants for landlords.",
       },
       {
         title: "Agree terms",
@@ -116,7 +116,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       },
     ],
     includes: [
-      "Verified listings and tenant screening",
+      "Listings shared by property owners, and tenant screening",
       "Terms negotiation",
       "Leave-and-licence agreement drafting",
       "Mandatory registration",
@@ -179,11 +179,11 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     faqCategory: "NRI Services",
     body: [
       "The rules for NRI buyers are workable. The risk is not regulatory — it is that you cannot stand in the flat and notice that the 'park-facing' bedroom faces a wall.",
-      "We are your eyes on the ground. We view properly, photograph honestly, video-call you from the site, verify the paperwork, and coordinate with your CA on the tax and repatriation side before you commit rather than after.",
+      "We are your eyes on the ground. We view properly, photograph honestly, video-call you from the site, help gather the paperwork for an independent property solicitor to review, and coordinate with your CA on the tax and repatriation side before you commit rather than after.",
     ],
     includes: [
       "Property search and honest video walkthroughs",
-      "Title and approval verification",
+      "Title search and legal opinion by independent property solicitors, coordinated by us",
       "Guidance on NRE / NRO / FCNR funding routes",
       "Power of attorney coordination",
       "Registration handled in your absence",
@@ -196,16 +196,16 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     faqCategory: "Legal & Documentation",
     body: [
       "Paperwork is where property deals quietly go wrong, usually months after everyone has celebrated.",
-      "We coordinate title searches, agreements, stamp duty, registration and society transfers with solicitors who do this every day — so the thing you own is actually, verifiably yours.",
+      "The legal work is done by independent property solicitors: they conduct the title search, review the documents and give you a written legal opinion. Our role is coordination — we collect the documents they need, keep the solicitor, the other side and the society moving, and handle the practical steps of stamp duty, registration and society transfer. We do not give legal opinions ourselves.",
     ],
     includes: [
-      "Title search and written legal opinion",
-      "Approval and occupation certificate checks",
-      "MahaRERA verification",
-      "Agreement drafting and review",
-      "Stamp duty calculation and payment",
-      "Registration",
-      "Society transfer and share certificate",
+      "Title search and written legal opinion — by independent property solicitors",
+      "Agreement drafting and review — by independent property solicitors",
+      "Collecting approval and occupation certificate documents — coordinated by us",
+      "The project's MahaRERA registration details, for you to check on the official portal",
+      "Stamp duty calculation and payment — coordinated by us",
+      "Registration at the sub-registrar's office — coordinated by us",
+      "Society transfer and share certificate — coordinated by us",
     ],
   },
 
@@ -262,7 +262,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       "Search or listing, depending on your side",
       "Viewings and buyer or seller qualification",
       "Negotiation",
-      "Legal verification",
+      "Legal checks by independent property solicitors",
       "Stamp duty and registration",
       "Handover",
     ],

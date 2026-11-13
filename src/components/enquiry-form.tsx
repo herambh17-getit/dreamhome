@@ -163,7 +163,7 @@ export function EnquiryForm({
           label="Your name"
           required
           autoComplete="name"
-          placeholder="Nayan Jomraj"
+          placeholder="Your full name"
           errors={errors.name}
         />
         <Field
