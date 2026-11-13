@@ -253,7 +253,7 @@ You decide the price. That is genuinely your call. But you should decide it with
   {
     id: "post-006",
     slug: "reading-a-carpet-area-number-properly",
-    title: "Carpet area, built-up, super built-up: reading the number properly",
+    title: "Carpet area vs built-up vs super built-up, explained",
     excerpt:
       "Three numbers describe the same flat and only one of them is the floor you walk on. Here is how to compare listings honestly.",
     category: "Buying",
@@ -472,7 +472,7 @@ If you would like someone in your corner for your first purchase, our [property 
   {
     id: "post-010",
     slug: "leave-and-licence-agreement-mumbai-guide",
-    title: "Leave and licence agreements in Mumbai: a guide for landlords and tenants",
+    title: "Leave and licence agreements in Mumbai, explained",
     excerpt:
       "Why rent agreements in Mumbai must be registered, what they should cover, and the police verification and society steps both sides tend to forget.",
     category: "Renting",

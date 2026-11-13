@@ -206,7 +206,7 @@ export const practiceAreas = [
     title: "Real Estate Consultancy",
     icon: "Building2",
     summary:
-      "End-to-end advisory across buying, selling, leasing and investment.",
+      "Long-term advisory: one consultant across several deals — buying, selling, leasing and investment — as your plans change.",
   },
   {
     slug: "nri-services",
@@ -217,10 +217,10 @@ export const practiceAreas = [
   },
   {
     slug: "buying-selling",
-    title: "Buying & Selling",
+    title: "Property Buying & Selling",
     icon: "ArrowRightLeft",
     summary:
-      "Transaction management from first viewing to registered agreement.",
+      "Transaction management: one coordinator for a sale, a purchase or both, from first viewing to registered agreement and handover.",
   },
   {
     slug: "project-marketing",

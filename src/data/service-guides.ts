@@ -243,12 +243,12 @@ export const serviceGuides: Record<string, ServiceGuide> = {
 
   "buying-selling": {
     summary:
-      "End-to-end transaction management for buyers and sellers, from the first viewing or listing to the registered agreement and handover, with one point of contact throughout.",
+      "Property buying and selling, managed as one transaction: a single coordinator for your sale, purchase or both, from the first viewing or listing to the registered agreement and handover.",
     faqs: [
       {
-        question: "What does end-to-end transaction management include?",
+        question: "What does the property buying and selling service include?",
         answer:
-          "Search or listing, viewings, qualifying the other side, negotiation, legal verification, the agreement, stamp duty, registration and handover — with the same person coordinating every stage.",
+          "Search or listing, viewings, qualifying the other side, negotiation, the legal checks (carried out by property solicitors), the agreement, stamp duty, registration and handover — with the same person coordinating every stage.",
       },
       {
         question: "Who handles the legal checks?",
@@ -265,7 +265,7 @@ export const serviceGuides: Record<string, ServiceGuide> = {
 
   "real-estate-consultancy": {
     summary:
-      "A long-term advisory relationship covering buying, selling, leasing and investment, for residential and commercial property across Mumbai's western suburbs.",
+      "Real estate consultancy as a long-term advisory relationship, for clients who expect to transact more than once, covering buying, selling, leasing and investment across Mumbai's western suburbs.",
     faqs: [
       {
         question: "What is the difference between a property consultant and a broker?",

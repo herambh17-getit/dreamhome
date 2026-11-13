@@ -128,7 +128,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
 
   "property-consultation": {
     body: [
-      "Sometimes you do not need an agent. You need someone with no stake in the outcome to look at what is in front of you and tell you what they honestly think.",
+      "A property consultation is a one-off second opinion on a single decision. Sometimes you do not need an agent. You need someone to look at what is in front of you and tell you what they honestly think.",
       "Bring us a shortlist you assembled yourself, a builder's offer, a redevelopment proposal, or just a question you cannot get a straight answer to. We will give you ours — including when the answer is that you should wait, or walk away entirely.",
     ],
     includes: [
@@ -255,8 +255,8 @@ export const serviceDetails: Record<string, ServiceDetail> = {
 
   "buying-selling": {
     body: [
-      "End-to-end transaction management, whichever side of the table you are on.",
-      "From first viewing to registered agreement, with one point of contact and no gaps between the people handling each stage.",
+      "Our property buying and selling service is transaction management for a deal that is actually happening: one coordinator for your sale, your purchase, or both together.",
+      "From first viewing to registered agreement, with one point of contact and no gaps between the people handling each stage. If you are still deciding what to do, start with a property consultation instead.",
     ],
     includes: [
       "Search or listing, depending on your side",
@@ -270,7 +270,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
 
   "real-estate-consultancy": {
     body: [
-      "The full advisory relationship: buying, selling, leasing and investment, across residential and commercial property in Mumbai's western suburbs.",
+      "Our real estate consultancy is a long-term advisory relationship for clients who expect to transact more than once: buying, selling, leasing and investment, across residential and commercial property in Mumbai's western suburbs. For a single decision or a one-off second opinion, a property consultation is the better fit.",
       "Most of our clients start with one transaction and stay for the next one. That is the business model — we would rather be useful to you for twenty years than extract everything from one deal.",
     ],
     includes: [
