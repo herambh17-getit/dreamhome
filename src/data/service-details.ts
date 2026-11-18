@@ -130,6 +130,25 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     body: [
       "A property consultation is a one-off second opinion on a single decision. Sometimes you do not need an agent. You need someone to look at what is in front of you and tell you what they honestly think.",
       "Bring us a shortlist you assembled yourself, a builder's offer, a redevelopment proposal, or just a question you cannot get a straight answer to. We will give you ours — including when the answer is that you should wait, or walk away entirely.",
+      "A consultation covers the commercial and practical side of the decision: whether the price is fair, whether the locality and building suit how you live, what the terms really commit you to, and where the risks sit. It is separate from a formal legal opinion, which comes from an independent property solicitor, and we coordinate that when you need one.",
+    ],
+    steps: [
+      {
+        title: "Tell us what you are deciding",
+        body: "A shortlist, an offer, a proposal or a plain question, along with your budget, timeline and what matters most.",
+      },
+      {
+        title: "Share what you have",
+        body: "Offer letters, draft agreements, brochures, society notices. The more we can see, the more specific the advice.",
+      },
+      {
+        title: "We say what we would do",
+        body: "A direct opinion with reasons, including the parts you may not want to hear.",
+      },
+      {
+        title: "You decide",
+        body: "The choice stays yours. If you want help carrying it out, we can take it from there, but there is no obligation.",
+      },
     ],
     includes: [
       "Second opinion on a shortlist you built yourself",
@@ -213,6 +232,25 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     body: [
       "Property investment advice in Mumbai is mostly conviction dressed as analysis. We prefer to show our working.",
       "Yield, appreciation, holding costs, exit liquidity and the honest downside — laid out so you can decide. Sometimes our advice is that this particular asset is not worth buying, and occasionally that property is not the right vehicle for what you are trying to achieve at all.",
+      "Most investment mistakes in property come from looking at one number. A high headline rent can hide high maintenance and long vacancies. A strong locality can hide a building with a weak society. We look at the whole picture, for one specific asset at a time, because averages across a suburb tell you very little about a particular flat.",
+    ],
+    steps: [
+      {
+        title: "Define the goal",
+        body: "Regular rental income, long-term capital growth, or a mix, and the time horizon you can genuinely hold for.",
+      },
+      {
+        title: "Run the numbers on a specific asset",
+        body: "Net yield after maintenance, property tax, repairs and vacant months, not the gross figure in the listing.",
+      },
+      {
+        title: "Test the downside",
+        body: "What happens with a long vacancy, a delayed possession, or a need to sell sooner than planned.",
+      },
+      {
+        title: "Give a clear recommendation",
+        body: "Buy, negotiate, wait, or walk away, with the reasoning written down so you can check it.",
+      },
     ],
     includes: [
       "Rental yield analysis grounded in local comparables",
@@ -228,6 +266,29 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     body: [
       "Owning a property you do not live in is a small ongoing job. If you are abroad or simply busy, it is a job that quietly does not get done.",
       "We take it on: tenant sourcing and screening, rent collection, maintenance, society compliance, and renewals — with a single point of contact who actually answers.",
+      "The point of management is not only convenience. A flat left to itself loses value in small ways: a slow leak that nobody reports, a tenant who stops paying on time, a society notice that goes unanswered. Regular attention catches these while they are still cheap to fix.",
+    ],
+    steps: [
+      {
+        title: "Take stock of the property",
+        body: "We record its condition with photographs and gather the documents and keys we need, so everyone starts from the same baseline.",
+      },
+      {
+        title: "Find and screen the tenant",
+        body: "Tenant sourcing and screening, then a registered leave-and-licence agreement with police verification and society NOC where required.",
+      },
+      {
+        title: "Run the tenancy",
+        body: "Rent collection and follow-up, maintenance coordination, and liaison with the society on dues and compliance.",
+      },
+      {
+        title: "Inspect and report",
+        body: "Periodic inspections with photographs, so you can see how the property is being kept even from another country.",
+      },
+      {
+        title: "Renew or re-let",
+        body: "Renewals are handled with the existing tenant. When a tenant leaves, we find and screen the next one.",
+      },
     ],
     includes: [
       "Tenant sourcing and screening",
@@ -243,6 +304,29 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     body: [
       "We work with developers across the western suburbs as a channel partner, bringing qualified buyers to launches and inventory.",
       "We are selective about what we represent, for a straightforward commercial reason: our clients trust our recommendations because we do not recommend everything. That trust is the entire asset, and one bad project spends it.",
+      "For a developer, the useful part of a channel partner is not volume. It is the feedback. We talk to buyers every day, so we can tell you what they ask about, which part of the pricing or product they push back on, and what stops them from booking. That is information a brochure and a sales office rarely produce.",
+    ],
+    steps: [
+      {
+        title: "Understand the project",
+        body: "Approvals, MahaRERA registration, location, product and pricing, so we know what we would be recommending.",
+      },
+      {
+        title: "Decide whether we represent it",
+        body: "We take on only projects we would be comfortable recommending to our own clients.",
+      },
+      {
+        title: "Introduce qualified buyers",
+        body: "Buyers who fit the project and have thought about financing, not a list of names.",
+      },
+      {
+        title: "Coordinate site visits",
+        body: "We arrange visits and prepare buyers so the time at the site is spent on real questions.",
+      },
+      {
+        title: "Support through registration and report back",
+        body: "Transaction support to registration, plus honest feedback on how buyers are responding.",
+      },
     ],
     includes: [
       "Channel partnership for launches and inventory",
@@ -257,6 +341,33 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     body: [
       "Our property buying and selling service is transaction management for a deal that is actually happening: one coordinator for your sale, your purchase, or both together.",
       "From first viewing to registered agreement, with one point of contact and no gaps between the people handling each stage. If you are still deciding what to do, start with a property consultation instead.",
+      "It matters most when one deal depends on another. If you are selling a flat to buy a bigger one, the sale date, the buyer's payments, your own booking amount and the handover of the new home all have to line up. Someone who sees both sides of the timeline can spot a gap before it costs you a rental month or a bridging loan.",
+    ],
+    steps: [
+      {
+        title: "Agree the brief",
+        body: "Whether you are buying, selling or doing both, we settle what a good outcome looks like: budget or price expectation, timeline, and the things you will not compromise on.",
+      },
+      {
+        title: "Search or list",
+        body: "Buyers get a shortlist and accompanied viewings. Sellers get a valuation from registered comparables and an accurate listing.",
+      },
+      {
+        title: "Qualify and negotiate",
+        body: "We check the other side's financing and paperwork early, then negotiate price and terms on your behalf.",
+      },
+      {
+        title: "Verify the paperwork",
+        body: "Independent property solicitors run the title search and review the documents. We coordinate them alongside every other stage so nothing waits on a missing paper.",
+      },
+      {
+        title: "Agreement, stamp duty and registration",
+        body: "We coordinate the agreement, stamp duty payment and registration at the sub-registrar's office.",
+      },
+      {
+        title: "Handover",
+        body: "Possession, society transfer and the final steps are tracked to completion, so the deal does not stall after the celebration.",
+      },
     ],
     includes: [
       "Search or listing, depending on your side",
@@ -272,6 +383,25 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     body: [
       "Our real estate consultancy is a long-term advisory relationship for clients who expect to transact more than once: buying, selling, leasing and investment, across residential and commercial property in Mumbai's western suburbs. For a single decision or a one-off second opinion, a property consultation is the better fit.",
       "Most of our clients start with one transaction and stay for the next one. That is the business model — we would rather be useful to you for twenty years than extract everything from one deal.",
+      "It suits families with a home and an investment flat, investors building a portfolio, businesses that own or lease premises, and owners facing a large decision such as a society redevelopment. What they share is that the decisions connect: the right time to sell one property depends on what you plan to do with the next.",
+    ],
+    steps: [
+      {
+        title: "Understand your position",
+        body: "What you own, what you owe, what you plan to do, and the constraints that are not negotiable, across residential and commercial property.",
+      },
+      {
+        title: "Set a direction",
+        body: "A plain view on whether to buy, sell, lease or hold over the next few years, and why.",
+      },
+      {
+        title: "Act when it makes sense",
+        body: "When a transaction is right, we support it through to registration, coordinating independent solicitors for the legal side.",
+      },
+      {
+        title: "Revisit as things change",
+        body: "A new job, a growing family, a redevelopment notice: when circumstances shift, the plan gets updated rather than abandoned.",
+      },
     ],
     includes: [
       "Residential and commercial advisory",

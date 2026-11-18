@@ -106,6 +106,16 @@ export const serviceGuides: Record<string, ServiceGuide> = {
         answer:
           "We review the commercial terms and flag anything that looks wrong. Where you need a formal legal opinion, we coordinate it with an independent property solicitor.",
       },
+      {
+        question: "Will you tell me not to buy if that is the right answer?",
+        answer:
+          "Yes. A consultation is only useful if it is honest. If the price is wrong, the building has a problem, or the timing is poor, we say so and explain why, even when it means no deal for us.",
+      },
+      {
+        question: "How is a consultation different from a legal opinion?",
+        answer:
+          "A consultation covers the commercial and practical side: whether the price is fair, whether the property suits you, what the terms commit you to and where the risks are. A formal legal opinion on title or documents comes from an independent property solicitor, which we coordinate when it is needed.",
+      },
     ],
   },
 
@@ -194,6 +204,21 @@ export const serviceGuides: Record<string, ServiceGuide> = {
         answer:
           "No. Some properties are good investments and many are not, and sometimes property isn't the right vehicle for what you are trying to achieve at all. We would rather tell you that up front than sell you a flat.",
       },
+      {
+        question: "What is the difference between rental yield and capital appreciation?",
+        answer:
+          "Rental yield is the income a property earns each year relative to its price. Capital appreciation is the rise in its value over time. They often pull in different directions, so the right mix depends on whether you want income now or growth over a longer holding period.",
+      },
+      {
+        question: "Is an under-construction or a ready property better for investment?",
+        answer:
+          "An under-construction property usually has a lower entry price and staged payments, but it earns no rent until possession and carries completion risk. A ready property can earn rent immediately and can be inspected before you buy. Which suits you depends on your timeline and on the developer's delivery record.",
+      },
+      {
+        question: "Is rental income and the profit on a sale taxable?",
+        answer:
+          "Both are generally taxable, and the rules depend on how long you hold the property and your own circumstances. Your chartered accountant should confirm the tax treatment before you commit, and we are happy to work alongside them.",
+      },
     ],
   },
 
@@ -215,6 +240,16 @@ export const serviceGuides: Record<string, ServiceGuide> = {
         question: "Do you handle renewals and new tenants?",
         answer:
           "Yes. We handle renewals with existing tenants and, when a tenant leaves, find and screen the next one, with a registered agreement each time.",
+      },
+      {
+        question: "What happens when something needs repairing?",
+        answer:
+          "We coordinate the repair with a contractor and tell you what is needed and why. How repairs are approved, and up to what amount we can act without checking first, is agreed with you at the start.",
+      },
+      {
+        question: "Can you manage a flat that is currently empty?",
+        answer:
+          "Yes. We can find and screen a tenant, arrange the registered leave-and-licence agreement with police verification and society NOC where required, and then manage the tenancy.",
       },
     ],
   },
@@ -238,6 +273,16 @@ export const serviceGuides: Record<string, ServiceGuide> = {
         answer:
           "Yes — the purchase is between the buyer and the developer. We support the buyer through the process and make sure they have checked the project's MahaRERA details themselves.",
       },
+      {
+        question: "What do you need from a developer before you agree to market a project?",
+        answer:
+          "The project's MahaRERA registration details, its approvals, clear pricing and payment terms, and access for site visits. We need to be able to check what we are recommending before we recommend it.",
+      },
+      {
+        question: "What kind of feedback can a developer expect from you?",
+        answer:
+          "What buyers ask about, which parts of the pricing or product they push back on, and what stops them from booking. We talk to buyers every day, so the feedback is direct and specific to the project.",
+      },
     ],
   },
 
@@ -260,6 +305,16 @@ export const serviceGuides: Record<string, ServiceGuide> = {
         answer:
           "Yes. Coordinating both lets the dates, payments and handovers line up, so you avoid a gap or an overlap between homes.",
       },
+      {
+        question: "What happens if a problem turns up in the paperwork mid-deal?",
+        answer:
+          "The solicitor flags it, and we explain it to you in plain terms. Depending on what it is, the options are usually to get it fixed, to renegotiate the price or terms, or to walk away. We will not push you to proceed with a deal that does not add up.",
+      },
+      {
+        question: "When should I choose transaction management instead of a consultation?",
+        answer:
+          "Choose transaction management when a deal is actually going ahead and you want one coordinator through to registration. Choose a property consultation when you are still deciding, or want an independent opinion on an offer or a shortlist before committing.",
+      },
     ],
   },
 
@@ -281,6 +336,16 @@ export const serviceGuides: Record<string, ServiceGuide> = {
         question: "Do you advise on residential and commercial property?",
         answer:
           "Yes — flats, homes, offices and shops, for buying, selling, leasing and investment.",
+      },
+      {
+        question: "How is long-term advisory different from a property consultation?",
+        answer:
+          "A property consultation is a one-off second opinion on a single decision. Long-term advisory is an ongoing relationship for clients who expect to buy, sell, lease or invest more than once, so the advice on one property takes account of what you plan to do with the next.",
+      },
+      {
+        question: "Who is long-term advisory best suited to?",
+        answer:
+          "Families with a home and an investment flat, investors building a portfolio, businesses that own or lease premises, and owners facing a big decision such as a society redevelopment. Anyone whose property decisions are connected tends to benefit.",
       },
     ],
   },

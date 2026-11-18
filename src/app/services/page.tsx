@@ -59,6 +59,117 @@ export default function ServicesPage() {
           ))}
         </RevealGroup>
       </Section>
+
+      <Section>
+        <SectionHeader
+          eyebrow="Finding the right one"
+          title="Which service do you need?"
+          description="Most people arrive with a situation, not a service name. Find yours below and we will point you to the right page."
+        />
+
+        <div className="mx-auto mt-12 max-w-3xl divide-y divide-border rounded-2xl border border-border bg-card">
+          {situations.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group flex items-center justify-between gap-4 p-5 transition-colors hover:bg-brand-indigo-50/60 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-ring"
+            >
+              <div>
+                <p className="text-sm font-semibold text-brand-indigo-900">
+                  {item.situation}
+                </p>
+                <p className="mt-1 text-pretty text-sm leading-relaxed text-muted-foreground">
+                  {item.note}
+                </p>
+              </div>
+              <ArrowRight
+                aria-hidden
+                className="size-4 shrink-0 text-primary transition-transform duration-300 group-hover:translate-x-1"
+              />
+            </Link>
+          ))}
+        </div>
+
+        <div className="mx-auto mt-12 max-w-3xl space-y-4 text-pretty leading-relaxed text-muted-foreground">
+          <h3 className="text-xl text-brand-indigo-900">How every service works</h3>
+          <p>
+            Whatever you come to us for, the approach is the same. We start from
+            what you actually need, not from what we have to sell. We tell you
+            the drawbacks of an option before you spend a weekend visiting it.
+            And where a decision needs a legal opinion, an independent property
+            solicitor gives it, with us coordinating the documents and the
+            people around it.
+          </p>
+          <p>
+            If you are unsure which service fits, a short conversation is
+            usually quicker than reading. Call or WhatsApp us, tell us where you
+            are, and we will say plainly whether we can help and where to begin.
+          </p>
+        </div>
+      </Section>
     </>
   );
 }
+
+const situations = [
+  {
+    situation: "I want to buy a home",
+    note: "A shortlist built around your needs, accompanied viewings and paperwork through to registration.",
+    href: "/services/property-buying",
+  },
+  {
+    situation: "I want to sell my property",
+    note: "A valuation from registered comparables, honest presentation and screened buyers.",
+    href: "/services/property-selling",
+  },
+  {
+    situation: "I want to rent a home, or let mine out",
+    note: "Tenant screening, registered leave-and-licence agreements, police verification and society NOC.",
+    href: "/services/renting",
+  },
+  {
+    situation: "I am still deciding and want an independent opinion",
+    note: "A one-off second opinion on a shortlist, a builder's offer or a redevelopment proposal.",
+    href: "/services/property-consultation",
+  },
+  {
+    situation: "A deal is going ahead and I want one coordinator",
+    note: "One point of contact for a sale, a purchase or both, from first viewing to handover.",
+    href: "/services/buying-selling",
+  },
+  {
+    situation: "I expect to buy, sell or invest more than once",
+    note: "Long-term advisory across residential and commercial property.",
+    href: "/services/real-estate-consultancy",
+  },
+  {
+    situation: "I am an NRI buying, selling or managing from abroad",
+    note: "Video walkthroughs, power of attorney coordination and registration in your absence.",
+    href: "/services/nri-services",
+  },
+  {
+    situation: "My society has a redevelopment proposal",
+    note: "Developer evaluation, the agreement in plain language and building member consensus.",
+    href: "/services/society-redevelopment",
+  },
+  {
+    situation: "I need the paperwork sorted",
+    note: "Title search and legal opinion by independent solicitors, stamp duty, registration and society transfer.",
+    href: "/services/legal-documentation",
+  },
+  {
+    situation: "I am looking at property as an investment",
+    note: "Net yield, holding costs, exit liquidity and a clear recommendation.",
+    href: "/services/investment-advisory",
+  },
+  {
+    situation: "I own a flat I do not live in",
+    note: "Tenant sourcing, rent collection, maintenance and inspections with photographs.",
+    href: "/services/property-management",
+  },
+  {
+    situation: "I am a developer looking for a channel partner",
+    note: "Qualified buyer introductions, site visits and honest market feedback.",
+    href: "/services/project-marketing",
+  },
+];

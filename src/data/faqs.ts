@@ -95,6 +95,76 @@ export const faqs: Faq[] = [
       "Yes — offices, shops, showrooms and warehouses across the western suburbs, for both purchase and lease. Commercial deals turn on different things than residential ones: permitted use, footfall, lease structure, and yield. We advise on all of them.",
     category: "Commercial",
   },
+  {
+    id: "faq-013",
+    question: "What is the difference between carpet area and super built-up area?",
+    answer:
+      "Carpet area is the usable floor area inside the flat's walls, the space you could actually lay a carpet on. Super built-up area adds a share of common areas such as lobbies, staircases and amenities. Under RERA, developers must sell apartments on carpet area, so compare listings on carpet area, not on the larger figure.",
+    category: "Buying",
+  },
+  {
+    id: "faq-014",
+    question: "What should I look for when I visit a flat?",
+    answer:
+      "Visit more than once, at different times of day. Check natural light, ventilation, noise, water pressure and mobile signal. Look at the condition of the staircase, lift and compound, ask the society about maintenance charges and any arrears, and find out whether redevelopment is being discussed. A flat can look right on paper and feel wrong in person.",
+    category: "Buying",
+  },
+  {
+    id: "faq-015",
+    question: "Can I get a home loan approved before I find a property?",
+    answer:
+      "Usually yes. Many lenders will give an in-principle approval based on your income and credit profile, which tells you what budget is realistic. The final sanction depends on the specific property, including its title and approvals. We introduce lenders, but the choice of lender is yours.",
+    category: "Buying",
+  },
+  {
+    id: "faq-016",
+    question: "What is an occupation certificate and why does it matter?",
+    answer:
+      "An occupation certificate, or OC, is issued by the local municipal authority to confirm that a building was completed in line with its approved plans and is fit to live in. Buying in a building without one carries legal and practical risk and can complicate a home loan or the society transfer, so ask for it early and have your solicitor check it.",
+    category: "Legal & Documentation",
+  },
+  {
+    id: "faq-017",
+    question: "What is the difference between an agreement for sale and a sale deed?",
+    answer:
+      "An agreement for sale records the terms of the purchase, including price, payment schedule and possession, and in Maharashtra it must be registered. A sale deed or conveyance is the document that transfers title. Which documents apply depends on whether the property is resale or under construction, and your solicitor will confirm the exact set for your transaction.",
+    category: "Legal & Documentation",
+  },
+  {
+    id: "faq-018",
+    question: "What documents do I need to sell my flat?",
+    answer:
+      "Typically proof of ownership and your registered agreement, the society share certificate, the society's no-objection certificate, recent maintenance and property tax receipts showing no dues, and your identity documents. If there is a loan on the flat, you will also need your lender's papers to close it at the time of sale. We give you a checklist for your specific flat.",
+    category: "Selling",
+  },
+  {
+    id: "faq-019",
+    question: "What should a tenant check before signing a leave and licence agreement?",
+    answer:
+      "Confirm that the person signing owns the flat, ask for the society's no-objection certificate where required, and make sure the rent, deposit, lock-in, notice period and who pays for repairs are written down. The agreement should be registered, and you should keep a signed inventory of what is in the flat on the day you move in.",
+    category: "Renting",
+  },
+  {
+    id: "faq-020",
+    question: "What documents does an NRI need to buy property in India?",
+    answer:
+      "Typically a passport, a PAN, proof of overseas address, and details of the NRE or NRO account the funds will come from. The solicitor and the lender will confirm the exact requirements for your case, and if you are buying through a power of attorney, that document has its own formalities, which we coordinate.",
+    category: "NRI Services",
+  },
+  {
+    id: "faq-021",
+    question: "What should I check before buying or leasing a shop or office?",
+    answer:
+      "Start with permitted use, because not every premises can legally be used for every business. Then check ownership and title, the lease terms if you are leasing, any society or building rules on signage and hours, and the practicalities of power, water and access. For an investment purchase, look at how long similar premises have stayed vacant.",
+    category: "Commercial",
+  },
+  {
+    id: "faq-022",
+    question: "How do I choose between Borivali, Kandivali, Malad, Goregaon and Andheri?",
+    answer:
+      "Start with the commute, because that shapes daily life more than any other factor, then your budget, and then what you want around you: schools, open space, shopping, quiet. All five sit on the Western Line corridor, so the differences are in character and price. Our locality guides set out what each area offers, and we are happy to talk through your specific priorities.",
+    category: "General",
+  },
 ];
 
 export const faqCategories = Array.from(new Set(faqs.map((f) => f.category)));
