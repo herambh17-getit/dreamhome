@@ -44,9 +44,9 @@ export const siteConfig = {
   ).replace(/\/+$/, ""),
 
   contact: {
-    phone: "+91 98193 88390",
-    phoneHref: "+919819388390",
-    whatsapp: "919819388390",
+    phone: "+91 99871 17947",
+    phoneHref: "+919987117947",
+    whatsapp: "919987117947",
     email: "dreamproperties147@gmail.com",
     address: {
       street:
@@ -77,7 +77,7 @@ export const siteConfig = {
    */
   google: {
     rating: 4.8,
-    reviewCount: 26,
+    reviewCount: 40,
     profileUrl: "https://share.google/zCtJJkIpltB7TBwlZ",
     reviewUrl: "https://g.page/r/CXfVb9UYAmh2EAE/review",
     placeId: "ChIJg8DRKQux5zsRd9Vv1RgCaHY",
