@@ -23,7 +23,7 @@ const barlow = Barlow({
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} | Real Estate Consultant in Mumbai`,
+    default: `Real Estate Agent in Borivali East | ${siteConfig.name}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.shortDescription,
@@ -38,13 +38,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     siteName: siteConfig.name,
-    title: `${siteConfig.name} | Real Estate Consultant in Mumbai`,
+    title: `Real Estate Agent in Borivali East | ${siteConfig.name}`,
     description: siteConfig.shortDescription,
     images: [{ url: DEFAULT_OG_IMAGE, width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${siteConfig.name} | Real Estate Consultant in Mumbai`,
+    title: `Real Estate Agent in Borivali East | ${siteConfig.name}`,
     description: siteConfig.shortDescription,
     images: [DEFAULT_OG_IMAGE],
   },

@@ -27,8 +27,8 @@ export async function generateMetadata(
   if (!location) return { title: "Location not found" };
 
   return pageMetadata({
-    title: `Property in ${location.name}, Mumbai`,
-    description: `Buy, sell or rent property in ${location.name}, Mumbai with ${siteConfig.name}. ${location.tagline}. Local expertise and transparent advice.`,
+    title: `Real Estate Agent for ${location.name} Property`,
+    description: `Real estate agent for buying, selling and renting property in ${location.name}, Mumbai. ${location.tagline}. Local expertise and transparent advice from ${siteConfig.name}.`,
     path: `/locations/${location.slug}`,
     image: location.image,
     imageAlt: `${location.name}, Mumbai`,

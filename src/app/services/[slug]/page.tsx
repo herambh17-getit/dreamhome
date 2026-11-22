@@ -48,7 +48,7 @@ export async function generateMetadata(
     // results a fuller, still-accurate snippet.
     description:
       service.description === service.summary
-        ? `${service.summary} ${siteConfig.name} — real estate consultants in Borivali East, Mumbai.`
+        ? `${service.summary} ${siteConfig.name} — real estate agents and consultants in Borivali East, Mumbai.`
         : `${service.summary} ${service.description}`,
     path: `/services/${slug}`,
   });

@@ -20,7 +20,7 @@ import { pageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata = pageMetadata({
-  title: `${siteConfig.name} | Real Estate Consultant in Mumbai`,
+  title: `Real Estate Agent in Borivali East | ${siteConfig.name}`,
   description: siteConfig.shortDescription,
   path: "/",
 });

@@ -92,8 +92,9 @@ export function Hero({ locations }: { locations: Location[] }) {
             transition={{ duration: 0.7, ease: EASE, delay: 0.16 }}
             className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-white/85 sm:text-lg"
           >
-            A real estate consultancy in Borivali East, guiding buyers, sellers
-            and investors across Mumbai&apos;s western suburbs. We show you
+            A real estate agent in Borivali East with a consulting approach,
+            guiding buyers, sellers and investors across Mumbai&apos;s western
+            suburbs. We show you
             everything relevant, explain the trade-offs honestly, and leave the
             decision where it belongs — with you.
           </motion.p>
@@ -118,7 +119,7 @@ export function Hero({ locations }: { locations: Location[] }) {
               variant="outline"
               className="border-white/30 bg-white/5 text-white backdrop-blur-sm hover:bg-white/15 hover:text-white"
             >
-              Talk to a consultant
+              Talk to an agent
             </ButtonLink>
           </motion.div>
         </div>

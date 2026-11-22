@@ -21,14 +21,14 @@ export const siteConfig = {
   tagline: "Building Trust. Finding Homes.",
   // From the source data sheet; used as a secondary//supporting line.
   altTagline: "Your Local Real Estate Expert",
-  industry: "Real Estate Consultancy",
-  businessType: "Real Estate Consultant",
+  industry: "Real Estate Agency",
+  businessType: "Real Estate Agent & Consultant",
 
   description:
-    "Dream Home Properties is a Mumbai-based real estate consultancy specializing in residential and commercial properties. The company assists buyers, sellers, investors and tenants with transparent and professional guidance.",
+    "Dream Home Properties is a real estate agent in Borivali East, Mumbai, working with a consulting approach. It specializes in residential and commercial properties and assists buyers, sellers, investors and tenants with transparent and professional guidance.",
 
   shortDescription:
-    "A premium real estate consultancy in Borivali East, Mumbai — guiding buyers, sellers, investors and tenants with transparent, expert advice.",
+    "Real estate agent in Borivali East, Mumbai, since 2005. Brokers with a consulting approach, advising buyers, sellers, investors and tenants across Mumbai.",
 
   /**
    * The site's public address. Every canonical, sitemap entry, share link
@@ -360,6 +360,8 @@ export const brandVoice = {
 
 /** SEO keywords from the source data sheet. */
 export const seoKeywords = [
+  "Real Estate Agent Borivali East",
+  "Real Estate Agent Mumbai",
   "Real Estate Consultant Mumbai",
   "Property Consultant Mumbai",
   "Buy Property Mumbai",
