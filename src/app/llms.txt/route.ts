@@ -41,7 +41,7 @@ ${practiceAreas.map((p) => `- [${p.title}](${u}/services/${p.slug}): ${p.summary
 ${locations.map((l) => `- [Property in ${l.name}, Mumbai](${u}/locations/${l.slug}): ${locationGuides[l.slug]?.summary ?? `${l.tagline}.`}`).join("\n")}
 
 ## Neighbourhood guides
-${microAreas.map((a) => `- [Property in ${a.fullName}](${u}/locations/${a.parent}/${a.slug}): ${a.intro[0]}${a.priceBands ? ` Typical asking prices as of ${a.priceBands.asOf} — resale: ${a.priceBands.resale.map((b) => `${b.config} ${b.range}`).join(", ")}; rent: ${a.priceBands.rent.map((b) => `${b.config} ${b.range}`).join(", ")}.` : ""}`).join("\n")}
+${microAreas.filter((a) => !a.draft).map((a) => `- [Property in ${a.fullName}](${u}/locations/${a.parent}/${a.slug}): ${a.intro[0]}${a.priceBands ? ` Typical asking prices as of ${a.priceBands.asOf} — resale: ${a.priceBands.resale.map((b) => `${b.config} ${b.range}`).join(", ")}; rent: ${a.priceBands.rent.map((b) => `${b.config} ${b.range}`).join(", ")}.` : ""}`).join("\n")}
 
 ## Guides
 ${blogPosts.map((p) => `- [${p.title}](${u}/blog/${p.slug}): ${p.excerpt}`).join("\n")}

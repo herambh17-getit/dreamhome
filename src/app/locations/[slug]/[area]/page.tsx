@@ -30,6 +30,7 @@ export async function generateMetadata(
     title: `Property in ${area.fullName}`,
     description: area.intro[0],
     path: `/locations/${slug}/${area.slug}`,
+    noindex: area.draft,
   });
 }
 

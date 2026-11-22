@@ -66,7 +66,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     })),
 
-    ...microAreas.map((a) => ({
+    ...microAreas.filter((a) => !a.draft).map((a) => ({
       url: `${base}/locations/${a.parent}/${a.slug}`,
       changeFrequency: "weekly" as const,
       priority: 0.8,
