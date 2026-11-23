@@ -8,9 +8,12 @@ import { ReviewsSection } from "@/components/home/reviews-section";
 import { LocationsSection } from "@/components/home/locations-section";
 import { BlogPreview } from "@/components/home/blog-preview";
 import { ContactSection } from "@/components/home/contact-section";
+import { WhoWeAre } from "@/components/home/who-we-are";
+import { HomeFaq } from "@/components/home/home-faq";
 import { WebSiteJsonLd } from "@/components/seo/json-ld";
 import {
   getBlogPosts,
+  getFaqs,
   getFeaturedProperties,
   getLocations,
   getTestimonials,
@@ -18,6 +21,9 @@ import {
 import { fetchGoogleReviews } from "@/lib/google-reviews";
 import { pageMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
+
+/** The five questions shown on the homepage, in order (ids from data/faqs.ts). */
+const HOME_FAQ_IDS = ["faq-001", "faq-002", "faq-004", "faq-003", "faq-008"];
 
 export const metadata = pageMetadata({
   title: `Real Estate Agent in Borivali East | ${siteConfig.name}`,
@@ -39,14 +45,19 @@ export const metadata = pageMetadata({
  * sequence would stack their latency for no reason.
  */
 export default async function HomePage() {
-  const [featured, locations, posts, seedTestimonials, googleReviews] =
+  const [featured, locations, posts, seedTestimonials, googleReviews, allFaqs] =
     await Promise.all([
       getFeaturedProperties(6),
       getLocations(),
       getBlogPosts(),
       getTestimonials(),
       fetchGoogleReviews(),
+      getFaqs(),
     ]);
+
+  const homeFaqs = HOME_FAQ_IDS.map((id) =>
+    allFaqs.find((f) => f.id === id),
+  ).filter((f): f is NonNullable<typeof f> => Boolean(f));
 
   // Prefer live Google reviews when the Places API is configured.
   const testimonials = googleReviews ?? seedTestimonials;
@@ -54,6 +65,7 @@ export default async function HomePage() {
   return (
     <>
       <Hero locations={locations} />
+      <WhoWeAre />
       <FeaturedProperties properties={featured} />
       <AboutSection />
       <ServicesSection />
@@ -62,6 +74,7 @@ export default async function HomePage() {
       <ReviewsSection testimonials={testimonials.slice(0, 4)} />
       <LocationsSection locations={locations} />
       <BlogPreview posts={posts} />
+      <HomeFaq faqs={homeFaqs} />
       <ContactSection />
       <WebSiteJsonLd />
     </>

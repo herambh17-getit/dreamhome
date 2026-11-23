@@ -31,7 +31,7 @@ export function OrganizationJsonLd() {
     <JsonLd
       data={{
         "@context": "https://schema.org",
-        "@type": "RealEstateAgent",
+        "@type": ["RealEstateAgent", "Organization"],
         "@id": `${siteConfig.url}/#organization`,
         name: siteConfig.name,
         description: siteConfig.description,
