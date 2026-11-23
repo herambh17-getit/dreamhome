@@ -33,7 +33,11 @@ export async function generateMetadata(
     path: `/blog/${post.slug}`,
     image: post.image,
     imageAlt: post.title,
-    article: { publishedTime: post.publishedAt, authors: [post.author] },
+    article: {
+      publishedTime: post.publishedAt,
+      modifiedTime: post.updatedAt,
+      authors: [post.author],
+    },
   });
 }
 
@@ -60,6 +64,12 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
         <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-white/65">
           <span className="font-medium text-white/85">{post.author}</span>
           <time dateTime={post.publishedAt}>{formatDate(post.publishedAt)}</time>
+          {post.updatedAt && post.updatedAt !== post.publishedAt && (
+            <span>
+              Updated{" "}
+              <time dateTime={post.updatedAt}>{formatDate(post.updatedAt)}</time>
+            </span>
+          )}
           <span className="flex items-center gap-1.5">
             <Clock className="size-3.5" aria-hidden />
             {post.readingMinutes} min read

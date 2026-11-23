@@ -21,36 +21,37 @@ export const blogPosts: BlogPost[] = [
     category: "Buying",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-06-24",
+    updatedAt: "2026-11-23",
     readingMinutes: 7,
     image: "/images/insights/verify-property.jpg",
     tags: ["Due Diligence", "Legal", "Buying"],
     featured: true,
     content: `Most people spend more time comparing phones than verifying a property that costs a hundred times as much. That is not a criticism — the process is opaque, and nobody explains it. So here it is.
 
-## Start with the title
+## How do you check a property's title?
 
 The title is the chain of ownership. A title search traces it back over a period of years and confirms two things: that the person selling can legally sell, and that the property carries no undisclosed mortgage, litigation or encumbrance.
 
 Do not accept a photocopy and a reassurance. A solicitor should run this and give you a written opinion. If a seller resists a title search, that resistance is your answer.
 
-## Then the approvals
+## Which approvals should you check?
 
 For any project still under construction, the developer needs the commencement certificate, and for a completed one, the occupation certificate. The OC matters more than people realise — without it, the building is not legally fit for occupation, and you can face difficulty with everything from a home loan to a water connection.
 
-## Check RERA yourself
+## How do you check a project's RERA registration?
 
 MahaRERA publishes registered projects on a public portal: approvals, plans, committed possession dates. Ask for the registration number, then look it up yourself. Do not let anyone — including us — look it up on your behalf and tell you what it says.
 
 If a project that should be registered is not, stop.
 
-## For a society flat, add these
+## What else should you check for a society flat?
 
 - The **share certificate**, confirming the seller's membership
 - A **no-objection certificate** from the society for the transfer
 - Confirmation that **maintenance dues are clear** — arrears follow the flat, not the seller
 - The society's stance on **redevelopment**, if that is on the table
 
-## What we do
+## How do we help with verification?
 
 We coordinate the title search with an independent property solicitor, help you collect the approvals and society paperwork, and give you the project's RERA number so you can check it yourself — all before you commit. Not as an upsell. Because the alternative is you finding out later.
 
@@ -65,29 +66,30 @@ If something does not check out, we will tell you, even when it costs us the dea
     category: "Buying",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-06-10",
+    updatedAt: "2026-11-23",
     readingMinutes: 6,
     image: "/images/insights/under-construction.jpg",
     tags: ["Buying", "Investment"],
     featured: true,
     content: `This question comes up in almost every first meeting, and it usually gets answered with a slogan. It deserves better.
 
-## The case for under construction
+## Why might you choose an under-construction home?
 
 The entry price is lower. Payment is staged across construction rather than due at once, which helps if your money is arriving over time rather than sitting in an account. You get first pick of floor, view and layout. And if the area appreciates during construction, that gain accrues to you.
 
-## The case against
+## What are the risks of buying under construction?
 
 You are buying a plan, not a flat. Completion risk is real — RERA improved accountability considerably, but it did not abolish delay. Under-construction property attracts GST that ready property does not. And if you are renting while you wait, you are paying twice for years.
 
-## The case for ready to move
+## Why might you choose a ready-to-move home?
 
 What you see is what you get. You can inspect the actual construction quality, meet actual neighbours, and check whether the promised amenities exist rather than trusting a render. No GST. No waiting. Rent stops the day you move in.
 
-## The case against
+## What are the downsides of a ready-to-move home?
 
 You pay for that certainty. Ready inventory in a good building is priced accordingly, and you may find less choice of unit.
 
-## So how do you actually decide
+## How do you decide between the two?
 
 Ask three questions:
 
@@ -108,6 +110,7 @@ There is no universal answer. There is an answer for you, and we will give you o
     category: "Redevelopment",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-05-20",
+    updatedAt: "2026-11-23",
     readingMinutes: 8,
     image: "/images/insights/society-redevelopment.jpg",
     tags: ["Redevelopment", "Legal"],
@@ -116,7 +119,7 @@ There is no universal answer. There is an answer for you, and we will give you o
 
 The difference is almost always decided before anyone signs.
 
-## Ask about the developer's record first
+## How do you judge a redevelopment developer?
 
 Not their brochure. Their record. Specifically:
 
@@ -127,7 +130,7 @@ Not their brochure. Their record. Specifically:
 
 That last one is the most useful question in this article. Go and ask them.
 
-## Understand what you are actually being promised
+## What are members actually being promised?
 
 Three numbers matter:
 
@@ -137,19 +140,19 @@ Three numbers matter:
 
 **The rent.** How much, for how long, paid on what date, and — critically — what is the remedy if it stops? A rent promise with no security behind it is a sentence in a document.
 
-## Read the development agreement properly
+## What should you check in the development agreement?
 
 This is the document that governs everything. Engage a solicitor who works on redevelopment specifically, and have them explain the delay clauses, the termination rights, and what security exists behind the rent and corpus commitments.
 
 The developer's lawyer drafted it to protect the developer. That is their job. You need someone doing the same job for you.
 
-## Get genuine consensus before, not after
+## How do you build genuine member consensus?
 
 The single biggest cause of stalled redevelopment is a society that was not actually aligned. A narrow majority pushed through over sustained objection tends to produce litigation, and litigation stops the project — often for years, with everyone already out of their homes.
 
 Do the slow work of bringing members along. It is faster than the alternative.
 
-## Where we fit
+## How can we help a society?
 
 We help societies evaluate developers, understand terms in plain language, and reach a decision members can actually live with. We are not incentivised to push you toward any particular developer, and we will tell you if we think a proposal is bad for you.
 
@@ -164,35 +167,36 @@ If your society is considering redevelopment, talk to us early — while you sti
     category: "NRI Services",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-04-28",
+    updatedAt: "2026-11-23",
     readingMinutes: 7,
     image: "/images/properties/mumbai-sealink.jpg",
     tags: ["NRI", "Buying", "Legal"],
     featured: false,
     content: `Buying property in Mumbai from abroad is entirely doable. It is also where small process mistakes get expensive, because you are not there to catch them.
 
-## What you can and cannot buy
+## What can an NRI buy in India, and what is off limits?
 
 NRIs and OCI cardholders can buy residential and commercial property in India without special permission. The exceptions are agricultural land, plantation property and farmhouses — those require specific approval that is rarely granted.
 
-## Funding has to route correctly
+## How must an NRI fund the purchase?
 
 Payment must come through proper banking channels — NRE, NRO or FCNR accounts. Cash is not an option, and neither is routing money through a relative's resident account to "keep it simple". That creates a problem you will meet later, usually when you try to sell.
 
 Home loans are available to NRIs from most Indian lenders, with repayment through the same account types.
 
-## Think about repatriation before you buy, not after
+## How does repatriation affect your purchase?
 
 There are rules on how much you can take back out and when, and they differ depending on whether you bought with repatriable funds. Sale proceeds also attract capital gains tax, with TDS deducted at source at a rate that surprises most people.
 
 Talk to a CA who does NRI work **before** you purchase. Structuring this correctly at the start is straightforward. Fixing it afterwards is not.
 
-## Power of attorney
+## Can you buy through a power of attorney?
 
 You do not need to fly in. A properly drafted power of attorney lets someone you trust complete registration on your behalf. Two cautions: draft it narrowly, for the specific transaction, and execute it correctly — for a PoA made abroad, that usually means notarisation and, depending on the country, apostille or consular attestation, followed by adjudication in India.
 
 A vague, wide PoA handed to the wrong person is a genuine risk. Keep it specific.
 
-## Why someone on the ground matters
+## Why does having someone on the ground matter?
 
 Everything above is procedural and manageable. What you cannot do from another time zone is stand in the flat, notice that the "park-facing" bedroom faces a wall, or sense that a society's paperwork is not what it should be.
 
@@ -207,6 +211,7 @@ That is the actual job we do for NRI clients: be there, look properly, and tell 
     category: "Selling",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-04-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 5,
     image: "/images/properties/mumbai-towers.jpg",
     tags: ["Selling", "Valuation"],
@@ -215,13 +220,13 @@ That is the actual job we do for NRI clients: be there, look properly, and tell 
 
 Here is how we arrive at a real one.
 
-## We start from registered transactions
+## How do we start valuing your flat?
 
 Not asking prices. Not what someone told you at a society meeting. Actual registered transactions in your building, or in genuinely comparable neighbouring societies, over recent months.
 
 Asking prices tell you what sellers hope for. Registered prices tell you what buyers paid.
 
-## Then we adjust for your specific flat
+## How do we adjust for your specific flat?
 
 Two flats in the same building can differ meaningfully in value:
 
@@ -232,11 +237,11 @@ Two flats in the same building can differ meaningfully in value:
 - **Parking** — allotted or not
 - **Society health** — dues, disputes, redevelopment prospects
 
-## Then we adjust for your timeline
+## How does your timeline affect the price?
 
 If you need to sell in six weeks, that is a different price from a sale you can wait a year for. Neither is wrong. But they are not the same number, and pretending otherwise wastes your time.
 
-## Why overpricing costs you money
+## Why does overpricing cost you money?
 
 There is an intuition that you may as well start high and come down. It does not work, for a specific reason.
 
@@ -244,7 +249,7 @@ Your listing gets the most attention in its first two to three weeks. That is wh
 
 Priced right, you sell to a buyer who was ready. Priced high, you sell later, to a worse buyer, for less.
 
-## What we will tell you
+## What will we tell you about your price?
 
 We will tell you what the market will actually pay. Sometimes that is more than you expected. Often it is less. We would rather have the awkward conversation at the start than watch your flat sit for eight months.
 
@@ -259,13 +264,14 @@ You decide the price. That is genuinely your call. But you should decide it with
     category: "Buying",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-03-16",
+    updatedAt: "2026-11-23",
     readingMinutes: 5,
     image: "/images/properties/mumbai-city.jpg",
     tags: ["Buying", "Basics"],
     featured: false,
     content: `If you are comparing two flats and one quotes 1,100 and the other quotes 750, you may be looking at the same amount of floor.
 
-## The three numbers
+## What are carpet, built-up and super built-up area?
 
 **Carpet area** is the usable floor inside your walls — the area you could actually lay carpet on. This is the honest number.
 
@@ -275,13 +281,13 @@ You decide the price. That is genuinely your call. But you should decide it with
 
 The gap between carpet and super built-up — the "loading" — has often run around 25–40%, and it is not standardised. Two developers can quote super built-up on entirely different bases.
 
-## RERA fixed the worst of this
+## How did RERA change how area is measured?
 
 Under RERA, developers must disclose **carpet area**, defined consistently. That was a genuine improvement, and it is why you should insist on carpet area for every comparison you make.
 
 Some resale listings and older marketing still lead with super built-up. That is not necessarily dishonest — but it is not comparable.
 
-## The practical rule
+## What is the practical rule for comparing flats?
 
 Compare carpet to carpet. Always. If a listing will not give you a carpet number, that reluctance is information.
 
@@ -298,23 +304,24 @@ We quote carpet area on every listing on this site, for exactly this reason.`,
     category: "Locations",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 6,
     image: "/images/locations/kandivali.jpg",
     tags: ["Borivali", "Kandivali", "Buying", "Locations"],
     featured: false,
     content: `Borivali and Kandivali sit next to each other on the Western Line, and families looking in one almost always end up looking at the other. They are closer than most comparisons suggest — but they are not the same, and the difference matters more for some households than others.
 
-## The short answer
+## Which is better for families, Borivali or Kandivali?
 
 Choose **Borivali** if green space, an established neighbourhood and mature schools and hospitals matter most, and you can live with a slightly longer commute south. Choose **Kandivali** if you want more flat for your budget and good Metro access towards Malad, Goregaon and Andheri, and you are happy to pick your pocket carefully.
 
-## Space and surroundings
+## Which has better space and surroundings?
 
 Borivali's defining feature is [Sanjay Gandhi National Park](/locations/borivali) on its eastern edge. For a family that values a morning walk under trees, that is hard to replicate anywhere else inside Mumbai. Borivali is also well established: schools, hospitals and retail have been there for years rather than being promised in a brochure.
 
 Kandivali's character depends heavily on the pocket. **Thakur Village** and **Lokhandwala Township** in Kandivali East are planned areas with wide internal roads and everyday shopping nearby. **Charkop** and **Mahavir Nagar** in Kandivali West are busier, older and very well served. Visit more than one before deciding — they feel like different suburbs.
 
-## Getting to work
+## Which is better for getting to work?
 
 Both have their own Western Line station and sit on the Western Express Highway. The Metro changed the picture for both:
 
@@ -323,13 +330,13 @@ Both have their own Western Line station and sit on the Western Express Highway.
 
 Kandivali is one station closer to Malad, Goregaon and Andheri. If both parents commute south every day, that difference adds up over a year. If one works from home or in the northern suburbs, it barely matters.
 
-## Value for money
+## Which gives better value for money?
 
 Kandivali generally gives you more carpet area for the same budget than Borivali. That is the main reason families who start in Borivali end up buying in Kandivali. But "cheaper per square foot" is an average across very different buildings; a well-run Borivali society can be better value than a poorly maintained Kandivali one at a lower rate. Compare specific flats, not suburbs.
 
 Indicative rates for each area are on our [Borivali](/locations/borivali) and [Kandivali](/locations/kandivali) guides — treat them as orientation, not a quote.
 
-## Older buildings and redevelopment
+## What about older buildings and redevelopment?
 
 Both suburbs mix older society buildings with newer redeveloped towers. That matters for families in two ways:
 
@@ -351,13 +358,14 @@ If you want a second opinion on a specific flat in either area, [talk to us](/co
     category: "Buying",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 6,
     image: "/images/properties/mumbai-city.jpg",
     tags: ["Stamp Duty", "Registration", "Legal", "Buying"],
     featured: false,
     content: `Stamp duty and registration are the two largest costs of buying a flat after the price itself, and they surprise first-time buyers more than anything else. Here is how they work. We have deliberately left out percentages: rates and concessions are revised by the state, and a blog post quoting last year's figure is worse than none. The official source is linked below.
 
-## What stamp duty is
+## What is stamp duty?
 
 Stamp duty is a tax the state charges on the document that transfers the property — your sale agreement. It has to be paid before the agreement is registered. In Mumbai it is calculated on the **higher of** two values:
 
@@ -366,23 +374,23 @@ Stamp duty is a tax the state charges on the document that transfers the propert
 
 So writing a lower price into the agreement does not reduce stamp duty. It only creates problems for you later.
 
-## What registration is
+## What is registration?
 
 Registration records the agreement at the sub-registrar's office, which makes it the legal record of the sale. There is a separate registration fee. On the day, the buyer and seller (or their power-of-attorney holders) sign in front of the sub-registrar with witnesses, and photographs and thumbprints are taken.
 
-## Who pays
+## Who pays stamp duty and registration?
 
 Normally the **buyer** pays both stamp duty and the registration fee. This is negotiable in principle, but it is the standard practice in Mumbai, so budget for it from the start.
 
-## How payment works
+## How do you pay stamp duty and registration?
 
 Stamp duty is paid electronically before registration — through the state's online payment system or by e-stamping — and the receipt is attached to the agreement. We calculate the amounts for your specific transaction and coordinate payment and the registration appointment.
 
-## Where to check the current rates
+## Where can you check the current rates?
 
 The **Department of Registration and Stamps, Maharashtra** publishes the current stamp duty rates, the ready reckoner rates and an online calculator at [igrmaharashtra.gov.in](https://igrmaharashtra.gov.in). Use the official figures, not a number from a forum or an old article — including this one.
 
-## The other costs to budget for
+## What other costs should you budget for?
 
 Stamp duty and registration are not the only additions to the price. A realistic budget also includes:
 
@@ -393,7 +401,7 @@ Stamp duty and registration are not the only additions to the price. A realistic
 - **brokerage**, if applicable
 - **moving and interiors**, which are always more than planned
 
-## Common mistakes
+## What are the common mistakes?
 
 1. **Under-declaring the price** to save stamp duty. It doesn't work — duty is charged on the ready reckoner value anyway — and it can cause tax and loan problems.
 2. **Forgetting stamp duty in the loan plan.** Lenders usually do not finance stamp duty and registration; they come from your own funds.
@@ -410,33 +418,34 @@ If you want the exact figures for a property you are considering, our [legal and
     category: "Buying",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 8,
     image: "/images/locations/borivali.jpg",
     tags: ["First-Time Buyers", "Buying", "Home Loan"],
     featured: false,
     content: `Buying your first home in Mumbai is exciting and, frankly, nerve-wracking. The amounts are large, the paperwork is unfamiliar, and everyone has an opinion. This is the process we take first-time buyers through, in order.
 
-## 1. Work out what you can really afford
+## Step 1: How much can you really afford?
 
 Start with your total budget, not the flat's price. Add stamp duty and registration, legal fees, any GST, society transfer charges, moving and basic interiors — our guide to [stamp duty and registration](/blog/stamp-duty-and-registration-in-mumbai-explained) lists them. Then speak to a lender about how much they will lend and what the monthly EMI would be. Be honest about the EMI you can carry comfortably, not just the maximum the bank approves.
 
-## 2. Decide what you need, not just what you want
+## Step 2: What do you need, not just want?
 
 Write down the non-negotiables: the longest commute you will tolerate, the number of bedrooms you need now and in five years, schools, and whether you want ready-to-move or are willing to wait for an under-construction flat. Our comparison of [under-construction and ready-to-move](/blog/under-construction-vs-ready-to-move-the-honest-comparison) property helps with that choice.
 
-## 3. Choose the area before the flat
+## Step 3: Which area should you choose first?
 
 Shortlist one or two areas that fit your commute and budget, then visit at the times you would actually travel. Our local guides to [Borivali](/locations/borivali), [Kandivali](/locations/kandivali), [Malad](/locations/malad), [Goregaon](/locations/goregaon) and [Andheri](/locations/andheri) cover neighbourhoods, Metro lines and trade-offs.
 
-## 4. Get a home loan in-principle approval
+## Step 4: How do you get a home loan in-principle approval?
 
 An in-principle approval tells you, and sellers, that you are a serious buyer and fixes your realistic budget before you fall in love with a flat you cannot finance.
 
-## 5. View properly
+## Step 5: How should you view a flat?
 
 Visit more than once, at different times of day. Check light, ventilation, noise, water pressure and mobile signal. Ask about the society: maintenance charges, any arrears, how it is run, and whether redevelopment is being discussed. Compare **carpet area**, not "built-up" or "super built-up" — our guide to [reading carpet area](/blog/reading-a-carpet-area-number-properly) explains why.
 
-## 6. Verify before you pay anything significant
+## Step 6: What should you verify before paying?
 
 This is the step first-time buyers most often rush. Before paying more than a small token amount:
 
@@ -447,19 +456,19 @@ This is the step first-time buyers most often rush. Before paying more than a sm
 
 Our [step-by-step verification guide](/blog/how-to-verify-a-property-before-you-buy-in-mumbai) goes through each check.
 
-## 7. Negotiate and agree terms
+## Step 7: How do you negotiate and agree terms?
 
 Price is only one term. Possession date, what is included, payment schedule and who pays which charges all matter. Get everything in writing before the agreement is drafted.
 
-## 8. Agreement, stamp duty and registration
+## Step 8: What happens at agreement, stamp duty and registration?
 
 The sale agreement is drafted and reviewed, stamp duty is paid, and the agreement is registered at the sub-registrar's office. Your lender disburses the loan as per the agreement.
 
-## 9. Possession and society transfer
+## Step 9: What happens at possession and society transfer?
 
 Collect the keys, check the flat against what was agreed, and complete the society membership transfer so the share certificate is in your name. Keep every document safely — you will need them when you sell.
 
-## The mistakes we see most
+## What mistakes do first-time buyers make most?
 
 1. Paying a large advance before the title is verified.
 2. Budgeting for the price but not for stamp duty and the other costs.
@@ -478,23 +487,24 @@ If you would like someone in your corner for your first purchase, our [property 
     category: "Renting",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 6,
     image: "/images/properties/mumbai-towers.jpg",
     tags: ["Renting", "Leave and Licence", "Legal"],
     featured: false,
     content: `Most rental disputes in Mumbai trace back to the same few gaps: the agreement was never registered, the terms were never written down, or the society and police steps were skipped. Here is how to do it properly, whether you are the landlord or the tenant.
 
-## What a leave and licence agreement is
+## What is a leave and licence agreement?
 
 In Mumbai, residential rentals are almost always done through a **leave and licence agreement** rather than a lease. It gives the tenant (the licensee) the right to occupy the flat for an agreed period, without creating a tenancy that is hard to end.
 
-## It has to be registered
+## Does a leave and licence agreement have to be registered?
 
 In Maharashtra, a leave and licence agreement must be **registered**. It can be done online through the Department of Registration and Stamps at [igrmaharashtra.gov.in](https://igrmaharashtra.gov.in), with both parties' identity verified. Stamp duty and a registration fee are payable; the official site has the current amounts.
 
 An unregistered agreement gives both sides very little protection. If something goes wrong — unpaid rent, a tenant who won't leave, a deposit that isn't returned — the registered agreement is what you rely on.
 
-## What the agreement should cover
+## What should the agreement cover?
 
 Settle all of this in writing before anyone moves in:
 
@@ -507,25 +517,25 @@ Settle all of this in writing before anyone moves in:
 - **Who pays what** — maintenance, property tax, electricity, repairs
 - **Use** of the flat and any restrictions from the society
 
-## Police verification
+## What about police verification?
 
 Landlords in Mumbai are required to share tenant details with the police. Mumbai Police offers an online tenant-information process. Do it at the start of every tenancy — it protects the landlord, and it is not optional.
 
-## The society
+## What is the society's role?
 
 Check the society's rules before you agree terms. Many societies require an application and an NOC for a new tenant, and some charge non-occupancy charges. A society that objects after the tenant has moved in is a problem nobody wants.
 
-## Handover
+## What happens at handover?
 
 Do a documented handover: a list of furniture and fittings, meter readings, and photographs of the flat's condition. It turns the deposit conversation at the end from an argument into a checklist.
 
-## For tenants specifically
+## What should tenants know?
 
 - See the owner's proof of ownership, or a valid authority if someone else is letting the flat.
 - Never pay a deposit before the agreement is drafted.
 - Keep receipts for every payment.
 
-## For landlords specifically
+## What should landlords know?
 
 - Verify the tenant's identity and employment.
 - Don't hand over keys before the agreement is registered and the police information is submitted.
@@ -542,25 +552,26 @@ Our [renting service](/services/renting) handles all of this for both landlords 
     category: "Buying",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 6,
     image: "/images/insights/under-construction.jpg",
     tags: ["RERA", "Occupation Certificate", "Legal", "Due Diligence"],
     featured: false,
     content: `Three sets of initials decide whether the flat you are buying is legally sound: **CC**, **OC** and **RERA**. Sales teams mention them quickly. Here is what each actually means, and how to check it yourself instead of taking anyone's word for it.
 
-## CC — Commencement Certificate
+## What is a Commencement Certificate (CC)?
 
 The commencement certificate is issued by the planning authority — in most of Mumbai, the municipal corporation — before construction is allowed to begin. It confirms that the building plans have been approved and work can start.
 
 **When it matters:** for any **under-construction** project. If a developer is selling flats in a building without a valid CC for the floors being sold, stop. Ask to see the CC, and check which floors it covers — approvals are sometimes granted in stages.
 
-## OC — Occupation Certificate
+## What is an Occupation Certificate (OC)?
 
 The occupation certificate is issued after construction, confirming that the building was built according to the approved plans and is fit to be occupied.
 
 **When it matters:** for any **ready-to-move** or **resale** flat in a newer building. Without an OC, a building is not legally fit for occupation, and you can run into trouble with a home loan, water and electricity connections, and eventually resale. A **part OC** covers only some floors or wings — check that it covers the flat you are buying.
 
-## RERA — MahaRERA registration
+## What is MahaRERA registration?
 
 Under the Real Estate (Regulation and Development) Act, most new residential projects in Maharashtra must be registered with **MahaRERA** before they are advertised or sold. Registration generally applies where the land exceeds 500 square metres or the project has more than eight apartments, along with ongoing projects that had not received completion certificates when the Act came in.
 
@@ -575,13 +586,13 @@ The MahaRERA portal publishes, for each registered project:
 
 Real estate agents in Maharashtra must also be registered with MahaRERA and quote their registration number.
 
-## Which ones you need, by type of purchase
+## Which documents do you need for each type of purchase?
 
 - **Under-construction flat:** a valid **CC** for the relevant floors, and **MahaRERA registration** for the project.
 - **New, ready-to-move flat:** an **OC** for your building and wing, and the project's **MahaRERA** record.
 - **Resale flat in an older building:** the **OC** where one was issued, plus the society paperwork — share certificate, NOC and clear maintenance dues — and a title search.
 
-## Red flags
+## What are the red flags?
 
 1. A developer who "will share the RERA number later".
 2. A building that has been occupied for years "without OC — everyone lives there".
@@ -599,24 +610,25 @@ For a full pre-purchase checklist, see [how to verify a property before you buy]
     category: "Locations",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 6,
     image: "/images/locations/malad.jpg",
     tags: ["Malad", "Goregaon", "Renting", "Locations"],
     featured: false,
     content: `If you work in Mindspace, Nesco, or anywhere along the Western Express Highway between Malad and Andheri, Malad and Goregaon are usually the first two names on your list. They border each other and share a lot — but where exactly your office is should decide between them.
 
-## The short answer
+## Which is better for working professionals, Malad or Goregaon?
 
 Live in **Malad West** if you work in or near Mindspace and want to walk or take a short ride to work. Live in **Goregaon** if your office is at Nesco or further south towards Andheri, or if you value being central between the northern suburbs and the Andheri–BKC belt.
 
-## Where the offices are
+## Where are the offices?
 
 - **Malad West** has the [Mindspace business district](/locations/malad), surrounded by Infiniti and Inorbit malls and plenty of places to eat.
 - **Goregaon East** has [Nesco and the Bombay Exhibition Centre](/locations/goregaon), the Oberoi Garden City township with its own offices, and Film City further inland.
 
 Living on the same side of the railway line as your office matters more than which suburb you pick. Crossing the line at peak hours is where commutes lose time.
 
-## Getting around
+## How easy is it to get around?
 
 Both are well served:
 
@@ -624,7 +636,7 @@ Both are well served:
 - **Metro Line 2A** along Link Road on the west side — Malad West, Valnai and Lower Malad in Malad; Goregaon West in Goregaon.
 - **Metro Line 7** along the Western Express Highway on the east side — Kurar and Dindoshi in Malad; Aarey and Goregaon East in Goregaon.
 
-## Neighbourhoods
+## Which neighbourhoods should you look at?
 
 **Malad West:** the Mindspace and Chincholi Bunder area for proximity to work; Orlem and Marve Road for an established residential feel, heading towards the beaches at Aksa and Marve.
 
@@ -634,11 +646,11 @@ Both are well served:
 
 **Goregaon West:** Bangur Nagar, Motilal Nagar and the area around the station and SV Road — older, established neighbourhoods.
 
-## Lifestyle
+## What is the lifestyle like?
 
 Malad West has the edge on malls, restaurants and the beaches. Goregaon East offers large townships with amenities inside the complex, plus the green belt of Aarey. Goregaon West feels more like a traditional, settled neighbourhood.
 
-## Renting first, buying later
+## Should you rent first and buy later?
 
 Many professionals rent in one of these areas before buying. That is a sensible way to test the commute and the neighbourhood with real days rather than a weekend visit. When you do rent, make sure the [leave and licence agreement](/blog/leave-and-licence-agreement-mumbai-guide) is registered.
 
@@ -657,17 +669,18 @@ Tell us where you work and your budget, and we will shortlist [rentals](/service
     category: "Locations",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 5,
     image: "/images/locations/andheri.jpg",
     tags: ["Andheri", "Buying", "Locations"],
     featured: false,
     content: `Andheri is the most connected suburb in the western suburbs — and the railway line splits it into two quite different places. Choosing between East and West is mostly about how you live and where you work.
 
-## The short answer
+## Andheri East or Andheri West: which is better to buy in?
 
 **Andheri West** suits buyers who want a lifestyle neighbourhood: Lokhandwala, Versova and Four Bungalows, with restaurants, retail and the sea nearby. **Andheri East** suits buyers who work at the airport, SEEPZ, MIDC or Chakala and want a short commute. West generally costs more for a comparable flat.
 
-## Andheri West
+## What is Andheri West like?
 
 - **Lokhandwala** — busy, popular and well served for shopping and eating out.
 - **Versova and Seven Bungalows** — towards the sea, at the western end of Metro Line 1.
@@ -675,7 +688,7 @@ Tell us where you work and your budget, and we will shortlist [rentals](/service
 
 West is where most people picture "living in Andheri". The trade-off is price and traffic, particularly on the roads towards the station.
 
-## Andheri East
+## What is Andheri East like?
 
 - **Marol** — a residential and commercial mix close to the airport.
 - **Chakala and MIDC** — a major office and industrial belt.
@@ -683,7 +696,7 @@ West is where most people picture "living in Andheri". The trade-off is price an
 
 East is more practical than glamorous. If your office is here, living nearby can turn a long cross-city commute into a short one.
 
-## Connectivity
+## How is the connectivity?
 
 Andheri is a Metro interchange:
 
@@ -693,13 +706,13 @@ Andheri is a Metro interchange:
 
 Andheri station is on the Western Line and the Harbour Line, and the airport is in Andheri East. Of the areas we cover, Andheri is the closest to BKC.
 
-## Who each suits
+## Who does each side suit?
 
 - **Andheri West:** families and professionals who want lifestyle and are paying for location.
 - **Andheri East:** people who work in the eastern office belt or travel often, and buyers who want Andheri's connectivity at a lower price than West.
 - **Commercial buyers:** Andheri East has the deepest office market in the western suburbs.
 
-## If Andheri stretches the budget
+## What if Andheri stretches your budget?
 
 Goregaon is the next suburb north, with two Metro lines and the Western Express Highway, and often more space for the money. Our [Goregaon guide](/locations/goregaon) and [Andheri guide](/locations/andheri) compare them in more detail.
 
@@ -714,17 +727,18 @@ Thinking of buying in Andheri? [Talk to us](/contact) — we will tell you hones
     category: "NRI Services",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 6,
     image: "/images/properties/mumbai-sealink.jpg",
     tags: ["NRI", "Selling", "Tax", "Legal"],
     featured: false,
     content: `Selling a Mumbai flat from abroad is entirely possible. It just has more moving parts than a sale by a resident, and most delays come from the tax and paperwork side rather than finding a buyer. This is the process, and where it usually goes wrong. Tax rules change — confirm the specifics with a chartered accountant who handles NRI cases before you sell.
 
-## The short answer
+## Can an NRI sell property in Mumbai?
 
 You can sell without travelling, using a properly drafted power of attorney. The buyer must deduct tax at source (TDS) from what they pay you. Capital gains tax applies, and getting the proceeds abroad depends on how you originally paid for the property. Speak to a CA **before** you agree a price, not after.
 
-## TDS: the part that surprises sellers
+## What is TDS, and why does it surprise sellers?
 
 When the seller is an NRI, the **buyer is required to deduct TDS** from the payment and deposit it with the tax department. For an NRI seller this deduction is generally calculated on the sale price, not just your profit, so it can be much larger than the tax you actually owe.
 
@@ -735,19 +749,19 @@ Two things help:
 
 Make sure the buyer has a **TAN** and deposits the TDS correctly; you will need the TDS certificate.
 
-## Capital gains
+## How are capital gains handled?
 
 The gain is taxed in India. How it is taxed depends mainly on how long you have held the property, your purchase cost and improvement costs. Your CA will also advise on any exemptions available and how the sale interacts with tax in your country of residence.
 
-## Power of attorney
+## Can you sell through a power of attorney?
 
 You don't need to fly in. A **power of attorney** lets someone you trust sign and register the sale on your behalf. Keep it **specific to this sale**, and execute it correctly where you sign it — usually notarisation and, depending on the country, apostille or consular attestation — and complete the formalities in India before it is used.
 
-## Getting the money out
+## How do you get the money out of India?
 
 Sale proceeds are credited to your NRO account. How much you can send abroad, and under what conditions, depends on how the property was originally bought and is subject to RBI rules and limits; your bank and CA will need the purchase and sale documents and tax certificates. This is why the question "how did you pay for it originally?" matters so much.
 
-## Documents to have ready
+## Which documents should you have ready?
 
 - Your purchase agreement and the chain of earlier agreements
 - Society share certificate and a society NOC for the transfer
@@ -755,7 +769,7 @@ Sale proceeds are credited to your NRO account. How much you can send abroad, an
 - PAN and passport, and the power of attorney if someone is signing for you
 - Loan closure letter, if the flat had a home loan
 
-## Common mistakes
+## What are the common mistakes?
 
 1. Agreeing a price before understanding the TDS — and being surprised by the net amount.
 2. A broad, open-ended power of attorney instead of one for this transaction.
@@ -773,13 +787,14 @@ Our [NRI services](/services/nri-services) team can manage the sale on the groun
     category: "Buying",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 6,
     image: "/images/properties/mumbai-skyline.jpg",
     tags: ["RERA", "Under Construction", "Legal", "Buying"],
     featured: false,
     content: `Delayed possession is the most common complaint from buyers of under-construction flats. Before RERA, there was little a buyer could do except wait. The Real Estate (Regulation and Development) Act changed that. This is general guidance, not legal advice — for a specific case, speak to a lawyer.
 
-## The short answer
+## What are your rights if possession is delayed?
 
 If the developer fails to give possession by the date in your agreement, RERA generally lets you choose: **withdraw from the project** and get your money back with interest, or **stay in the project** and receive interest for every month of delay until possession. You can file a complaint with **MahaRERA** to enforce this.
 
@@ -802,7 +817,7 @@ Think about your home loan too — if you are paying EMIs on an incomplete flat,
 
 Complaints are filed online through the MahaRERA portal, with your agreement, payment receipts and correspondence. MahaRERA also offers a conciliation route for disputes that both sides are willing to settle. A lawyer who handles RERA matters can tell you which route suits your case.
 
-## Before you buy under construction
+## What should you check before buying under construction?
 
 Prevention is easier than a complaint:
 
@@ -822,17 +837,18 @@ Our guide to [OC, CC and RERA](/blog/oc-cc-and-rera-what-they-mean-when-buying-a
     category: "Buying",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 6,
     image: "/images/properties/mumbai-towers.jpg",
     tags: ["Resale", "Society", "Legal", "Buying"],
     featured: false,
     content: `Most flats in Mumbai sit inside a cooperative housing society. When you buy a resale flat, you are buying two things: the flat itself, and the seller's membership and shares in the society. Registering the sale agreement transfers the first. The second needs its own process — and if it is skipped, you can find yourself owning a flat in a building where you are not a member.
 
-## The short answer
+## How does the society transfer work for a resale flat?
 
 Before you buy, see the **share certificate**, a **society NOC** for the sale, and proof that **dues are clear**. After registration, apply to the society for **membership transfer** so the share certificate is endorsed in your name, then move the **electricity, gas and property tax** records across.
 
-## Before you agree to buy
+## What should you check before you agree to buy?
 
 Ask the seller for:
 
@@ -844,11 +860,11 @@ Ask the seller for:
 
 Also ask the managing committee — not just the seller — whether **redevelopment** is under discussion, whether there are any **disputes or litigation**, and what the **monthly maintenance** is. Our [verification checklist](/blog/how-to-verify-a-property-before-you-buy-in-mumbai) covers the title side.
 
-## Registration
+## What happens at registration?
 
 The sale agreement is stamped and registered at the sub-registrar's office. After registration you receive the registered document and an **Index II** extract, which records the transaction. Keep both safely — you will need them for the society, the utilities and, one day, your own sale. Our guide to [stamp duty and registration](/blog/stamp-duty-and-registration-in-mumbai-explained) explains that step.
 
-## Transferring the society membership
+## How do you transfer the society membership?
 
 After registration, the buyer applies to the society to become a member in place of the seller. Typically this involves:
 
@@ -860,7 +876,7 @@ After registration, the buyer applies to the society to become a member in place
 
 Ask the society secretary for its exact checklist at the start — societies differ, and a missing signature can hold things up for a month.
 
-## Moving the utilities and taxes
+## How do you move the utilities and taxes?
 
 Once the society transfer is done, change the name on:
 
@@ -871,11 +887,11 @@ Once the society transfer is done, change the name on:
 
 These all ask for the registered agreement and usually the society's letter, which is another reason to finish the society transfer promptly.
 
-## If you have a home loan
+## What changes if you have a home loan?
 
 Your lender will usually want the society NOC and an undertaking from the society to note the bank's interest — sometimes called a **lien letter**. Ask the society early so it doesn't delay disbursement.
 
-## The mistakes we see most
+## What mistakes do buyers make most?
 
 1. Paying a large advance before seeing the original share certificate.
 2. Assuming dues are clear because the seller says so.
@@ -893,23 +909,24 @@ Our [legal and documentation](/services/legal-documentation) service coordinates
     category: "Buying",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 5,
     image: "/images/properties/mumbai-skyline.jpg",
     tags: ["Ready Reckoner", "Stamp Duty", "Tax", "Buying"],
     featured: false,
     content: `If you are buying or selling property in Mumbai, someone will mention the "ready reckoner rate" — usually when stamp duty comes up. It is a simple idea with consequences for both buyers and sellers. We have left out actual rates: they differ street by street and are revised by the state, so look up the current figure for your property on the official site linked below.
 
-## The short answer
+## What is the ready reckoner rate, in short?
 
 The ready reckoner rate is the **government's reference value** for property in a given location. Stamp duty is charged on the **higher of** this value and your agreement price. If you buy below the ready reckoner value, you still pay stamp duty on the ready reckoner value — and both buyer and seller can face income tax consequences.
 
-## What it is
+## How does the ready reckoner rate work?
 
 The Department of Registration and Stamps, Maharashtra publishes ready reckoner rates — officially the **Annual Statement of Rates** — for every zone and sub-zone of the state, by type of property: flats, offices, shops, industrial and open land. They are typically revised once a year.
 
 The rate for a specific flat can also be adjusted for factors such as the floor it is on, the age of the building and the amenities, following the rules published with the rates.
 
-## Why it matters when you buy
+## Why does it matter when you buy?
 
 **Stamp duty** is calculated on the higher of the agreement value and the ready reckoner value. So:
 
@@ -918,15 +935,15 @@ The rate for a specific flat can also be adjusted for factors such as the floor 
 
 This is why under-declaring the price in the agreement never saves stamp duty. Our guide to [stamp duty and registration](/blog/stamp-duty-and-registration-in-mumbai-explained) covers the rest of that cost.
 
-## Why it matters for tax
+## Why does it matter for tax?
 
 Where a property is sold for less than its ready reckoner value beyond a permitted margin, income tax law can treat the ready reckoner value as the sale price for the seller, and the difference as income for the buyer. Older buildings and distressed sales are where this comes up most. If your agreed price is below the ready reckoner value, speak to a chartered accountant before you sign.
 
-## Ready reckoner rate is not market price
+## Is the ready reckoner rate the market price?
 
 The ready reckoner value is a reference, not a valuation. In many parts of the western suburbs, actual market prices are different from it — sometimes higher, sometimes lower for older or poorly maintained buildings. Don't use it to decide what a flat is worth. Compare recent registered transactions for similar flats nearby instead.
 
-## Where to look it up
+## Where can you look it up?
 
 Use the **official ready reckoner tool** of the Department of Registration and Stamps at [igrmaharashtra.gov.in](https://igrmaharashtra.gov.in). Select the district, taluka, village or zone and sub-zone, and the property type, to see the current rate. If you are unsure which zone a building falls in, the sub-registrar's office or your lawyer can confirm it.
 
@@ -941,29 +958,30 @@ Want the stamp duty and ready reckoner figures for a specific property before yo
     category: "Commercial",
     author: "Mr. Nayan Jomraj",
     publishedAt: "2026-11-05",
+    updatedAt: "2026-11-23",
     readingMinutes: 6,
     image: "/images/properties/mumbai-city.jpg",
     tags: ["Commercial", "Office", "Shop", "Investment"],
     featured: false,
     content: `Buying a shop or office is not the same as buying a bigger flat. The checks overlap, but commercial property has its own questions — about what the space may legally be used for, who the tenant is, and how easily you could sell it again.
 
-## The short answer
+## What should you check before buying a shop or office in Mumbai?
 
 Confirm the space is **approved for the use you intend**, check the **title and approvals** just as you would for a flat, read any **existing lease** carefully if it is tenanted, and judge the purchase on **realistic rent and resale demand**, not on the asking price.
 
-## 1. Permitted use
+## 1. What is the permitted use?
 
 The first question is what the space is legally approved for. A unit approved as an office may not be usable as a clinic, restaurant or retail shop without further permissions. Check the approved plans and occupation certificate, and ask your lawyer to confirm that your intended use is allowed. For a shop, trade and business licences depend on this too.
 
-## 2. Title and approvals
+## 2. Are the title and approvals in order?
 
 Everything in our [property verification checklist](/blog/how-to-verify-a-property-before-you-buy-in-mumbai) applies: a title search with a written opinion, the occupation certificate for the building, and MahaRERA registration where the project falls under it — see our guide to [OC, CC and RERA](/blog/oc-cc-and-rera-what-they-mean-when-buying-a-flat-in-mumbai).
 
-## 3. The society or building rules
+## 3. What are the society or building rules?
 
 Commercial units in mixed-use buildings are often subject to society or association rules on signage, operating hours, deliveries and what businesses are allowed. Read them before you commit — a restaurant or clinic can be blocked by rules that would never affect a flat.
 
-## 4. If the property is already tenanted
+## 4. What if the property is already tenanted?
 
 A tenanted shop or office can produce income from day one, but you are also buying the lease:
 
@@ -972,15 +990,15 @@ A tenanted shop or office can produce income from day one, but you are also buyi
 - check who is responsible for **maintenance, property tax and repairs**
 - understand what happens if the tenant leaves — how quickly could you re-let it?
 
-## 5. Taxes and costs
+## 5. What taxes and costs apply?
 
 Budget for **stamp duty and registration**, legal fees, and **GST** if you buy under construction. Rent from commercial property can also attract GST depending on the owner's circumstances. Get a chartered accountant's view before you buy, especially if you are buying as an investment.
 
-## 6. Location for the use, not just the address
+## 6. Is the location right for the use, not just the address?
 
 For a **shop**, footfall and frontage matter more than the building: main-road visibility, parking and the businesses around it. For an **office**, it is access — stations, Metro and roads — and the employment base nearby. In the western suburbs, Andheri East's SEEPZ, MIDC and Chakala belt has the deepest office market; our [Andheri guide](/locations/andheri) covers it.
 
-## 7. Exit
+## 7. How easily can you exit?
 
 Ask how easy it would be to sell. Smaller, well-located units in good buildings usually find buyers more easily than large or awkward floor plates. If the answer depends on finding one specific type of buyer, factor that into the price.
 

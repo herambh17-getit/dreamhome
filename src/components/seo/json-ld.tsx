@@ -227,7 +227,7 @@ export function ArticleJsonLd({ post }: { post: BlogPost }) {
         description: post.excerpt,
         image: `${siteConfig.url}${post.image}`,
         datePublished: post.publishedAt,
-        dateModified: post.publishedAt,
+        dateModified: post.updatedAt ?? post.publishedAt,
         author: { "@type": "Person", name: post.author },
         publisher: { "@id": `${siteConfig.url}/#organization` },
         mainEntityOfPage: {

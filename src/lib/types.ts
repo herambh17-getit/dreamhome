@@ -129,6 +129,8 @@ export interface BlogPost {
   category: string;
   author: string;
   publishedAt: string;
+  /** ISO date of the last real content revision. Omit if never revised. */
+  updatedAt?: string;
   readingMinutes: number;
   image: string;
   tags: string[];

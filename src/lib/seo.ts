@@ -35,7 +35,11 @@ interface PageSeo {
   /** Page-specific share image; falls back to the branded default. */
   image?: string | null;
   imageAlt?: string;
-  article?: { publishedTime: string; authors: string[] };
+  article?: {
+    publishedTime: string;
+    modifiedTime?: string;
+    authors: string[];
+  };
   /** Keep the page out of search results (it stays crawlable/followable). */
   noindex?: boolean;
 }
@@ -76,6 +80,7 @@ export function pageMetadata({
           ...shared,
           type: "article",
           publishedTime: article.publishedTime,
+          modifiedTime: article.modifiedTime,
           authors: article.authors,
         }
       : { ...shared, type: "website" },
