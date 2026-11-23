@@ -119,6 +119,80 @@ export const microAreas: MicroArea[] = [
     cta: "Tell us your budget, preferred size and move-in date, and we'll come back with honest options in Dahisar East.",
     draft: true,
   },
+  {
+    slug: "ashokvan",
+    parent: "borivali",
+    name: "Ashokvan",
+    fullName: "Ashokvan, Borivali East",
+    h1: "Property in Ashokvan, Borivali East — Buy, Rent, Lease",
+    intro: [
+      "Ashokvan sits off Shiv Vallabh Road in Borivali East, in the quieter lanes close to Universal High School and Sanjay Gandhi National Park, next to Shantivan. It is also where our office is.",
+      `Dream Home Properties is based in Ashokvan and has worked in Borivali East since ${siteConfig.founded}. Tell us your budget, the size of home you need and when you want to move, and we will tell you honestly which Ashokvan buildings are worth seeing and which are not.`,
+    ],
+    why: [
+      "Quieter lanes off Shiv Vallabh Road, away from the main highway",
+      "Close to Universal High School and Sanjay Gandhi National Park",
+      "Right next to Shantivan, in the established Borivali East belt",
+      "Our office is here, so you can visit us without a long trip",
+    ],
+    cta: "Tell us your budget, preferred size and move-in date, and we'll come back with honest options in Ashokvan.",
+    draft: true,
+  },
+  {
+    slug: "oberoi-sky-city",
+    parent: "borivali",
+    name: "Oberoi Sky City",
+    fullName: "Oberoi Sky City, Borivali East",
+    h1: "Oberoi Sky City, Borivali East — Buying, Renting and Nearby Options",
+    intro: [
+      "Oberoi Sky City is a well-known residential project in Borivali East. This page is for people comparing homes in and around it.",
+      `We are an independent real estate agent based in Borivali East, not the developer, and we have worked in this area since ${siteConfig.founded}. Tell us your budget, the size of home you need and when you want to move, and we will tell you honestly whether it suits you and what else is worth comparing nearby.`,
+    ],
+    why: [
+      "Located in Borivali East, within the established belt of schools, hospitals and shops",
+      "Comparing it with nearby buildings usually matters as much as the project itself",
+      "An independent agent can show you the drawbacks as well as the strengths",
+    ],
+    cta: "Tell us your budget, preferred size and move-in date, and we'll come back with honest options in and around Oberoi Sky City.",
+    draft: true,
+  },
+  {
+    slug: "thakur-complex",
+    parent: "kandivali",
+    name: "Thakur Complex",
+    fullName: "Thakur Complex, Kandivali East",
+    h1: "Property in Thakur Complex, Kandivali East — Buy, Rent, Lease",
+    intro: [
+      "Thakur Complex is a residential area in Kandivali East, close to Thakur Village. Kandivali East sits just south of Borivali East, along the Western Express Highway and Metro Line 7.",
+      `Our office is in Borivali East, next door, and we have worked across north Mumbai since ${siteConfig.founded}. Tell us your budget, the size of home you need and when you want to move, and we will tell you honestly which Thakur Complex buildings are worth seeing and which are not.`,
+    ],
+    why: [
+      "In Kandivali East, close to Thakur Village",
+      "Near the Western Express Highway and Metro Line 7",
+      "Next door to Borivali East, so Borivali's schools, hospitals and shops are within easy reach",
+    ],
+    cta: "Tell us your budget, preferred size and move-in date, and we'll come back with honest options in Thakur Complex.",
+    draft: true,
+  },
+  {
+    slug: "thakur-village",
+    parent: "kandivali",
+    name: "Thakur Village",
+    fullName: "Thakur Village, Kandivali East",
+    h1: "Property in Thakur Village, Kandivali East — Buy, Rent, Lease",
+    intro: [
+      "Thakur Village is a planned township in Kandivali East, with wide internal roads, mature trees and everyday retail. It is one of the better-known residential pockets in the suburb.",
+      `Our office is in Borivali East, next door, and we have worked across north Mumbai since ${siteConfig.founded}. Tell us your budget, the size of home you need and when you want to move, and we will tell you honestly which Thakur Village buildings are worth seeing and which are not.`,
+    ],
+    why: [
+      "A planned township with wide internal roads and mature trees",
+      "Everyday retail within the township",
+      "Close to the Western Express Highway and Metro Line 7",
+      "Next door to Borivali East, so Borivali's schools, hospitals and shops are within easy reach",
+    ],
+    cta: "Tell us your budget, preferred size and move-in date, and we'll come back with honest options in Thakur Village.",
+    draft: true,
+  },
 ];
 
 export function getMicroArea(parent: string, slug: string): MicroArea | undefined {
