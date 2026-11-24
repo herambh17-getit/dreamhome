@@ -258,6 +258,13 @@ export const practiceAreas = [
     summary:
       "Tenant sourcing, rent collection, maintenance and compliance for owners.",
   },
+  {
+    slug: "leave-and-licence-registration",
+    title: "Onsite Leave & Licence Registration",
+    icon: "FileText",
+    summary:
+      "Leave and licence agreements drafted and registered onsite, in Borivali East, for landlords and tenants.",
+  },
 ] as const;
 
 /** "Why Choose Us" — from the source data sheet. */

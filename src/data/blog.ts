@@ -541,7 +541,7 @@ Do a documented handover: a list of furniture and fittings, meter readings, and 
 - Don't hand over keys before the agreement is registered and the police information is submitted.
 - Diarise the end date so renewal or exit is planned, not rushed.
 
-Our [renting service](/services/renting) handles all of this for both landlords and tenants — from finding the right match to registration, police verification and handover.`,
+Our [renting service](/services/renting) handles all of this for both landlords and tenants — from finding the right match to registration, police verification and handover. If you only need the registration, we also offer [onsite leave and licence registration in Borivali East](/services/leave-and-licence-registration).`,
   },
   {
     id: "post-011",

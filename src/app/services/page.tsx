@@ -21,7 +21,7 @@ export default function ServicesPage() {
       <PageHeader
         eyebrow="Services"
         title="What we do, and how we do it"
-        description="Four core services and eight specialist desks. Every one runs on the same principle: you get the full picture, including the parts that don't suit us."
+        description="Four core services and nine specialist desks. Every one runs on the same principle: you get the full picture, including the parts that don't suit us."
         breadcrumbs={[{ name: "Services", href: "/services" }]}
       />
 
@@ -126,6 +126,11 @@ const situations = [
     situation: "I want to rent a home, or let mine out",
     note: "Tenant screening, registered leave-and-licence agreements, police verification and society NOC.",
     href: "/services/renting",
+  },
+  {
+    situation: "I need my rent agreement registered onsite",
+    note: "Leave and licence agreements drafted and registered onsite in Borivali East.",
+    href: "/services/leave-and-licence-registration",
   },
   {
     situation: "I am still deciding and want an independent opinion",

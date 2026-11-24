@@ -119,6 +119,43 @@ export const serviceGuides: Record<string, ServiceGuide> = {
     ],
   },
 
+  "leave-and-licence-registration": {
+    summary:
+      "We offer onsite leave and licence registration in Borivali East: the agreement is drafted, checked and registered, with police verification and the society's no-objection certificate coordinated where required, for landlords and tenants.",
+    faqs: [
+      {
+        question: "What is onsite leave and licence registration?",
+        answer:
+          "It means we carry out the registration of your leave and licence agreement onsite, as arranged with you, so you are not handling the process on your own. Call or WhatsApp us with the property and the details of both sides, and we will explain exactly how it will work for your case.",
+      },
+      {
+        question: "Is it mandatory to register a leave and licence agreement in Maharashtra?",
+        answer:
+          "Yes. Registration of a leave and licence agreement is mandatory in Maharashtra, and an unregistered agreement gives you very little protection if the arrangement goes wrong.",
+      },
+      {
+        question: "Which documents are needed to register a leave and licence agreement?",
+        answer:
+          "Typically identity and address proof of the landlord and the tenant, proof of the landlord's ownership of the flat, and the society's no-objection certificate where required. We confirm the exact list for your property when you contact us.",
+      },
+      {
+        question: "Who arranges and pays for the registration, the landlord or the tenant?",
+        answer:
+          "Either side can ask us to arrange it. Who bears the cost should be written into the agreement, and we help both sides agree on it in writing before registration.",
+      },
+      {
+        question: "Do you also handle police verification and the society NOC?",
+        answer:
+          "Yes. We coordinate police verification of the tenant and the society's no-objection certificate where required, as part of our renting service.",
+      },
+      {
+        question: "Which areas does the onsite service cover?",
+        answer:
+          "Our office is in Ashokvan, Borivali East, and that is where this service is based. If your property is elsewhere in Mumbai, ask us whether we can help.",
+      },
+    ],
+  },
+
   "society-redevelopment": {
     summary:
       "We guide housing societies through redevelopment: what the plot actually supports, developers judged on their delivery record, the development agreement in plain language, and genuine member consensus — without being tied to any developer.",

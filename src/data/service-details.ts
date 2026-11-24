@@ -160,6 +160,45 @@ export const serviceDetails: Record<string, ServiceDetail> = {
     ],
   },
 
+  "leave-and-licence-registration": {
+    faqCategory: "Renting",
+    body: [
+      "In Maharashtra, a leave and licence agreement has to be registered. An unregistered agreement protects a landlord or a tenant very little if the arrangement goes wrong.",
+      "We offer onsite leave and licence registration in Borivali East. Call or WhatsApp us with the property and the details of the landlord and the tenant, and we will tell you what is needed and arrange the registration with you.",
+      "Registration is the last step of a longer process: agreeing the rent, deposit, lock-in and notice terms in writing, drafting the agreement, and, where required, police verification of the tenant and the society's no-objection certificate. We can handle those steps too, as part of our renting service.",
+    ],
+    steps: [
+      {
+        title: "Tell us about the tenancy",
+        body: "The property address, the names of the landlord and the tenant, and the rent, deposit and period you have agreed.",
+      },
+      {
+        title: "We confirm what is needed",
+        body: "The documents each side has to provide, and whether the society needs to give a no-objection certificate.",
+      },
+      {
+        title: "The agreement is drafted and checked",
+        body: "Rent, deposit, lock-in, notice and who fixes what, written clearly before anyone signs.",
+      },
+      {
+        title: "Registration, onsite",
+        body: "We carry out the registration onsite, as arranged with you.",
+      },
+      {
+        title: "Police verification and handover",
+        body: "We coordinate police verification of the tenant and the society's no-objection certificate where required, and a documented inventory at handover.",
+      },
+    ],
+    includes: [
+      "Onsite leave and licence registration",
+      "Leave-and-licence agreement drafting",
+      "Mandatory registration of the agreement",
+      "Police verification coordination",
+      "Society NOC",
+      "Handover inventory",
+    ],
+  },
+
   "society-redevelopment": {
     faqCategory: "Redevelopment",
     body: [

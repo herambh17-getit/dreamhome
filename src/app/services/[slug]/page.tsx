@@ -15,7 +15,13 @@ import { practiceAreas, services, siteConfig, whatsappLink } from "@/lib/site-co
 import { serviceDetails } from "@/data/service-details";
 import { serviceGuides } from "@/data/service-guides";
 
-/** Both the four core services and the eight practice areas live at /services/*. */
+/** Both the four core services and the nine practice areas live at /services/*. */
+
+/** Pages whose search title should name the neighbourhood instead of "in Mumbai". */
+const TITLE_OVERRIDES: Record<string, string> = {
+  "leave-and-licence-registration":
+    "Onsite Leave and Licence Registration in Borivali East",
+};
 function findService(slug: string) {
   const core = services.find((s) => s.slug === slug);
   if (core) return { ...core, kind: "core" as const };
@@ -43,7 +49,7 @@ export async function generateMetadata(
   if (!service) return { title: "Service not found" };
 
   return pageMetadata({
-    title: `${service.title} in Mumbai`,
+    title: TITLE_OVERRIDES[slug] ?? `${service.title} in Mumbai`,
     // The summary alone runs ~80 characters; adding the detail gives search
     // results a fuller, still-accurate snippet.
     description:
