@@ -15,6 +15,23 @@ export interface ServiceDetail {
   faqCategory?: string;
 }
 
+/** The three services linked at the foot of each service page, by slug. */
+export const relatedServices: Record<string, string[]> = {
+  "property-buying": ["property-consultation", "legal-documentation", "buying-selling"],
+  "property-selling": ["buying-selling", "legal-documentation", "real-estate-consultancy"],
+  renting: ["leave-and-licence-registration", "property-management", "nri-services"],
+  "property-consultation": ["property-buying", "investment-advisory", "society-redevelopment"],
+  "real-estate-consultancy": ["investment-advisory", "property-consultation", "property-management"],
+  "nri-services": ["property-management", "legal-documentation", "property-selling"],
+  "buying-selling": ["property-buying", "property-selling", "legal-documentation"],
+  "project-marketing": ["society-redevelopment", "investment-advisory", "real-estate-consultancy"],
+  "society-redevelopment": ["property-consultation", "legal-documentation", "project-marketing"],
+  "legal-documentation": ["leave-and-licence-registration", "property-buying", "society-redevelopment"],
+  "investment-advisory": ["real-estate-consultancy", "property-management", "project-marketing"],
+  "property-management": ["renting", "leave-and-licence-registration", "nri-services"],
+  "leave-and-licence-registration": ["renting", "property-management", "legal-documentation"],
+};
+
 export const serviceDetails: Record<string, ServiceDetail> = {
   "property-buying": {
     faqCategory: "Buying",

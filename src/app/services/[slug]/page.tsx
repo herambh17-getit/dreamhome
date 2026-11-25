@@ -12,7 +12,8 @@ import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import { FaqJsonLd, ServiceJsonLd } from "@/components/seo/json-ld";
 import { getFaqs } from "@/lib/queries";
 import { practiceAreas, services, siteConfig, whatsappLink } from "@/lib/site-config";
-import { serviceDetails } from "@/data/service-details";
+import { relatedServices, serviceDetails } from "@/data/service-details";
+import Link from "next/link";
 import { serviceGuides } from "@/data/service-guides";
 
 /** Both the four core services and the nine practice areas live at /services/*. */
@@ -71,6 +72,10 @@ export default async function ServicePage(
   const allFaqs = await getFaqs();
 
   const guide = serviceGuides[slug];
+
+  const related = (relatedServices[slug] ?? [])
+    .map((s) => findService(s))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
   // Service-specific questions first, then the shared FAQs for this
   // service's category (when one is mapped).
@@ -237,6 +242,29 @@ export default async function ServicePage(
             ))}
           </RevealGroup>
           <FaqJsonLd faqs={faqs} />
+        </Section>
+      )}
+
+      {related.length > 0 && (
+        <Section className="py-14 sm:py-20">
+          <h2 className="text-2xl text-brand-indigo-900">Related services</h2>
+          <ul className="mt-6 grid gap-4 md:grid-cols-3">
+            {related.map((item) => (
+              <li key={item.slug}>
+                <Link
+                  href={`/services/${item.slug}`}
+                  className="flex h-full flex-col rounded-2xl border border-border bg-card p-5 transition-colors hover:border-brand-indigo-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
+                >
+                  <span className="text-base font-semibold text-brand-indigo-900">
+                    {item.title}
+                  </span>
+                  <span className="mt-2 text-pretty text-sm leading-relaxed text-muted-foreground">
+                    {item.summary}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Section>
       )}
     </>

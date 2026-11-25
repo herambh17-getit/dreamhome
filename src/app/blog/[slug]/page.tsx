@@ -47,9 +47,14 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
   if (!post) notFound();
 
   const all = await getBlogPosts();
-  const related = all
-    .filter((p) => p.id !== post.id && p.category === post.category)
-    .slice(0, 3);
+  // Same category first. Starting from the next post (not the top of the list)
+  // spreads these links so every article is linked from several others.
+  const index = all.findIndex((p) => p.id === post.id);
+  const others = [...all.slice(index + 1), ...all.slice(0, Math.max(index, 0))];
+  const related = [
+    ...others.filter((p) => p.category === post.category),
+    ...others.filter((p) => p.category !== post.category),
+  ].slice(0, 3);
 
   return (
     <>
@@ -149,7 +154,11 @@ export default async function BlogPostPage(props: PageProps<"/blog/[slug]">) {
           <SectionHeader
             align="left"
             eyebrow="Keep reading"
-            title={`More on ${post.category.toLowerCase()}`}
+            title={
+              related.every((p) => p.category === post.category)
+                ? `More on ${post.category.toLowerCase()}`
+                : "Related guides"
+            }
             className="mx-0"
           />
           <div className="mt-10 grid gap-6 md:grid-cols-3">

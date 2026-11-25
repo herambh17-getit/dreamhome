@@ -83,8 +83,14 @@ export default async function MicroAreaPage(
             {area.priceBands && (
               <section className="mt-12">
                 <h2 className="text-2xl text-brand-indigo-900">
-                  Current price bands in {area.name}
+                  What do flats cost in {area.name}?
                 </h2>
+                <p className="mt-3 text-pretty leading-relaxed text-muted-foreground">
+                  A {area.priceBands.resale[0].config} typically asks{" "}
+                  {area.priceBands.resale[0].range} to buy and{" "}
+                  {area.priceBands.rent[0].range} to rent, as of{" "}
+                  {area.priceBands.asOf}. Larger homes are listed below.
+                </p>
                 <div className="mt-5 grid gap-4 sm:grid-cols-2">
                   {(
                     [
@@ -127,7 +133,7 @@ export default async function MicroAreaPage(
             {/* 3. Why this neighbourhood */}
             <section className="mt-12">
               <h2 className="text-2xl text-brand-indigo-900">
-                Why {area.name}
+                Why choose {area.name}?
               </h2>
               <ul className="mt-4 space-y-2.5">
                 {area.why.map((w) => (

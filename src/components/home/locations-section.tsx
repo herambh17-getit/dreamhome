@@ -4,6 +4,10 @@ import { ArrowUpRight } from "lucide-react";
 import { Section, SectionHeader } from "@/components/section";
 import { RevealGroup, RevealItem } from "@/components/motion/reveal";
 import type { Location } from "@/lib/types";
+import { microAreas } from "@/data/micro-areas";
+
+/** Neighbourhood pages that are public (drafts stay unlinked). */
+const publishedAreas = microAreas.filter((a) => !a.draft);
 
 /**
  * Property locations.
@@ -81,6 +85,23 @@ export function LocationsSection({ locations }: { locations: Location[] }) {
           </RevealItem>
         ))}
       </RevealGroup>
+
+      {publishedAreas.length > 0 && (
+        <p className="mt-10 text-center text-sm leading-relaxed text-muted-foreground">
+          Neighbourhood guides:{" "}
+          {publishedAreas.map((area, i) => (
+            <span key={area.slug}>
+              {i > 0 && ", "}
+              <Link
+                href={`/locations/${area.parent}/${area.slug}`}
+                className="font-semibold text-primary underline-offset-4 hover:underline"
+              >
+                Property in {area.fullName}
+              </Link>
+            </span>
+          ))}
+        </p>
+      )}
     </Section>
   );
 }
